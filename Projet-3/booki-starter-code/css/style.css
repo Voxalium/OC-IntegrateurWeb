@@ -170,7 +170,7 @@ i {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
-    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .hebergements-cards img {
@@ -189,12 +189,12 @@ i {
 .hebergements-plus {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 30px 0 0 0;
 }
 
 /****** Populaires ***********/
 .populaires {
-    width: 40%;
+    width: 45%;
     padding: 30px;
 }
 
@@ -219,6 +219,8 @@ i {
 .populaires-cards .card-content {
     width: 67%;
     padding-left: 15px;
+    padding-right: 5px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
