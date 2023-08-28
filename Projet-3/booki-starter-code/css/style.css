@@ -101,6 +101,15 @@ body {
     border-radius: 10px 0px 0px 10px;
 }
 
+.search-bar-magnif {
+    display: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .search-bar p {
     padding: 15px 24px;
 }
@@ -354,5 +363,110 @@ footer {
 }
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .mobile-padding {
+        padding: 0 20px;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+    /* HEADER */
+    .header {
+        display: block;
+        text-align: center;
+    }
+    .header-logo {
+        padding: 30px;
+    }
+    .header-links {
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-links a {
+        padding: 0 0 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .header-links a:hover {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+    .header-links a:active {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    /*Search*/
+    .section-search h1 {
+        margin: 30px 0 8px;
+    }
+    .section-search p {
+        margin: 0;
+    }
+
+    .search-bar {
+        justify-content: space-between;
+        margin: 35px 0 35px;
+    }
+    .search-bar-button {
+        display: none;
+    }
+    .search-bar-city {
+        width: 100%;
+    }
+    .search-bar-magnif {
+        display: block;
+    }
+
+    /* Filters */
+
+    .filters-main {
+        flex-wrap: wrap;
+    }
+    .filters-div {
+        margin: 20px 10px 0 0;
+    }
+    .filters p {
+        margin: 0;
+    }
+
+    /* Hebergement */
+    .hebergements {
+        margin: 0;
+    }
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+    }
+
+    .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires {
+        margin: 0;
+    }
+    .populaires-cards {
+        flex-direction: column;
+    }
+    .populaires-cards .card {
+        width: 100%;
+    }
+
+    /* Activité */
+
+    .activites-cards {
+        flex-direction: column;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: column;
+    }
 }
