@@ -199,16 +199,10 @@ i {
 }
 /****** Hebergements ***********/
 .hebergements {
-    width: 100%;
+    width: 85%;
     margin-right: 40px;
     padding: 30px;
     background-color: var(--main-bg-color);
-}
-
-.hebergements-cards .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .hebergements-cards {
@@ -217,19 +211,31 @@ i {
     grid-gap: 30px;
     padding-top: 30px;
 }
-
+.hebergements-cards .card {
+    width: 100%;
+}
 .hebergements-cards img {
     height: 124px;
     border-radius: 20px 20px 0px 0px;
 }
 
 .hebergements-cards .card-content {
+    position: relative;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.hebergements-cards .card-rating {
-    padding-bottom: 5px;
+.hebergements-cards .card-title {
+    position: absolute;
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 4px;
+}
+.hebergements-cards .card-subtitle {
+    position: relative;
+    margin-top: 36px;
 }
 
 .hebergements-plus {
@@ -283,7 +289,7 @@ i {
 
 /****** Activités ***********/
 .activites {
-    padding: 30px;
+    width: 100%;
 }
 .activites-cards {
     display: flex;
@@ -302,11 +308,6 @@ i {
 }
 .activites-cards .activites-title {
     margin: 20px 19px;
-}
-.activites-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 15px;
 }
 
 /****** Activités ***********/
@@ -354,7 +355,9 @@ footer {
     .filters {
         display: block;
     }
-
+    .hebergements {
+        width: 100%;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -393,7 +396,10 @@ footer {
     .activites-cards .card img {
         height: 210px;
     }
+    .activites-card .activites-title {
+    }
 }
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /*Scrollbar disable*/
@@ -529,6 +535,12 @@ footer {
 
     .activites-cards {
         display: block;
+        padding: 30px;
+    }
+    .activites h2 {
+        padding-left: 30px;
+        padding-top: 30px;
+        margin-bottom: 0;
     }
     .activites-cards .card {
         margin-top: 15px;
