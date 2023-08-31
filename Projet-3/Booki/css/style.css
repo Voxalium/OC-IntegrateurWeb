@@ -135,10 +135,6 @@ h1 {
     padding: 15px 24px;
 }
 .search-bar-city {
-    /* border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-color: var(--main-bg-color);
-  */
     box-sizing: border-box;
     height: 48px;
     border-top: 1px solid;
@@ -294,6 +290,7 @@ i {
 .activites-cards {
     display: flex;
     justify-content: space-between;
+    padding-left: 30px;
 }
 
 .activites-cards .card {
@@ -395,8 +392,6 @@ footer {
 
     .activites-cards .card img {
         height: 210px;
-    }
-    .activites-card .activites-title {
     }
 }
 
