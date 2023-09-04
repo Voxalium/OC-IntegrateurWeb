@@ -186,10 +186,9 @@ p {
     border-width: 3px;
 }
 
-/* Correction en utilisant outine à la place de border-width*/
+/* Correction en utilisant outline à la place de border-width*/
 
 /* .buttonHighlight:hover {
     font-weight: 800;
-    outline: 3px solid;
-}
- */
+    outline: 1px solid;
+} */
