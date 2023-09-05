@@ -1,3 +1,48 @@
-img {
-    width: 300px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&family=Shrikhand&display=swap");
+.button {
+  display: flex;
+  text-align: center;
+  font-family: Roboto;
+  border-radius: 25px;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
+.button:hover {
+  background: linear-gradient(#ff79da, #9356dc);
+  opacity: 0.85;
+}
+.button--restaurant {
+  width: 218px;
+  height: 50px;
+}
+.button--commander {
+  width: 186px;
+  height: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+body {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+h1 {
+  font-family: Shrikhand;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */
