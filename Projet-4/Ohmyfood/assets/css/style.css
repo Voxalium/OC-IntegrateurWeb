@@ -10,22 +10,86 @@
   align-items: center;
 }
 .button:hover {
-  background: linear-gradient(#ff79da, #9356dc);
   opacity: 0.85;
 }
-.button--restaurant {
+.button-restaurant {
   width: 218px;
   height: 50px;
 }
-.button--commander {
+.button-commander {
   width: 186px;
   height: 50px;
+}
+
+.card-fonctionnement {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  height: 72px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  display: flex;
+  align-items: center;
+}
+.card-fonctionnement .number {
+  transform: translateX(-50%);
+  color: white;
+  background-color: #9356dc;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.card-fonctionnement .number span {
+  height: 100%;
+  font-size: 14px;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-fonctionnement .card-fonctionnement-content {
+  padding: 0;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+}
+.card-fonctionnement .card-fonctionnement-content .icon-tel {
+  width: 13px;
+  height: 20px;
+}
+.card-fonctionnement .card-fonctionnement-content .icon-menu {
+  width: 16px;
+  height: 16px;
+}
+.card-fonctionnement .card-fonctionnement-content .icon-resto {
+  width: 18px;
+  height: 18px;
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: Roboto;
+}
+
+h1,
+h4 {
+  font-family: Shrikhand;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 300px;
 }
 
 body header {
@@ -51,7 +115,12 @@ body header .location span {
   display: flex;
   align-items: center;
 }
-body header .reservation {
+body main > * {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+body .reservation {
+  text-align: center;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -59,25 +128,33 @@ body header .reservation {
   padding: 40px 25px 60px 25px;
   margin-bottom: 48px;
 }
-body header .reservation p {
+body .reservation p {
   padding: 25px 0;
   font-weight: 300;
 }
-
-h1 {
-  font-family: Shrikhand;
+body .restaurants {
+  background-color: #f6f6f6;
 }
-
-h2 {
-  font-size: 24px;
+body .fonctionnement h2 {
+  padding-bottom: 26px;
 }
-
-a {
-  text-decoration: none;
+body .fonctionnement div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 68px;
 }
-
-img {
-  width: 300px;
+body .fonctionnement div .card-fonctionnement {
+  margin-left: 15px;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #353535;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  gap: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

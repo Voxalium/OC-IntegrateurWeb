@@ -1,0 +1,70 @@
+@import "./variables.scss";
+
+.button {
+    display: flex;
+    text-align: center;
+    font-family: Roboto;
+    border-radius: 25px;
+    background: linear-gradient($secondary, $primary);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        opacity: 0.85;
+    }
+
+    &-restaurant {
+        width: 218px;
+        height: 50px;
+    }
+    &-commander {
+        width: 186px;
+        height: 50px;
+    }
+}
+
+.card-fonctionnement {
+    background-color: $bgColor2;
+    border-radius: 20px;
+    height: 72px;
+    box-shadow: 0px 4px 15px 0px #00000026;
+    display: flex;
+    align-items: center;
+    .number {
+        transform: translateX(-50%);
+        color: white;
+        background-color: $primary;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        span {
+            height: 100%;
+            font-size: 14px;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .card-fonctionnement-content {
+        padding: 0;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+            &-tel {
+                width: 13px;
+                height: 20px;
+            }
+            &-menu {
+                width: 16px;
+                height: 16px;
+            }
+            &-resto {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
