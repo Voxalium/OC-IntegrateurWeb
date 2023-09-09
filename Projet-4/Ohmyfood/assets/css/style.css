@@ -64,6 +64,25 @@
   height: 18px;
 }
 
+.card-restaurants {
+  background-color: white;
+  border-radius: 15px;
+}
+.card-restaurants img {
+  object-fit: cover;
+  height: 231px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.card-restaurants-content {
+  position: relative;
+  padding: 16px 0 12px 13px;
+}
+.card-restaurants-content p {
+  font-weight: 300;
+  padding-top: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,12 +103,16 @@ h4 {
   font-size: 18px;
 }
 
+p,
+h3 {
+  color: black;
+}
+
 a {
   text-decoration: none;
 }
-
-img {
-  width: 300px;
+a:visited {
+  color: inherit;
 }
 
 body header {
@@ -135,6 +158,13 @@ body .reservation p {
 body .restaurants {
   background-color: #f6f6f6;
 }
+body .restaurants h2 {
+  padding-top: 54px;
+  margin-bottom: 25px;
+}
+body .restaurants article {
+  margin-bottom: 18px;
+}
 body .fonctionnement h2 {
   padding-bottom: 26px;
 }
@@ -148,13 +178,16 @@ body .fonctionnement div .card-fonctionnement {
   margin-left: 15px;
 }
 body footer {
+  color: white;
   display: flex;
   flex-direction: column;
-  color: white;
   background-color: #353535;
   padding-top: 22px;
   padding-bottom: 22px;
   gap: 7px;
+}
+body footer p {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

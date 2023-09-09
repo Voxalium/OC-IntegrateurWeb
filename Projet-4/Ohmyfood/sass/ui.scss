@@ -22,7 +22,6 @@
         height: 50px;
     }
 }
-
 .card-fonctionnement {
     background-color: $bgColor2;
     border-radius: 20px;
@@ -65,6 +64,25 @@
                 width: 18px;
                 height: 18px;
             }
+        }
+    }
+}
+.card-restaurants {
+    background-color: white;
+    border-radius: 15px;
+
+    img {
+        object-fit: cover;
+        height: 231px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    &-content {
+        position: relative;
+        padding: 16px 0 12px 13px;
+        p {
+            font-weight: 300;
+            padding-top: 5px;
         }
     }
 }

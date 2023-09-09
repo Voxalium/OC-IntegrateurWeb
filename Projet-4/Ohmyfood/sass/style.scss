@@ -19,12 +19,17 @@ h4 {
     font-weight: 400;
     font-size: 18px;
 }
+p,
+h3 {
+    color: black;
+}
 a {
     text-decoration: none;
+    &:visited {
+        color: inherit;
+    }
 }
-img {
-    width: 300px;
-}
+
 //Structure
 body {
     header {
@@ -71,6 +76,13 @@ body {
     }
     .restaurants {
         background-color: $bgColor2;
+        h2 {
+            padding-top: 54px;
+            margin-bottom: 25px;
+        }
+        article {
+            margin-bottom: 18px;
+        }
     }
     .fonctionnement {
         h2 {
@@ -88,12 +100,15 @@ body {
         }
     }
     footer {
+        color: white;
         display: flex;
         flex-direction: column;
-        color: white;
         background-color: $grey;
         padding-top: 22px;
         padding-bottom: 22px;
         gap: 7px;
+        p {
+            color: white;
+        }
     }
 }
