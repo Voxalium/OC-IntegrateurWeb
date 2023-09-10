@@ -213,6 +213,7 @@ i {
 }
 .hebergements-cards .card {
     width: 100%;
+    box-sizing: border-box;
 }
 .hebergements-cards img {
     height: 124px;
@@ -460,15 +461,19 @@ footer {
     .search-bar {
         justify-content: space-between;
         margin: 35px 0 35px;
+        position: relative;
     }
     .search-bar-button {
         display: none;
     }
     .search-bar-city {
         width: 100%;
+        border-radius: 0 20px 20px 0;
     }
     .search-bar-magnif {
         display: block;
+        position: absolute;
+        right: 0;
     }
 
     /* Filters */
