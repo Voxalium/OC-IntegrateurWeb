@@ -518,6 +518,7 @@ footer {
     }
 
     .hebergements-cards {
+        padding-top: 0;
         display: block;
     }
     .hebergements-cards .card {
