@@ -87,16 +87,18 @@ h1 {
     padding: 30px 50px 30px 0px;
 }
 
-.header-links {
+nav {
     padding-top: 16px;
 }
-.header-links a {
+
+nav a {
     text-decoration: none;
     padding-top: 14px;
     margin-left: 68px;
     color: black;
 }
-.header-links a:hover {
+
+nav a:hover {
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
 }
@@ -164,13 +166,13 @@ i {
     display: flex;
 }
 .filters-div {
-    padding-right: 20px;
-    margin-left: 15px;
-    border-radius: 36px;
     display: flex;
     align-items: center;
-    border: 2px solid var(--main-bg-color);
     height: 45px;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 36px;
+    padding-right: 20px;
+    margin-left: 15px;
 }
 .filters-div:hover {
     background-color: var(--filter-bg-color);
@@ -229,9 +231,9 @@ i {
 .hebergements-cards .card-title {
     position: absolute;
     white-space: nowrap;
-    width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 80%;
     padding-top: 4px;
 }
 .hebergements-cards .card-subtitle {
@@ -385,6 +387,7 @@ footer {
     }
 
     .populaires-cards .card {
+        margin-top: 20px;
         width: 30%;
     }
 
@@ -427,22 +430,22 @@ footer {
     .header-logo {
         padding: 30px;
     }
-    .header-links {
+    nav {
         padding: 0;
         display: flex;
         justify-content: space-around;
     }
-    .header-links a {
+    nav a {
         padding: 0 0 15px;
         margin: 0;
         width: 100%;
     }
 
-    .header-links a:hover {
+    nav a:hover {
         border-top: none;
         box-shadow: inset 0 -2px 0 var(--main-color); /*border bottom faisait bouger les div*/
     }
-    .header-links a:active {
+    nav a:active {
         border-top: none;
         border-bottom: 2px solid var(--main-color);
     }
@@ -470,6 +473,7 @@ footer {
         width: 100%;
         border-radius: 0 20px 20px 0;
     }
+
     .search-bar-magnif {
         display: block;
         position: absolute;
