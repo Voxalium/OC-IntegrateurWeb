@@ -1,4 +1,5 @@
 /****** General ***********/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600&display=swap");
 * {
     font-family: "Raleway", sans-serif;
 }
@@ -7,6 +8,7 @@
     --main-color: #0065fc;
     --main-bg-color: #f2f2f2;
     --filter-bg-color: #deebff;
+    --gray: #d9d9d9;
 }
 
 .fa-solid {
@@ -70,7 +72,7 @@ h1 {
 }
 
 .euro {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .neutral-star {
@@ -169,7 +171,7 @@ i {
     display: flex;
     align-items: center;
     height: 45px;
-    border: 2px solid var(--main-bg-color);
+    border: 2px solid var(--gray);
     border-radius: 36px;
     padding-right: 20px;
     margin-left: 15px;
@@ -180,10 +182,30 @@ i {
 .filters-div i {
     padding: 16px;
 }
+
 .filters-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 35px;
 }
+.filters-info i {
+    margin-right: 10px;
+    border: 1px solid var(--gray);
+    padding: 0;
+    border-radius: 50%;
+}
 
+.filters-info span {
+    display: flex;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    font-family: Noto serif;
+    font-size: 14px;
+}
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
