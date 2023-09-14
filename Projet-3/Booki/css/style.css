@@ -3,7 +3,10 @@
 * {
     font-family: "Raleway", sans-serif;
 }
-
+a {
+    text-decoration: none;
+    color: black;
+}
 :root {
     --main-color: #0065fc;
     --main-bg-color: #f2f2f2;
@@ -94,10 +97,8 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
     padding-top: 14px;
     margin-left: 68px;
-    color: black;
 }
 
 nav a:hover {
@@ -198,7 +199,6 @@ i {
 
 .filters-info span {
     display: flex;
-    font-style: normal;
     align-items: center;
     justify-content: center;
     height: 24px;
@@ -235,7 +235,7 @@ i {
     grid-gap: 30px;
     padding-top: 30px;
 }
-.hebergements-cards .card {
+.hebergements-cards a .card {
     width: 100%;
     box-sizing: border-box;
 }
@@ -326,18 +326,24 @@ i {
 .activites h2 {
     margin-left: 30px;
 }
+.activites a {
+    display: flex;
+    justify-content: space-between;
 
-.activites-cards .card {
+    width: 100%;
+}
+.activites-cards a .card {
+    display: grid;
     padding: 0;
     margin-right: 30px;
     width: 100%;
 }
 
-.activites-cards .card img {
+.activites-cards a .card img {
     height: 380px;
     border-radius: 20px 20px 0 0;
 }
-.activites-cards .activites-title {
+.activites-cards a .activites-title {
     margin: 20px 19px;
 }
 
@@ -355,7 +361,6 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
 }
 
 .footer-content a {
@@ -406,15 +411,12 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
 
-    .populaires-cards .card {
+    .populaires-cards a {
         margin-top: 20px;
-        width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
+        width: 100%;
     }
 
     .populaires-cards .card-subtitle {
@@ -425,8 +427,14 @@ footer {
         margin-bottom: 5px;
     }
 
-    .activites-cards .card img {
-        height: 210px;
+    .activites .card {
+        display: grid;
+    }
+    .activites-cards a .card img {
+        height: 200px;
+    }
+    .activites-cards .activites-title {
+        padding: 0;
     }
 }
 
@@ -505,6 +513,7 @@ footer {
     /* Filters */
     .filters {
         padding: 0 20px;
+        margin-bottom: 0px;
     }
     .filters-main {
         padding-top: 20px;
@@ -524,8 +533,8 @@ footer {
     }
 
     .filters-info {
-        margin-top: 25px;
-        margin-bottom: 35px;
+        margin-top: 9px;
+        margin-bottom: 19px;
         padding: 0 20px;
     }
 
@@ -565,10 +574,11 @@ footer {
     .populaires-cards {
         flex-direction: column;
         justify-content: flex-start;
+        gap: 0;
     }
     .populaires-cards .card {
         width: auto;
-        margin-top: 15px;
+        margin: 0;
     }
 
     /* Activité */
