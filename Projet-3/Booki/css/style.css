@@ -86,6 +86,7 @@ h1 {
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .header-logo {
     height: 20px;
@@ -138,6 +139,7 @@ nav a:hover {
 
 .search-bar p {
     padding: 15px 24px;
+    margin: 0;
 }
 .search-bar-city {
     box-sizing: border-box;
@@ -164,6 +166,7 @@ i {
 }
 .filters h3 {
     font-size: 18px;
+    margin-right: 15px;
 }
 .filters-main {
     display: flex;
@@ -175,7 +178,7 @@ i {
     border: 2px solid var(--gray);
     border-radius: 36px;
     padding-right: 20px;
-    margin-left: 15px;
+    margin-right: 15px;
 }
 .filters-div:hover {
     background-color: var(--filter-bg-color);
@@ -195,6 +198,9 @@ i {
     border: 1px solid var(--gray);
     padding: 0;
     border-radius: 50%;
+}
+.filters-info p {
+    margin: 0;
 }
 
 .filters-info span {
@@ -246,7 +252,7 @@ i {
 
 .hebergements-cards .card-content {
     position: relative;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-right: 15px;
 }
 
@@ -316,6 +322,7 @@ i {
 .activites {
     width: 100%;
     padding-top: 35px;
+    padding-bottom: 30px;
 }
 .activites-cards {
     display: flex;
@@ -348,11 +355,11 @@ i {
 }
 
 /****** Activités ***********/
+
 footer {
     display: flex;
     background-color: var(--main-bg-color);
     padding: 0;
-
     margin-top: 35px;
 }
 
@@ -364,8 +371,6 @@ footer {
 }
 
 .footer-content a {
-    text-decoration: none;
-    color: black;
     padding-top: 15px;
 }
 
@@ -415,8 +420,10 @@ footer {
     }
 
     .populaires-cards a {
-        margin-top: 20px;
         width: 100%;
+    }
+    .populaires-cards a .card {
+        margin-top: 20px;
     }
 
     .populaires-cards .card-subtitle {
@@ -586,7 +593,8 @@ footer {
         margin: 0;
     }
     .activites-cards {
-        display: block;
+        flex-direction: column;
+        gap: 15px;
         padding: 30px;
     }
     .activites h2 {
@@ -594,21 +602,19 @@ footer {
         padding-top: 30px;
         margin: 0;
     }
-    .activites-cards .card {
-        margin-top: 15px;
+    .activites-cards a .card {
+        margin-right: 0px;
     }
     .activites-cards .activites-title {
         display: flex;
-        padding: 20px;
         margin: 0;
-        align-items: center;
     }
     /* Footer */
 
     footer {
         flex-direction: column;
         padding: 30px 30px 0 30px;
-        margin-top: 30px;
+        margin-top: 0px;
     }
     .footer-content {
         padding: 0;
