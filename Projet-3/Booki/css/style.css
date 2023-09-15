@@ -482,10 +482,6 @@ footer {
         border-top: none;
         box-shadow: inset 0 -2px 0 var(--main-color); /*border bottom faisait bouger les div*/
     }
-    nav a:active {
-        border-top: none;
-        border-bottom: 2px solid var(--main-color);
-    }
 
     /*Search*/
     .section-search {
