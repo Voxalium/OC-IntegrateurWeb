@@ -67,7 +67,27 @@
         }
     }
     &-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
         padding: 15px;
+        height: 42px;
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .menu-prix {
+            position: absolute;
+            right: 16px;
+            bottom: 15px;
+            font-size: 15px;
+            font-weight: 700;
+        }
     }
 }
 
@@ -106,14 +126,14 @@
 
 .container-like {
     position: absolute;
-    right: 25px;
-    bottom: 33px;
+
     .like {
         cursor: pointer;
         width: 22px;
         height: 21px;
         background-image: url("/Projet-4/Ohmyfood/assets/images/icons/like.png");
         background-size: contain;
+        background-repeat: no-repeat;
     }
     input {
         display: none;

@@ -71,7 +71,27 @@
   height: 18px;
 }
 .card-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
   padding: 15px;
+  height: 42px;
+}
+.card-menu h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.card-menu p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.card-menu .menu-prix {
+  position: absolute;
+  right: 16px;
+  bottom: 15px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .card-restaurants {
@@ -108,8 +128,6 @@
 
 .container-like {
   position: absolute;
-  right: 25px;
-  bottom: 33px;
 }
 .container-like .like {
   cursor: pointer;
@@ -117,6 +135,7 @@
   height: 21px;
   background-image: url("/Projet-4/Ohmyfood/assets/images/icons/like.png");
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .container-like input {
   display: none;
@@ -153,6 +172,39 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+footer {
+  font-weight: 400;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  gap: 7px;
+}
+footer .bold {
+  font-weight: 500;
+}
+footer a {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+footer a img {
+  margin-right: 11px;
+}
+footer a .couvert {
+  width: 11px;
+  height: 13px;
+}
+footer a .hand {
+  width: 12px;
+  height: 13px;
+}
+footer p {
+  color: white;
 }
 
 .home header {
@@ -223,37 +275,9 @@ a {
 .home .restaurants article {
   margin-bottom: 18px;
 }
-.home footer {
-  font-weight: 400;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  background-color: #353535;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  gap: 7px;
-}
-.home footer .bold {
-  font-weight: 500;
-}
-.home footer a {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-}
-.home footer a img {
-  margin-right: 11px;
-}
-.home footer a .couvert {
-  width: 11px;
-  height: 13px;
-}
-.home footer a .hand {
-  width: 12px;
-  height: 13px;
-}
-.home footer p {
-  color: white;
+.home .restaurants .container-like {
+  right: 25px;
+  bottom: 33px;
 }
 
 .restaurants header {
@@ -271,9 +295,20 @@ a {
   left: 17px;
   top: 17px;
 }
-.restaurants .banner-img {
+.restaurants .img-border {
+  position: relative;
+}
+.restaurants .img-border img {
   width: 100%;
   object-fit: cover;
+}
+.restaurants .img-border .border {
+  background-color: #f3f3f3;
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
 }
 .restaurants main > * {
   padding-left: 18px;
@@ -281,7 +316,12 @@ a {
 }
 .restaurants main {
   background-color: #f3f3f3;
-  border-radius: 30px 30px 0 0;
+}
+.restaurants main .restaurants-title {
+  position: relative;
+  margin-top: 0;
+  padding: 0;
+  padding-left: 18px;
 }
 .restaurants main h2 {
   text-transform: uppercase;
@@ -302,11 +342,12 @@ a {
   justify-content: center;
   padding-bottom: 40px;
 }
+.restaurants main .container-like {
+  right: 40px;
+  bottom: 10px;
+}
 .restaurants footer {
   padding-left: 18px;
-}
-.restaurants .restaurant-title {
-  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

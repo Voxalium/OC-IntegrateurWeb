@@ -71,38 +71,9 @@
         article {
             margin-bottom: 18px;
         }
-    }
-    footer {
-        font-weight: 400;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        background-color: $grey;
-        padding-top: 22px;
-        padding-bottom: 22px;
-        gap: 7px;
-        .bold {
-            font-weight: 500;
-        }
-        a {
-            display: flex;
-            align-items: center;
-            font-weight: 400;
-
-            img {
-                margin-right: 11px;
-            }
-            .couvert {
-                width: 11px;
-                height: 13px;
-            }
-            .hand {
-                width: 12px;
-                height: 13px;
-            }
-        }
-        p {
-            color: white;
+        .container-like {
+            right: 25px;
+            bottom: 33px;
         }
     }
 }
