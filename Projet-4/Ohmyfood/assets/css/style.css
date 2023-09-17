@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+@keyframes opacityFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .button {
   display: flex;
   text-align: center;
@@ -8,6 +16,7 @@
   color: white;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .button:hover {
   opacity: 0.85;
@@ -21,11 +30,13 @@
   height: 50px;
 }
 
-.card-fonctionnement {
+.card {
   background-color: #f6f6f6;
   border-radius: 20px;
   height: 72px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.card-fonctionnement {
   display: flex;
   align-items: center;
 }
@@ -45,23 +56,130 @@
   justify-content: center;
   align-items: center;
 }
-.card-fonctionnement .card-fonctionnement-content {
-  padding: 0;
+.card-fonctionnement-content {
   padding: 0 10px;
-  display: flex;
-  flex-direction: row;
+  font-weight: 500;
 }
-.card-fonctionnement .card-fonctionnement-content .icon-tel {
+.card-fonctionnement-content .icon-tel {
   width: 13px;
   height: 20px;
 }
-.card-fonctionnement .card-fonctionnement-content .icon-menu {
+.card-fonctionnement-content .icon-menu {
   width: 16px;
   height: 16px;
 }
-.card-fonctionnement .card-fonctionnement-content .icon-resto {
+.card-fonctionnement-content .icon-resto {
   width: 18px;
   height: 18px;
+}
+.card-menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  padding: 15px;
+  height: 42px;
+  width: 100%;
+  transition: border-radius 1.5s;
+}
+.card-menu h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.card-menu p {
+  font-size: 15px;
+  font-weight: 300;
+  bottom: 15px;
+}
+.card-menu h3,
+.card-menu p {
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+.card-menu:hover {
+  border-radius: 20px 0 0 20px;
+  transition: border-radius 0s;
+}
+.card-menu:hover .validate {
+  display: flex;
+}
+.card-menu .menu-prix {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.card-restaurants {
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+.card-restaurants img {
+  object-fit: cover;
+  height: 231px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.card-restaurants span {
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  color: #008766;
+  height: 30px;
+  width: 80px;
+}
+.card-restaurants-content {
+  position: relative;
+  padding: 16px 0 12px 13px;
+}
+.card-restaurants-content p {
+  font-weight: 300;
+  padding-top: 5px;
+  font-size: 17px;
+}
+
+.container-like {
+  position: absolute;
+}
+.container-like .like {
+  cursor: pointer;
+  width: 22px;
+  height: 21px;
+  background-image: url("/Projet-4/Ohmyfood/assets/images/icons/like.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.container-like input {
+  display: none;
+}
+.container-like input:checked ~ .like {
+  background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
+  animation: opacityFade 0.5s ease-out;
+}
+
+.validate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0px;
+  height: 72px;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  transition: visibility 0;
+}
+.validate span {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 * {
@@ -84,42 +202,76 @@ h4 {
   font-size: 18px;
 }
 
+p,
+h3 {
+  color: black;
+}
+
 a {
   text-decoration: none;
 }
 
-img {
-  width: 300px;
+footer {
+  font-weight: 400;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  gap: 7px;
+}
+footer .bold {
+  font-weight: 500;
+}
+footer a {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+footer a img {
+  margin-right: 11px;
+}
+footer a .couvert {
+  width: 11px;
+  height: 13px;
+}
+footer a .hand {
+  width: 12px;
+  height: 13px;
+}
+footer p {
+  color: white;
 }
 
-body header {
+.home header {
   text-align: center;
 }
-body header h1 {
+.home header h1 {
   padding-top: 14px;
   padding-bottom: 5px;
 }
-body header .location {
+.home header .location {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #eaeaea;
   height: 50px;
 }
-body header .location img {
+.home header .location img {
   width: 12px;
   height: 16px;
   margin-right: 17px;
 }
-body header .location span {
+.home header .location span {
   display: flex;
   align-items: center;
 }
-body main > * {
+.home main > * {
   padding-left: 18px;
   padding-right: 18px;
 }
-body .reservation {
+.home .reservation {
   text-align: center;
   background-color: #f6f6f6;
   display: flex;
@@ -128,33 +280,121 @@ body .reservation {
   padding: 40px 25px 60px 25px;
   margin-bottom: 48px;
 }
-body .reservation p {
+.home .reservation p {
   padding: 25px 0;
   font-weight: 300;
 }
-body .restaurants {
-  background-color: #f6f6f6;
+.home .fonctionnement {
+  padding-bottom: 68px;
 }
-body .fonctionnement h2 {
+.home .fonctionnement h2 {
   padding-bottom: 26px;
 }
-body .fonctionnement div {
+.home .fonctionnement div {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding-bottom: 68px;
 }
-body .fonctionnement div .card-fonctionnement {
+.home .fonctionnement div .card-fonctionnement {
   margin-left: 15px;
 }
-body footer {
+.home .fonctionnement div .card-fonctionnement-content {
+  flex-direction: row;
+}
+.home .restaurants {
+  background-color: #f6f6f6;
+  padding-bottom: 66px;
+}
+.home .restaurants h2 {
+  padding-top: 54px;
+  margin-bottom: 25px;
+}
+.home .restaurants article {
+  margin-bottom: 18px;
+}
+.home .restaurants .container-like {
+  right: 25px;
+  bottom: 33px;
+}
+
+.restaurants header {
+  text-align: center;
+  position: relative;
+}
+.restaurants header h1 {
+  padding-top: 14px;
+  padding-bottom: 5px;
+}
+.restaurants header img {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+}
+.restaurants .img-border {
+  position: relative;
+}
+.restaurants .img-border img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+.restaurants .img-border .border {
+  background-color: #f3f3f3;
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+.restaurants main > * {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.restaurants main {
+  background-color: #f3f3f3;
+}
+.restaurants main .restaurants-title {
+  position: relative;
+  margin-top: 0;
+  padding: 0;
+  padding-left: 18px;
+}
+.restaurants main h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: 2px solid #99e2d0;
+  width: 40px;
+  height: 27px;
+}
+.restaurants main section {
+  margin-top: 40px;
+}
+.restaurants main article {
+  margin-top: 12px;
+}
+.restaurants main section article {
   display: flex;
-  flex-direction: column;
-  color: white;
-  background-color: #353535;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  gap: 7px;
+}
+.restaurants main section .validate {
+  transition: width 0.5s;
+}
+.restaurants main section article:hover .validate {
+  width: 68px;
+}
+.restaurants main .restaurants-commander {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.restaurants main .container-like {
+  right: 40px;
+  bottom: 10px;
+}
+.restaurants footer {
+  padding-left: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

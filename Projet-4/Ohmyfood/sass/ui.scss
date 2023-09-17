@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./anim.scss";
 
 .button {
     display: flex;
@@ -9,6 +10,7 @@
     color: white;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     &:hover {
         opacity: 0.85;
     }
@@ -22,49 +24,162 @@
         height: 50px;
     }
 }
-
-.card-fonctionnement {
+.card {
     background-color: $bgColor2;
     border-radius: 20px;
     height: 72px;
     box-shadow: 0px 4px 15px 0px #00000026;
-    display: flex;
-    align-items: center;
-    .number {
-        transform: translateX(-50%);
-        color: white;
-        background-color: $primary;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        span {
-            height: 100%;
-            font-size: 14px;
-            font-style: normal;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    &-fonctionnement {
+        display: flex;
+        align-items: center;
+        .number {
+            transform: translateX(-50%);
+            color: white;
+            background-color: $primary;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            span {
+                height: 100%;
+                font-size: 14px;
+                font-style: normal;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &-content {
+            padding: 0 10px;
+            font-weight: 500;
+
+            .icon {
+                &-tel {
+                    width: 13px;
+                    height: 20px;
+                }
+                &-menu {
+                    width: 16px;
+                    height: 16px;
+                }
+                &-resto {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
         }
     }
-    .card-fonctionnement-content {
-        padding: 0;
-        padding: 0 10px;
+    &-menu {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        padding: 15px;
+        height: 42px;
+        width: 100%;
+        transition: border-radius 1.5s;
 
-        .icon {
-            &-tel {
-                width: 13px;
-                height: 20px;
-            }
-            &-menu {
-                width: 16px;
-                height: 16px;
-            }
-            &-resto {
-                width: 18px;
-                height: 18px;
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 300;
+            bottom: 15px;
+        }
+        h3,
+        p {
+            position: absolute;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 80%;
+        }
+        &:hover {
+            border-radius: 20px 0 0 20px;
+            transition: border-radius 0s;
+        }
+        &:hover .validate {
+            display: flex;
+        }
+        .menu-prix {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+
+    &-restaurants {
+        background-color: white;
+        border-radius: 15px;
+        position: relative;
+        img {
+            object-fit: cover;
+            height: 231px;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+        span {
+            display: flex;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiary;
+            color: $green-font;
+            height: 30px;
+            width: 80px;
+        }
+
+        &-content {
+            position: relative;
+            padding: 16px 0 12px 13px;
+            p {
+                font-weight: 300;
+                padding-top: 5px;
+                font-size: 17px;
             }
         }
+    }
+}
+
+.container-like {
+    position: absolute;
+
+    .like {
+        cursor: pointer;
+        width: 22px;
+        height: 21px;
+        background-image: url("/Projet-4/Ohmyfood/assets/images/icons/like.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ .like {
+        background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
+
+        animation: opacityFade 0.5s ease-out;
+    }
+}
+.validate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    height: 72px;
+    background-color: $tertiary;
+    border-radius: 0 20px 20px 0;
+    transition: visibility 0;
+
+    span {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
     }
 }
