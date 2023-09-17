@@ -10,6 +10,7 @@
     color: white;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     &:hover {
         opacity: 0.85;
     }
@@ -49,6 +50,7 @@
         }
         &-content {
             padding: 0 10px;
+            font-weight: 500;
 
             .icon {
                 &-tel {
@@ -69,10 +71,13 @@
     &-menu {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         position: relative;
+        justify-content: space-between;
         padding: 15px;
         height: 42px;
+        width: 100%;
+        transition: border-radius 1.5s;
+
         h3 {
             font-size: 18px;
             font-weight: 500;
@@ -80,46 +85,63 @@
         p {
             font-size: 15px;
             font-weight: 300;
+            bottom: 15px;
+        }
+        h3,
+        p {
+            position: absolute;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 80%;
+        }
+        &:hover {
+            border-radius: 20px 0 0 20px;
+            transition: border-radius 0s;
+        }
+        &:hover .validate {
+            display: flex;
         }
         .menu-prix {
             position: absolute;
-            right: 16px;
+            right: 15px;
             bottom: 15px;
             font-size: 15px;
             font-weight: 700;
         }
     }
-}
 
-.card-restaurants {
-    background-color: white;
-    border-radius: 15px;
-    position: relative;
-    img {
-        object-fit: cover;
-        height: 231px;
-        width: 100%;
-        border-radius: 15px 15px 0 0;
-    }
-    span {
-        display: flex;
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        align-items: center;
-        justify-content: center;
-        background-color: $tertiary;
-        color: $green-font;
-        height: 30px;
-        width: 80px;
-    }
-
-    &-content {
+    &-restaurants {
+        background-color: white;
+        border-radius: 15px;
         position: relative;
-        padding: 16px 0 12px 13px;
-        p {
-            font-weight: 300;
-            padding-top: 5px;
+        img {
+            object-fit: cover;
+            height: 231px;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+        span {
+            display: flex;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiary;
+            color: $green-font;
+            height: 30px;
+            width: 80px;
+        }
+
+        &-content {
+            position: relative;
+            padding: 16px 0 12px 13px;
+            p {
+                font-weight: 300;
+                padding-top: 5px;
+                font-size: 17px;
+            }
         }
     }
 }
@@ -142,5 +164,22 @@
         background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
 
         animation: opacityFade 0.5s ease-out;
+    }
+}
+.validate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    height: 72px;
+    background-color: $tertiary;
+    border-radius: 0 20px 20px 0;
+    transition: visibility 0;
+
+    span {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
     }
 }

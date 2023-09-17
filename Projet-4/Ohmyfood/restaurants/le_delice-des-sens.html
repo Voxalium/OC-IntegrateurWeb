@@ -6,22 +6,29 @@
         <link rel="stylesheet" href="../assets/css/style.css" />
         <title>Ohmyfood | Le delice des sens</title>
     </head>
-    <body>
+    <body class="restaurants">
         <header>
-            <a href="../index.html"><i>Left Arrow</i></a>
-
-            <img src="../assets/images/logo/ohmyfood.png" alt="" />
+            <a href="../index.html"
+                ><img src="../assets/images/icons/arrow.png" alt="icon arrow"
+            /></a>
+            <h1>ohmyfood</h1>
+        </header>
+        <div class="img-border">
             <img
                 src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt=""
             />
-        </header>
+            <div class="border"></div>
+        </div>
 
         <main>
             <!-- Restaurant -->
-            <section>
+            <section class="restaurants-title">
                 <h1>Le delice des sens</h1>
-                <i>Coeur</i>
+                <label class="container-like">
+                    <input type="checkbox" />
+                    <div class="like"></div>
+                </label>
             </section>
 
             <!-- Entrées -->
@@ -29,19 +36,28 @@
                 <h2>Entrées</h2>
 
                 <article>
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
-                    <p>25€</p>
+                    <div class="card card-menu">
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                        <p class="menu-prix">25€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
                 <article>
-                    <h3>Bouchée de homard croustillant</h3>
-                    <p>Et sa farandole de petits légumes</p>
-                    <p>35€</p>
+                    <div class="card card-menu">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p>Et sa farandole de petits légumes</p>
+                        <p class="menu-prix">35€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
                 <article>
-                    <h3>Velouté de cèpes</h3>
-                    <p>Aux truffes</p>
-                    <p>20€</p>
+                    <div class="card card-menu">
+                        <h3>Velouté de cèpes</h3>
+                        <p>Aux truffes</p>
+                        <p class="menu-prix">20€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
             </section>
 
@@ -49,19 +65,29 @@
             <section>
                 <h2>Plats</h2>
                 <article>
-                    <h3>Poulet rôti aux herbes de Provence</h3>
-                    <p>Et sa crème de truffe</p>
-                    <p>40€</p>
+                    <div class="card card-menu">
+                        <h3>Poulet rôti aux herbes de Provence</h3>
+                        <p>Et sa crème de truffe</p>
+                        <p class="menu-prix">40€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
+                </article>
+
+                <article>
+                    <div class="card card-menu">
+                        <h3>Langouste rôtie</h3>
+                        <p>Et ses légumes de saison</p>
+                        <p class="menu-prix">35€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
                 <article>
-                    <h3>Langouste rôtie</h3>
-                    <p>Et ses légumes de saison</p>
-                    <p>35€</p>
-                </article>
-                <article>
-                    <h3>Côte de bœuf Angus</h3>
-                    <p>Et sa purée de panais</p>
-                    <p>44€</p>
+                    <div class="card card-menu">
+                        <h3>Côte de bœuf Angus</h3>
+                        <p>Et sa purée de panais</p>
+                        <p class="menu-prix">44€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
             </section>
 
@@ -69,25 +95,34 @@
             <section>
                 <h2>Dessert</h2>
                 <article>
-                    <h3>Farandole de desserts</h3>
-                    <p>Du chef</p>
-                    <p>18€</p>
+                    <div class="card card-menu">
+                        <h3>Farandole de desserts</h3>
+                        <p>Du chef</p>
+                        <p class="menu-prix">18€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
                 <article>
-                    <h3>Crème brulée</h3>
-                    <p>Revisitée</p>
-                    <p>22€</p>
+                    <div class="card card-menu">
+                        <h3>Crème brulée</h3>
+                        <p>Revisitée</p>
+                        <p class="menu-prix">22€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
                 <article>
-                    <h3>Tiramisu</h3>
-                    <p>À la noisette</p>
-                    <p>23€</p>
+                    <div class="card card-menu">
+                        <h3>Tiramisu</h3>
+                        <p>À la noisette</p>
+                        <p class="menu-prix">23€</p>
+                    </div>
+                    <div class="validate"><span></span></div>
                 </article>
             </section>
 
             <!-- CTA -->
-            <section>
-                <div>Commander</div>
+            <section class="restaurants-commander">
+                <a class="button button-commander" href="#">Commander</a>
             </section>
         </main>
 
