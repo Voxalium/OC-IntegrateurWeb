@@ -219,15 +219,20 @@ footer {
   background-color: #353535;
   padding-top: 22px;
   padding-bottom: 22px;
+  padding-left: 18px;
   gap: 7px;
 }
 footer .bold {
   font-weight: 500;
 }
+footer h4 {
+  padding-bottom: 16px;
+}
 footer a {
   display: flex;
   align-items: center;
   font-weight: 400;
+  line-height: 1.8;
 }
 footer a img {
   margin-right: 11px;
@@ -393,8 +398,57 @@ footer p {
   right: 40px;
   bottom: 10px;
 }
-.restaurants footer {
-  padding-left: 18px;
+
+@media (min-width: 1235px) {
+  .home header h1 {
+    padding: 30px 0 32px 0;
+  }
+  .home .reservation {
+    padding: 30px;
+  }
+  .home .reservation h2 {
+    font-size: 40px;
+  }
+  .home .reservation p {
+    padding: 18px 0;
+  }
+  .home .fonctionnement {
+    padding-bottom: 50px;
+    padding-right: 180px;
+    padding-left: 180px;
+  }
+  .home .fonctionnement .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .home .fonctionnement .container .card-fonctionnement {
+    width: 100%;
+  }
+  .home .restaurants {
+    padding-right: 180px;
+    padding-left: 180px;
+  }
+  .home .restaurants .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
+  .home footer {
+    height: 114px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .home footer h4 {
+    padding: 0;
+    margin: 0;
+  }
+  .home footer .footer-content {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
