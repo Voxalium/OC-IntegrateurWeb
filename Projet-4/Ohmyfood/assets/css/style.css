@@ -182,6 +182,20 @@
   border-radius: 50%;
 }
 
+.border {
+  background-color: #f3f3f3;
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+@media (min-width: 1235px) {
+  .border {
+    max-width: 1091px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -209,6 +223,7 @@ h3 {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 footer {
@@ -247,6 +262,21 @@ footer a .hand {
 }
 footer p {
   color: white;
+}
+@media (min-width: 1235px) {
+  footer {
+    padding-right: 100px;
+  }
+  footer .icon-footer {
+    display: flex;
+    margin-right: 50px;
+    gap: 10px;
+  }
+  footer .link-footer {
+    display: flex;
+    margin-right: 100px;
+    gap: 20px;
+  }
 }
 
 .home header {
@@ -339,34 +369,29 @@ footer p {
 }
 .restaurants .img-border {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .restaurants .img-border img {
   width: 100%;
   height: 275px;
   object-fit: cover;
 }
-.restaurants .img-border .border {
-  background-color: #f3f3f3;
-  height: 32px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-radius: 30px 30px 0 0;
-}
 .restaurants main > * {
   padding-left: 18px;
   padding-right: 18px;
 }
-.restaurants main {
+.restaurants main .container {
   background-color: #f3f3f3;
 }
-.restaurants main .restaurants-title {
+.restaurants main .container .restaurants-title {
   position: relative;
   margin-top: 0;
   padding: 0;
   padding-left: 18px;
 }
-.restaurants main h2 {
+.restaurants main .container h2 {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 16px;
@@ -374,27 +399,27 @@ footer p {
   width: 40px;
   height: 27px;
 }
-.restaurants main section {
+.restaurants main .container section {
   margin-top: 40px;
 }
-.restaurants main article {
+.restaurants main .container article {
   margin-top: 12px;
 }
-.restaurants main section article {
+.restaurants main .container section article {
   display: flex;
 }
-.restaurants main section .validate {
+.restaurants main .container section .validate {
   transition: width 0.5s;
 }
-.restaurants main section article:hover .validate {
+.restaurants main .container section article:hover .validate {
   width: 68px;
 }
-.restaurants main .restaurants-commander {
+.restaurants main .container .restaurants-commander {
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
 }
-.restaurants main .container-like {
+.restaurants main .container .container-like {
   right: 40px;
   bottom: 10px;
 }
@@ -414,11 +439,17 @@ footer p {
   }
   .home .fonctionnement {
     padding-bottom: 50px;
-    padding-right: 180px;
-    padding-left: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .fonctionnement h2 {
+    width: 100%;
+    max-width: 1080px;
   }
   .home .fonctionnement .container {
     width: 100%;
+    max-width: 1080px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -427,14 +458,26 @@ footer p {
     width: 100%;
   }
   .home .restaurants {
-    padding-right: 180px;
-    padding-left: 180px;
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .restaurants h2 {
+    width: 100%;
+    max-width: 1080px;
   }
   .home .restaurants .container {
+    max-width: 1080px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
     row-gap: 50px;
+  }
+  .home .restaurants .container .card-restaurants {
+    margin: 0;
   }
   .home footer {
     height: 114px;
@@ -447,6 +490,51 @@ footer p {
     margin: 0;
   }
   .home footer .footer-content {
+    display: flex;
+  }
+}
+@media (min-width: 1235px) {
+  .restaurants header h1 {
+    padding: 24px;
+  }
+  .restaurants header img {
+    top: 34px;
+  }
+  .restaurants main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restaurants main .container {
+    max-width: 1055px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurants main .container h1 {
+    width: 100%;
+  }
+  .restaurants main .container .content {
+    max-width: 640px;
+    width: 100%;
+  }
+  .restaurants main .container-like {
+    left: 270px;
+    bottom: 10px;
+  }
+  .restaurants footer {
+    height: 114px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurants footer h4 {
+    padding: 0;
+    margin: 0;
+  }
+  .restaurants footer .footer-content {
     display: flex;
   }
 }

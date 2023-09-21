@@ -25,6 +25,7 @@ h3 {
 }
 a {
     text-decoration: none;
+    color: white;
 }
 
 footer {
@@ -65,9 +66,23 @@ footer {
     p {
         color: white;
     }
+    @media (min-width: 1235px) {
+        .icon-footer {
+            display: flex;
+            margin-right: 50px;
+            gap: 10px;
+        }
+        .link-footer {
+            display: flex;
+            margin-right: 100px;
+            gap: 20px;
+        }
+        padding-right: 100px;
+    }
 }
 
 //Page
 @import "./pages/home.scss";
 @import "./pages/restaurants.scss";
 @import "./pages/home_desktop.scss";
+@import "./pages/restaurants_desktop.scss";

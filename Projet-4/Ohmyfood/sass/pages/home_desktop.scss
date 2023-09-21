@@ -16,10 +16,16 @@
         }
         .fonctionnement {
             padding-bottom: 50px;
-            padding-right: 180px;
-            padding-left: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                width: 100%;
+                max-width: 1080px;
+            }
             .container {
                 width: 100%;
+                max-width: 1080px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -29,13 +35,26 @@
             }
         }
         .restaurants {
-            padding-right: 180px;
-            padding-left: 180px;
+            width: 100%;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                width: 100%;
+                max-width: 1080px;
+            }
             .container {
+                max-width: 1080px;
+                width: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 column-gap: 100px;
                 row-gap: 50px;
+                .card-restaurants {
+                    margin: 0;
+                }
             }
         }
         footer {
