@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 @import "./variables.scss";
 @import "./ui.scss";
 
@@ -25,8 +24,11 @@ h3 {
 }
 a {
     text-decoration: none;
+    color: white;
 }
-
+.mouse-pointer:hover {
+    cursor: pointer;
+}
 footer {
     font-weight: 400;
     color: white;
@@ -35,14 +37,20 @@ footer {
     background-color: $grey;
     padding-top: 22px;
     padding-bottom: 22px;
+    padding-left: 18px;
+
     gap: 7px;
     .bold {
         font-weight: 500;
+    }
+    h4 {
+        padding-bottom: 16px;
     }
     a {
         display: flex;
         align-items: center;
         font-weight: 400;
+        line-height: 1.8;
 
         img {
             margin-right: 11px;
@@ -59,8 +67,23 @@ footer {
     p {
         color: white;
     }
+    @media (min-width: 1235px) {
+        .icon-footer {
+            display: flex;
+            margin-right: 50px;
+            gap: 10px;
+        }
+        .link-footer {
+            display: flex;
+            margin-right: 100px;
+            gap: 20px;
+        }
+        padding-right: 100px;
+    }
 }
 
 //Page
-@import "./home.scss";
-@import "./restaurants.scss";
+@import "./pages/home.scss";
+@import "./pages/restaurants.scss";
+@import "./pages/home_desktop.scss";
+@import "./pages/restaurants_desktop.scss";

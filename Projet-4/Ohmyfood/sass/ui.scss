@@ -11,8 +11,10 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: all 500ms;
     &:hover {
         opacity: 0.85;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
 
     &-restaurant {
@@ -145,7 +147,6 @@
         }
     }
 }
-
 .container-like {
     position: absolute;
 
@@ -162,8 +163,7 @@
     }
     input:checked ~ .like {
         background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
-
-        animation: opacityFade 0.5s ease-out;
+        animation: opacityFade 0.5s;
     }
 }
 .validate {
@@ -182,4 +182,98 @@
         background-color: white;
         border-radius: 50%;
     }
+}
+.border {
+    background-color: $bgColor;
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    @media (min-width: 1235px) {
+        max-width: 1091px;
+    }
+}
+
+//LOADER
+.div-loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $grey2;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    animation: display 2s linear forwards;
+    animation-timing-function: steps(1, end);
+    .container {
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px;
+        .loader {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 5px solid $primary;
+            border-bottom-color: $secondary;
+            border-radius: 50%;
+            box-sizing: border-box;
+            animation: rotation 1.5s linear infinite;
+        }
+        .letters {
+            margin-top: 10px;
+            font-size: 2em;
+
+            .l-1 {
+                animation: letters $delay linear infinite;
+                animation-delay: 0s;
+            }
+            .l-2 {
+                animation: letters $delay linear infinite;
+                animation-delay: 0.2s;
+            }
+            .l-3 {
+                animation: letters $delay linear infinite;
+                animation-delay: 0.4s;
+            }
+            .l-4 {
+                animation: letters $delay linear infinite;
+                animation-delay: 0.6s;
+            }
+            .l-5 {
+                animation: letters $delay linear infinite;
+                animation-delay: 0.8s;
+            }
+            .l-6 {
+                animation: letters $delay linear infinite;
+                animation-delay: 1s;
+            }
+            .l-7 {
+                animation: letters $delay linear infinite;
+                animation-delay: 1.2s;
+            }
+            .l-8 {
+                animation: letters $delay linear infinite;
+                animation-delay: 1.4s;
+            }
+
+            & > * {
+                font-family: Shrikhand;
+            }
+        }
+    }
+}
+
+.restaurants-entrees {
+    animation: opacityFade 1s;
+}
+.restaurants-plats > * {
+    animation: opacityFade 2s;
+}
+.restaurants-desserts > * {
+    animation: opacityFade 3s;
 }

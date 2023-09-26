@@ -3,10 +3,32 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="assets/css/style.css" />
         <title>Ohmyfood | Home</title>
     </head>
     <body class="home">
+        <div class="div-loader">
+            <div class="container">
+                <span class="loader"></span>
+                <div class="letters">
+                    <span class="l-1">O</span>
+                    <span class="l-2">h</span>
+                    <span class="l-3">m</span>
+                    <span class="l-4">y</span>
+                    <span class="l-5">f</span>
+                    <span class="l-6">o</span>
+                    <span class="l-7">o</span>
+                    <span class="l-8">d</span>
+                </div>
+            </div>
+        </div>
+
         <header>
             <h1>ohmyfood</h1>
             <div class="location">
@@ -33,7 +55,7 @@
             <!-- Fonctionnement -->
             <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
-                <div>
+                <div class="container">
                     <article class="card card-fonctionnement">
                         <i class="number"><span>1</span></i>
                         <div class="card-fonctionnement-content">
@@ -42,7 +64,7 @@
                                 src="assets/images/icons/mobile-screen-button.png"
                                 alt="icon telephone"
                             />
-                            <p>Choissisez un restaurant</p>
+                            <p>Choisissez un restaurant</p>
                         </div>
                     </article>
                     <article class="card card-fonctionnement">
@@ -74,7 +96,7 @@
             <!-- Restaurants -->
             <section id="restaurants" class="restaurants">
                 <h2>Restaurants</h2>
-                <div>
+                <div class="container">
                     <article class="card-restaurants">
                         <a href="restaurants/la_palette_du_gout.html">
                             <img
@@ -130,7 +152,7 @@
                     </article>
 
                     <article class="card-restaurants">
-                        <a href="restaurants/le_delice-des-sens.html">
+                        <a href="restaurants/le_delice_des_sens.html">
                             <img
                                 src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                 alt=""
@@ -147,29 +169,33 @@
                     </article>
                 </div>
             </section>
-
-            <footer>
-                <h4>ohmyfood</h4>
-
-                <a>
-                    <img
-                        class="couvert"
-                        src="assets/images/icons/couvert.png"
-                        alt="icone couvert"
-                    />
-                    <p class="bold">Proposer un restaurant</p>
-                </a>
-                <a>
-                    <img
-                        class="hand"
-                        src="assets/images/icons/hand.png"
-                        alt="icone main"
-                    />
-                    <p class="bold">Devenir partenaire</p>
-                </a>
-                <a>Mentions légales</a>
-                <a>Contact</a>
-            </footer>
         </main>
+        <footer>
+            <h4>ohmyfood</h4>
+            <div class="footer-content">
+                <section class="icon-footer">
+                    <a href="#">
+                        <img
+                            class="couvert"
+                            src="assets/images/icons/couvert.png"
+                            alt="icone couvert"
+                        />
+                        <p class="bold">Proposer un restaurant</p>
+                    </a>
+                    <a href="#">
+                        <img
+                            class="hand"
+                            src="assets/images/icons/hand.png"
+                            alt="icone main"
+                        />
+                        <p class="bold">Devenir partenaire</p>
+                    </a>
+                </section>
+                <section class="link-footer">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Contact</a>
+                </section>
+            </div>
+        </footer>
     </body>
 </html>
