@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <title>Ohmyfood | Le delice des sens</title>
     </head>
@@ -33,11 +39,11 @@
                 </section>
                 <div class="content">
                     <!-- Entrées -->
-                    <section>
+                    <section class="restaurants-entrees">
                         <h2>Entrées</h2>
 
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Tartare de thon</h3>
                                 <p>Assaisonné au yuzu</p>
                                 <p class="menu-prix">25€</p>
@@ -48,7 +54,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Bouchée de homard croustillant</h3>
                                 <p>Et sa farandole de petits légumes</p>
                                 <p class="menu-prix">35€</p>
@@ -59,7 +65,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Velouté de cèpes</h3>
                                 <p>Aux truffes</p>
                                 <p class="menu-prix">20€</p>
@@ -72,10 +78,10 @@
                     </section>
 
                     <!-- Plats -->
-                    <section>
+                    <section class="restaurants-plats">
                         <h2>Plats</h2>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Poulet rôti aux herbes de Provence</h3>
                                 <p>Et sa crème de truffe</p>
                                 <p class="menu-prix">40€</p>
@@ -87,7 +93,7 @@
                         </article>
 
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Langouste rôtie</h3>
                                 <p>Et ses légumes de saison</p>
                                 <p class="menu-prix">35€</p>
@@ -98,7 +104,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Côte de bœuf Angus</h3>
                                 <p>Et sa purée de panais</p>
                                 <p class="menu-prix">44€</p>
@@ -111,10 +117,10 @@
                     </section>
 
                     <!-- Desserts -->
-                    <section>
+                    <section class="restaurants-desserts">
                         <h2>Dessert</h2>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Farandole de desserts</h3>
                                 <p>Du chef</p>
                                 <p class="menu-prix">18€</p>
@@ -125,7 +131,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Crème brulée</h3>
                                 <p>Revisitée</p>
                                 <p class="menu-prix">22€</p>
@@ -136,7 +142,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Tiramisu</h3>
                                 <p>À la noisette</p>
                                 <p class="menu-prix">23€</p>
@@ -160,25 +166,30 @@
 
         <footer>
             <h4>ohmyfood</h4>
-
-            <a>
-                <img
-                    class="couvert"
-                    src="../assets/images/icons/couvert.png"
-                    alt="icone couvert"
-                />
-                <p class="bold">Proposer un restaurant</p>
-            </a>
-            <a>
-                <img
-                    class="hand"
-                    src="../assets/images/icons/hand.png"
-                    alt="icone main"
-                />
-                <p class="bold">Devenir partenaire</p>
-            </a>
-            <a>Mentions légales</a>
-            <a>Contact</a>
+            <div class="footer-content">
+                <section class="icon-footer">
+                    <a href="#">
+                        <img
+                            class="couvert"
+                            src="../assets/images/icons/couvert.png"
+                            alt="icone couvert"
+                        />
+                        <p class="bold">Proposer un restaurant</p>
+                    </a>
+                    <a href="#">
+                        <img
+                            class="hand"
+                            src="../assets/images/icons/hand.png"
+                            alt="icone main"
+                        />
+                        <p class="bold">Devenir partenaire</p>
+                    </a>
+                </section>
+                <section class="link-footer">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Contact</a>
+                </section>
+            </div>
         </footer>
     </body>
 </html>

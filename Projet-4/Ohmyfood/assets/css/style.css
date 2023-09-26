@@ -1,10 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 @keyframes opacityFade {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes letters {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+@keyframes display {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .button {
@@ -17,9 +41,11 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 500ms;
 }
 .button:hover {
   opacity: 0.85;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 .button-restaurant {
   width: 218px;
@@ -162,7 +188,7 @@
 }
 .container-like input:checked ~ .like {
   background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
-  animation: opacityFade 0.5s ease-out;
+  animation: opacityFade 0.5s;
 }
 
 .validate {
@@ -196,6 +222,87 @@
   }
 }
 
+.div-loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  text-align: center;
+  animation: display 2s linear forwards;
+  animation-timing-function: steps(1, end);
+}
+.div-loader .container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+.div-loader .container .loader {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #9356dc;
+  border-bottom-color: #ff79da;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1.5s linear infinite;
+}
+.div-loader .container .letters {
+  margin-top: 10px;
+  font-size: 2em;
+}
+.div-loader .container .letters .l-1 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 0s;
+}
+.div-loader .container .letters .l-2 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 0.2s;
+}
+.div-loader .container .letters .l-3 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 0.4s;
+}
+.div-loader .container .letters .l-4 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 0.6s;
+}
+.div-loader .container .letters .l-5 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 0.8s;
+}
+.div-loader .container .letters .l-6 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 1s;
+}
+.div-loader .container .letters .l-7 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 1.2s;
+}
+.div-loader .container .letters .l-8 {
+  animation: letters 1.6s linear infinite;
+  animation-delay: 1.4s;
+}
+.div-loader .container .letters > * {
+  font-family: Shrikhand;
+}
+
+.restaurants-entrees {
+  animation: opacityFade 1s;
+}
+
+.restaurants-plats > * {
+  animation: opacityFade 2s;
+}
+
+.restaurants-desserts > * {
+  animation: opacityFade 3s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -224,6 +331,10 @@ h3 {
 a {
   text-decoration: none;
   color: white;
+}
+
+.mouse-pointer:hover {
+  cursor: pointer;
 }
 
 footer {

@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <title>Ohmyfood | À la française</title>
     </head>
@@ -33,11 +39,11 @@
                 </section>
                 <div class="content">
                     <!-- Entrées -->
-                    <section>
+                    <section class="restaurants-entrees">
                         <h2>Entrées</h2>
 
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Tartare de poulpe acidulé</h3>
                                 <p>Aux zestes d'orange</p>
                                 <p class="menu-prix">25€</p>
@@ -48,7 +54,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Velouté de légumes d'antan</h3>
                                 <p>Carotte, panais, topinambour</p>
                                 <p class="menu-prix">35€</p>
@@ -59,7 +65,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Soupe à l'oignon</h3>
                                 <p>Revisitée</p>
                                 <p class="menu-prix">20€</p>
@@ -72,10 +78,10 @@
                     </section>
 
                     <!-- Plats -->
-                    <section>
+                    <section class="restaurants-plats">
                         <h2>Plats</h2>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Coquilles Saint-Jacques</h3>
                                 <p>Accompagnées d'une purée de panais</p>
                                 <p class="menu-prix">40€</p>
@@ -86,7 +92,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Magret de canard</h3>
                                 <p>Et parmentier de pommes de terre</p>
                                 <p class="menu-prix">35€</p>
@@ -97,7 +103,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                                 <p>Sur son lit de gnocchis aux légumes</p>
                                 <p class="menu-prix">44€</p>
@@ -110,10 +116,10 @@
                     </section>
 
                     <!-- Desserts -->
-                    <section>
+                    <section class="restaurants-desserts">
                         <h2>Dessert</h2>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Pétales de violettes glacés</h3>
                                 <p>Et purée de noisettes</p>
                                 <p class="menu-prix">18€</p>
@@ -124,7 +130,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Fondant au chocolat</h3>
                                 <p>Revisité</p>
                                 <p class="menu-prix">22€</p>
@@ -135,7 +141,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Millefeuille croustillant</h3>
                                 <p>Myrtilles et pâte d’amande</p>
                                 <p class="menu-prix">23€</p>
@@ -159,25 +165,30 @@
 
         <footer>
             <h4>ohmyfood</h4>
-
-            <a>
-                <img
-                    class="couvert"
-                    src="../assets/images/icons/couvert.png"
-                    alt="icone couvert"
-                />
-                <p class="bold">Proposer un restaurant</p>
-            </a>
-            <a>
-                <img
-                    class="hand"
-                    src="../assets/images/icons/hand.png"
-                    alt="icone main"
-                />
-                <p class="bold">Devenir partenaire</p>
-            </a>
-            <a>Mentions légales</a>
-            <a>Contact</a>
+            <div class="footer-content">
+                <section class="icon-footer">
+                    <a href="#">
+                        <img
+                            class="couvert"
+                            src="../assets/images/icons/couvert.png"
+                            alt="icone couvert"
+                        />
+                        <p class="bold">Proposer un restaurant</p>
+                    </a>
+                    <a href="#">
+                        <img
+                            class="hand"
+                            src="../assets/images/icons/hand.png"
+                            alt="icone main"
+                        />
+                        <p class="bold">Devenir partenaire</p>
+                    </a>
+                </section>
+                <section class="link-footer">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Contact</a>
+                </section>
+            </div>
         </footer>
     </body>
 </html>

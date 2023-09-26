@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <title>Ohmyfood | La note enchantée</title>
     </head>
@@ -36,7 +42,7 @@
                         <h2>Entrées</h2>
 
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Ravioles de foie gras</h3>
                                 <p>Accompagnées de leur crème à la truffe</p>
                                 <p class="menu-prix">25€</p>
@@ -47,7 +53,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Caviar osciètre</h3>
                                 <p>Sur blini à la farine de blé noir</p>
                                 <p class="menu-prix">35€</p>
@@ -58,7 +64,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Homard et espuma de potiron</h3>
                                 <p>Marinés aux zestes d'orange</p>
                                 <p class="menu-prix">20€</p>
@@ -69,7 +75,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Foie gras de canard cuit entier</h3>
                                 <p>Confiture de figue et pain toasté</p>
                                 <p class="menu-prix">35€</p>
@@ -82,10 +88,10 @@
                     </section>
 
                     <!-- Plats -->
-                    <section>
+                    <section class="restaurants-desserts">
                         <h2>Plats</h2>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Noix de coquilles Saint-Jacques</h3>
                                 <p>Sur lit de purée de céleri-rave</p>
                                 <p class="menu-prix">40€</p>
@@ -96,7 +102,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Langoustine poêlée</h3>
                                 <p>Purée de patate douce</p>
                                 <p class="menu-prix">35€</p>
@@ -107,7 +113,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Mijoté de queue de bœuf</h3>
                                 <p>Et riz sauvage aux zestes de citron</p>
                                 <p class="menu-prix">44€</p>
@@ -120,10 +126,10 @@
                     </section>
 
                     <!-- Desserts -->
-                    <section>
+                    <section class="restaurants-desserts">
                         <h2>Dessert</h2>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Macaron noisette et chocolat</h3>
                                 <p>Glace au caramel brun et sel de Guérande</p>
                                 <p class="menu-prix">18€</p>
@@ -134,7 +140,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Baba au rhum revisité</h3>
                                 <p>Avec son coulis de citron</p>
                                 <p class="menu-prix">22€</p>
@@ -145,7 +151,7 @@
                             />
                         </article>
                         <article>
-                            <div class="card card-menu">
+                            <div class="card card-menu mouse-pointer">
                                 <h3>Tarte au citron meringuée</h3>
                                 <p>Déstructurée</p>
                                 <p class="menu-prix">23€</p>
@@ -166,28 +172,32 @@
                 </div>
             </div>
         </main>
-
         <footer>
             <h4>ohmyfood</h4>
-
-            <a>
-                <img
-                    class="couvert"
-                    src="../assets/images/icons/couvert.png"
-                    alt="icone couvert"
-                />
-                <p class="bold">Proposer un restaurant</p>
-            </a>
-            <a>
-                <img
-                    class="hand"
-                    src="../assets/images/icons/hand.png"
-                    alt="icone main"
-                />
-                <p class="bold">Devenir partenaire</p>
-            </a>
-            <a>Mentions légales</a>
-            <a>Contact</a>
+            <div class="footer-content">
+                <section class="icon-footer">
+                    <a href="#">
+                        <img
+                            class="couvert"
+                            src="../assets/images/icons/couvert.png"
+                            alt="icone couvert"
+                        />
+                        <p class="bold">Proposer un restaurant</p>
+                    </a>
+                    <a href="#">
+                        <img
+                            class="hand"
+                            src="../assets/images/icons/hand.png"
+                            alt="icone main"
+                        />
+                        <p class="bold">Devenir partenaire</p>
+                    </a>
+                </section>
+                <section class="link-footer">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Contact</a>
+                </section>
+            </div>
         </footer>
     </body>
 </html>
