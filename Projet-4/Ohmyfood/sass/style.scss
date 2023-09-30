@@ -2,6 +2,9 @@
 @import "./ui.scss";
 
 //Global
+article {
+    border-radius: 20px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +32,7 @@ a {
 .mouse-pointer:hover {
     cursor: pointer;
 }
+
 footer {
     font-weight: 400;
     color: white;
@@ -67,7 +71,7 @@ footer {
     p {
         color: white;
     }
-    @media (min-width: 1235px) {
+    @media (min-width: 1080px) {
         .icon-footer {
             display: flex;
             margin-right: 50px;
@@ -79,6 +83,28 @@ footer {
             gap: 20px;
         }
         padding-right: 100px;
+        height: 114px;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        h4 {
+            padding: 0;
+            margin: 0;
+        }
+        .footer-content {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    * {
+        scrollbar-width: none;
+
+        -ms-overflow-style: none;
+    }
+    *::-webkit-scrollbar {
+        display: none;
     }
 }
 

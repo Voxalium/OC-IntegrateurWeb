@@ -1,4 +1,4 @@
-@media (min-width: 1235px) {
+@media (min-width: 768px) {
     .home {
         header {
             h1 {
@@ -31,12 +31,14 @@
                 justify-content: space-between;
                 .card-fonctionnement {
                     width: 100%;
+
+                    &-content {
+                        align-items: center;
+                    }
                 }
             }
         }
         .restaurants {
-            width: 100%;
-            padding-left: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -55,19 +57,6 @@
                 .card-restaurants {
                     margin: 0;
                 }
-            }
-        }
-        footer {
-            height: 114px;
-            flex-direction: row-reverse;
-            justify-content: flex-start;
-            align-items: center;
-            h4 {
-                padding: 0;
-                margin: 0;
-            }
-            .footer-content {
-                display: flex;
             }
         }
     }
