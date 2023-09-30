@@ -1,6 +1,11 @@
 @import "./variables.scss";
 @import "./anim.scss";
 
+article {
+    border-radius: 20px;
+    background-color: $bgColor2;
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+}
 .button {
     display: flex;
     text-align: center;
@@ -27,10 +32,8 @@
     }
 }
 .card {
-    background-color: $bgColor2;
-    border-radius: 20px;
     height: 72px;
-    box-shadow: 0px 4px 15px 0px #00000026;
+
     &-fonctionnement {
         display: flex;
         align-items: center;
@@ -78,7 +81,7 @@
         padding: 15px;
         height: 42px;
         width: 100%;
-        transition: border-radius 1.5s;
+        transition: border-radius 2s;
 
         h3 {
             font-size: 18px;
@@ -97,13 +100,7 @@
             text-overflow: ellipsis;
             max-width: 80%;
         }
-        &:hover {
-            border-radius: 20px 0 0 20px;
-            transition: border-radius 0s;
-        }
-        &:hover .validate {
-            display: flex;
-        }
+
         .menu-prix {
             position: absolute;
             right: 15px;

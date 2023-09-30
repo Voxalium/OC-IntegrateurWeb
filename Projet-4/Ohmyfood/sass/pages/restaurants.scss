@@ -25,6 +25,9 @@
             height: 275px;
             object-fit: cover;
         }
+        .border {
+            max-width: 1055px;
+        }
     }
     main > * {
         padding-left: 18px;
@@ -52,6 +55,7 @@
             }
             article {
                 margin-top: 12px;
+                background-color: white;
             }
             section {
                 article {
@@ -73,7 +77,7 @@
             }
             .container-like {
                 right: 40px;
-                bottom: 10px;
+                bottom: 6px;
             }
         }
     }
