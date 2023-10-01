@@ -32,9 +32,22 @@
   }
 }
 article {
-  border-radius: 20px;
-  background-color: #f6f6f6;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+}
+article input {
+  display: none;
+}
+article input:checked ~ .validate {
+  width: 68px;
+}
+article input:checked ~ .card-menu {
+  border-radius: 20px 0 0 20px;
+  transition-delay: 0s;
+}
+article .validate-container {
+  display: flex;
 }
 
 .button {
@@ -47,7 +60,7 @@ article {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: all 500ms;
+  transition: all 0.5s;
 }
 .button:hover {
   opacity: 0.85;
@@ -103,13 +116,16 @@ article {
 }
 .card-menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   justify-content: space-between;
   padding: 15px;
   height: 42px;
   width: 100%;
-  transition: border-radius 2s;
+  background-color: white;
+  border-radius: 20px;
+  transition: border-radius ease-out 0.5s;
+  transition-delay: 0.5s;
 }
 .card-menu h3 {
   font-size: 18px;
@@ -188,20 +204,10 @@ article {
 }
 
 .validate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 0px;
   height: 72px;
-  background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
-  transition: visibility 0;
-}
-.validate span {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 50%;
+  transition: width 0.6s;
 }
 
 .border {
@@ -538,16 +544,6 @@ footer p {
 }
 .restaurants main .container article {
   margin-top: 12px;
-  background-color: white;
-}
-.restaurants main .container section article {
-  display: flex;
-}
-.restaurants main .container section .validate {
-  transition: width 0.5s;
-}
-.restaurants main .container section article:hover .validate {
-  width: 68px;
 }
 .restaurants main .container .restaurants-commander {
   display: flex;

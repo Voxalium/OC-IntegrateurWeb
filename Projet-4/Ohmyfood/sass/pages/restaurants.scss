@@ -55,19 +55,6 @@
             }
             article {
                 margin-top: 12px;
-                background-color: white;
-            }
-            section {
-                article {
-                    display: flex;
-                }
-                .validate {
-                    transition: width 0.5s;
-                }
-
-                article:hover .validate {
-                    width: 68px;
-                }
             }
 
             .restaurants-commander {
