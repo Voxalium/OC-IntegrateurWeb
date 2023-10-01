@@ -2,9 +2,23 @@
 @import "./anim.scss";
 
 article {
-    border-radius: 20px;
-    background-color: $bgColor2;
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    input {
+        display: none;
+    }
+
+    input:checked ~ .validate {
+        width: 68px;
+    }
+    input:checked ~ .card-menu {
+        border-radius: 20px 0 0 20px;
+        transition-delay: 0s;
+    }
+    .validate-container {
+        display: flex;
+    }
 }
 .button {
     display: flex;
@@ -16,7 +30,7 @@ article {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    transition: all 500ms;
+    transition: all 0.5s;
     &:hover {
         opacity: 0.85;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
@@ -33,7 +47,6 @@ article {
 }
 .card {
     height: 72px;
-
     &-fonctionnement {
         display: flex;
         align-items: center;
@@ -75,14 +88,16 @@ article {
     }
     &-menu {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         position: relative;
         justify-content: space-between;
         padding: 15px;
         height: 42px;
         width: 100%;
-        transition: border-radius 2s;
-
+        background-color: white;
+        border-radius: 20px;
+        transition: border-radius ease-out 0.5s;
+        transition-delay: 0.5s;
         h3 {
             font-size: 18px;
             font-weight: 500;
@@ -164,21 +179,10 @@ article {
     }
 }
 .validate {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 0px;
     height: 72px;
-    background-color: $tertiary;
     border-radius: 0 20px 20px 0;
-    transition: visibility 0;
-
-    span {
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border-radius: 50%;
-    }
+    transition: width 0.6s;
 }
 .border {
     background-color: $bgColor;
