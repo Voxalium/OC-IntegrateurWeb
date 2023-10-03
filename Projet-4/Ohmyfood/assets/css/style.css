@@ -6,6 +6,17 @@
     opacity: 1;
   }
 }
+@keyframes menuTranslate {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes letters {
   0%, 100% {
     opacity: 1;
@@ -39,12 +50,21 @@ article {
 article input {
   display: none;
 }
+article input:hover ~ .validate {
+  width: 68px;
+}
+article input:hover ~ .card-menu {
+  border-radius: 20px 0 0 20px;
+  transition-delay: 0s;
+}
 article input:checked ~ .validate {
   width: 68px;
+  animation: opacityFade 1s;
 }
 article input:checked ~ .card-menu {
   border-radius: 20px 0 0 20px;
   transition-delay: 0s;
+  animation: opacityFade 1s;
 }
 article .validate-container {
   display: flex;
@@ -127,17 +147,21 @@ article .validate-container {
   transition: border-radius ease-out 0.5s;
   transition-delay: 0.5s;
 }
-.card-menu h3 {
+.card-menu h3,
+.card-menu .menu-title {
   font-size: 18px;
   font-weight: 500;
 }
-.card-menu p {
+.card-menu p,
+.card-menu .menu-subtitle {
   font-size: 15px;
   font-weight: 300;
   bottom: 15px;
 }
 .card-menu h3,
-.card-menu p {
+.card-menu p,
+.card-menu .menu-title,
+.card-menu .menu-subtitle {
   position: absolute;
   white-space: nowrap;
   overflow: hidden;
@@ -162,7 +186,7 @@ article .validate-container {
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
-.card-restaurants span {
+.card-restaurants .new {
   display: flex;
   position: absolute;
   top: 12px;
@@ -188,6 +212,7 @@ article .validate-container {
   position: absolute;
 }
 .container-like .like {
+  display: block;
   cursor: pointer;
   width: 22px;
   height: 21px;
@@ -293,16 +318,43 @@ article .validate-container {
   font-family: Shrikhand;
 }
 
-.restaurants-entrees {
-  animation: opacityFade 1s;
+.restaurants-entrees article:nth-child(2) {
+  animation: menuTranslate 2s;
+}
+.restaurants-entrees article:nth-child(3) {
+  animation: menuTranslate 2.5s;
+}
+.restaurants-entrees article:nth-child(4) {
+  animation: menuTranslate 3s;
+}
+.restaurants-entrees article:nth-child(5) {
+  animation: menuTranslate 3.5s;
 }
 
-.restaurants-plats > * {
-  animation: opacityFade 2s;
+.restaurants-plats article:nth-child(2) {
+  animation: menuTranslate 2s;
+}
+.restaurants-plats article:nth-child(3) {
+  animation: menuTranslate 2.5s;
+}
+.restaurants-plats article:nth-child(4) {
+  animation: menuTranslate 3s;
+}
+.restaurants-plats article:nth-child(5) {
+  animation: menuTranslate 3.5s;
 }
 
-.restaurants-desserts > * {
-  animation: opacityFade 3s;
+.restaurants-desserts article:nth-child(2) {
+  animation: menuTranslate 2s;
+}
+.restaurants-desserts article:nth-child(3) {
+  animation: menuTranslate 2.5s;
+}
+.restaurants-desserts article:nth-child(4) {
+  animation: menuTranslate 3s;
+}
+.restaurants-desserts article:nth-child(5) {
+  animation: menuTranslate 3.5s;
 }
 
 article {
