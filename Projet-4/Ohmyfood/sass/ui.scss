@@ -5,17 +5,28 @@ article {
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
     position: relative;
     width: 100%;
+
     input {
         display: none;
+        &:hover ~ .validate {
+            width: 68px;
+        }
+        &:hover ~ .card-menu {
+            border-radius: 20px 0 0 20px;
+            transition-delay: 0s;
+        }
     }
 
     input:checked ~ .validate {
         width: 68px;
+        animation: opacityFade 1s;
     }
     input:checked ~ .card-menu {
         border-radius: 20px 0 0 20px;
         transition-delay: 0s;
+        animation: opacityFade 1s;
     }
+
     .validate-container {
         display: flex;
     }
@@ -86,6 +97,7 @@ article {
             }
         }
     }
+
     &-menu {
         display: flex;
         flex-direction: row;
@@ -98,17 +110,21 @@ article {
         border-radius: 20px;
         transition: border-radius ease-out 0.5s;
         transition-delay: 0.5s;
-        h3 {
+        h3,
+        .menu-title {
             font-size: 18px;
             font-weight: 500;
         }
-        p {
+        p,
+        .menu-subtitle {
             font-size: 15px;
             font-weight: 300;
             bottom: 15px;
         }
         h3,
-        p {
+        p,
+        .menu-title,
+        .menu-subtitle {
             position: absolute;
             white-space: nowrap;
             overflow: hidden;
@@ -135,7 +151,7 @@ article {
             width: 100%;
             border-radius: 15px 15px 0 0;
         }
-        span {
+        .new {
             display: flex;
             position: absolute;
             top: 12px;
@@ -163,6 +179,7 @@ article {
     position: absolute;
 
     .like {
+        display: block;
         cursor: pointer;
         width: 22px;
         height: 21px;
@@ -268,13 +285,27 @@ article {
         }
     }
 }
-
 .restaurants-entrees {
-    animation: opacityFade 1s;
+    @for $i from 2 through 5 {
+        article:nth-child(#{$i}) {
+            animation: menuTranslate 2 + $delayT + s;
+        }
+        $delayT: + $delayT + 0.5;
+    }
 }
-.restaurants-plats > * {
-    animation: opacityFade 2s;
+.restaurants-plats {
+    @for $i from 2 through 5 {
+        article:nth-child(#{$i}) {
+            animation: menuTranslate 2 + $delayT + s;
+        }
+        $delayT: + $delayT + 0.5;
+    }
 }
-.restaurants-desserts > * {
-    animation: opacityFade 3s;
+.restaurants-desserts {
+    @for $i from 2 through 5 {
+        article:nth-child(#{$i}) {
+            animation: menuTranslate 2 + $delayT + s;
+        }
+        $delayT: + $delayT + 0.5;
+    }
 }
