@@ -6,29 +6,27 @@ article {
     position: relative;
     width: 100%;
 
-    input {
-        display: none;
-        &:hover ~ .validate {
-            width: 68px;
-        }
-        &:hover ~ .card-menu {
-            border-radius: 20px 0 0 20px;
-            transition-delay: 0s;
-        }
-    }
-
-    input:checked ~ .validate {
-        width: 68px;
-        animation: opacityFade 1s;
-    }
-    input:checked ~ .card-menu {
-        border-radius: 20px 0 0 20px;
-        transition-delay: 0s;
-        animation: opacityFade 1s;
-    }
-
     .validate-container {
         display: flex;
+        input {
+            display: none;
+            &:hover ~ .validate {
+                width: 68px;
+            }
+            &:hover ~ .card-menu {
+                border-radius: 20px 0 0 20px;
+                transition-delay: 0s;
+            }
+            &:checked ~ .validate {
+                width: 68px;
+                animation: opacityFade 1s;
+            }
+            &:checked ~ .card-menu {
+                border-radius: 20px 0 0 20px;
+                transition-delay: 0s;
+                animation: opacityFade 1s;
+            }
+        }
     }
 }
 .button {

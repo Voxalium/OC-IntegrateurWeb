@@ -47,27 +47,27 @@ article {
   position: relative;
   width: 100%;
 }
-article input {
-  display: none;
-}
-article input:hover ~ .validate {
-  width: 68px;
-}
-article input:hover ~ .card-menu {
-  border-radius: 20px 0 0 20px;
-  transition-delay: 0s;
-}
-article input:checked ~ .validate {
-  width: 68px;
-  animation: opacityFade 1s;
-}
-article input:checked ~ .card-menu {
-  border-radius: 20px 0 0 20px;
-  transition-delay: 0s;
-  animation: opacityFade 1s;
-}
 article .validate-container {
   display: flex;
+}
+article .validate-container input {
+  display: none;
+}
+article .validate-container input:hover ~ .validate {
+  width: 68px;
+}
+article .validate-container input:hover ~ .card-menu {
+  border-radius: 20px 0 0 20px;
+  transition-delay: 0s;
+}
+article .validate-container input:checked ~ .validate {
+  width: 68px;
+  animation: opacityFade 1s;
+}
+article .validate-container input:checked ~ .card-menu {
+  border-radius: 20px 0 0 20px;
+  transition-delay: 0s;
+  animation: opacityFade 1s;
 }
 
 .button {
@@ -517,10 +517,12 @@ footer p {
 .home .fonctionnement div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
 }
 .home .fonctionnement div .card-fonctionnement {
-  margin-left: 15px;
+  margin-left: 30px;
+  margin-right: 15px;
 }
 .home .fonctionnement div .card-fonctionnement-content {
   flex-direction: row;
@@ -639,6 +641,8 @@ footer p {
   }
   .home .fonctionnement .container .card-fonctionnement {
     width: 100%;
+    margin-right: 0;
+    margin-left: 15px;
   }
   .home .fonctionnement .container .card-fonctionnement-content {
     align-items: center;
