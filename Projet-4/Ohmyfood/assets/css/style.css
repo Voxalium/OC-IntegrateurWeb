@@ -216,7 +216,7 @@ article .validate-container input:checked ~ .card-menu {
   cursor: pointer;
   width: 22px;
   height: 21px;
-  background-image: url("/Projet-4/Ohmyfood/assets/images/icons/like.png");
+  background-image: url("../images/icons/like.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -224,7 +224,7 @@ article .validate-container input:checked ~ .card-menu {
   display: none;
 }
 .container-like input:checked ~ .like {
-  background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
+  background-image: url("../images/icons/liked.png");
   animation: opacityFade 0.5s;
 }
 
