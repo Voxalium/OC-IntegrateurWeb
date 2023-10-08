@@ -4,7 +4,9 @@
     --secondary-color: #cd006b;
     --third-color: #eee325;
 }
-
+.mouse_pointer {
+    cursor: pointer;
+}
 /* Reset CSS */
 * {
     -webkit-box-sizing: border-box;
