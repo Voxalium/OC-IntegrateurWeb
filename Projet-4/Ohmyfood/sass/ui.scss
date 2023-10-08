@@ -181,7 +181,7 @@ article {
         cursor: pointer;
         width: 22px;
         height: 21px;
-        background-image: url("/Projet-4/Ohmyfood/assets/images/icons/like.png");
+        background-image: url("../images/icons/like.png");
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -189,7 +189,7 @@ article {
         display: none;
     }
     input:checked ~ .like {
-        background-image: url("/Projet-4/Ohmyfood/assets/images/icons/liked.png");
+        background-image: url("../images/icons/liked.png");
         animation: opacityFade 0.5s;
     }
 }
@@ -288,7 +288,7 @@ article {
         article:nth-child(#{$i}) {
             animation: menuTranslate 2 + $delayT + s;
         }
-        $delayT: + $delayT + 0.5;
+        $delayT: $delayT + 0.5;
     }
 }
 .restaurants-plats {
@@ -296,7 +296,7 @@ article {
         article:nth-child(#{$i}) {
             animation: menuTranslate 2 + $delayT + s;
         }
-        $delayT: + $delayT + 0.5;
+        $delayT: $delayT + 0.5;
     }
 }
 .restaurants-desserts {
@@ -304,6 +304,6 @@ article {
         article:nth-child(#{$i}) {
             animation: menuTranslate 2 + $delayT + s;
         }
-        $delayT: + $delayT + 0.5;
+        $delayT: $delayT + 0.5;
     }
 }
