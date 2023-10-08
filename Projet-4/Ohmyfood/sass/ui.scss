@@ -288,7 +288,7 @@ article {
         article:nth-child(#{$i}) {
             animation: menuTranslate 2 + $delayT + s;
         }
-        $delayT: + $delayT + 0.5;
+        $delayT: $delayT + 0.5;
     }
 }
 .restaurants-plats {
@@ -296,7 +296,7 @@ article {
         article:nth-child(#{$i}) {
             animation: menuTranslate 2 + $delayT + s;
         }
-        $delayT: + $delayT + 0.5;
+        $delayT: $delayT + 0.5;
     }
 }
 .restaurants-desserts {
@@ -304,6 +304,6 @@ article {
         article:nth-child(#{$i}) {
             animation: menuTranslate 2 + $delayT + s;
         }
-        $delayT: + $delayT + 0.5;
+        $delayT: $delayT + 0.5;
     }
 }
