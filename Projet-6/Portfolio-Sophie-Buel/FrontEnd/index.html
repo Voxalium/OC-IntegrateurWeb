@@ -12,7 +12,6 @@
         />
         <meta name="description" content="" />
         <link rel="stylesheet" href="./assets/style.css" />
-        <script type="module" src="assets/javascript/index.js"></script>
     </head>
     <body>
         <header>
@@ -59,6 +58,12 @@
             </section>
             <section id="portfolio">
                 <h2>Mes Projets</h2>
+                <div class="filters">
+                    <div class="button button-selected filter-tous">Tous</div>
+                    <div class="button filter-objets">Objets</div>
+                    <div class="button filter-appart">Appartements</div>
+                    <div class="button filter-hotels">Hôtels & restaurants</div>
+                </div>
                 <div class="gallery"></div>
             </section>
             <section id="contact">
@@ -88,5 +93,7 @@
                 </ul>
             </nav>
         </footer>
+
+        <script src="assets/javascript/index.js" defer></script>
     </body>
 </html>
