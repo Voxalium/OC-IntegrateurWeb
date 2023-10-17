@@ -133,6 +133,7 @@ body {
     margin: auto;
     font-family: "Work Sans";
     font-size: 14px;
+    background-color: #fffef8;
 }
 header {
     display: flex;
@@ -141,6 +142,11 @@ header {
 }
 section {
     margin: 50px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -176,6 +182,7 @@ nav li {
 
 li:hover {
     color: #b1663c;
+    cursor: pointer;
 }
 #introduction {
     display: flex;
@@ -240,37 +247,42 @@ li:hover {
     background: #1d6154;
     color: white;
 }
-#contact {
+.form {
     width: 50%;
     margin: auto;
 }
-#contact > * {
+.form > * {
     text-align: center;
 }
-#contact h2 {
+.form h2 {
     margin-bottom: 20px;
 }
-#contact form {
+.form form {
     text-align: left;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
 
-#contact input {
+.form input {
     height: 50px;
     font-size: 1.2em;
     border: none;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-#contact label {
+.form label {
     margin: 2em 0 1em 0;
 }
-#contact textarea {
+.form textarea {
     border: none;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-
+.form a {
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 415px;
+}
 input[type="submit"] {
     font-family: "Syne";
     font-weight: 700;
@@ -281,7 +293,6 @@ input[type="submit"] {
     text-align: center;
     border-radius: 60px;
 }
-
 footer nav ul {
     display: flex;
     justify-content: flex-end;
