@@ -1,3 +1,4 @@
+//DOM
 const gallery = document.body.querySelector(".gallery");
 const tous = document.querySelector(".filter-tous");
 const objets = document.querySelector(".filter-objets");
