@@ -34,7 +34,7 @@ const loginForm = document
                 }
             })
             .then((data) => {
-                window.location.href = "../../index.html";
+                window.location.href = "../../index-edit.html";
                 token = data.token;
                 console.log(token);
             })
