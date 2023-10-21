@@ -1,18 +1,18 @@
+//DATA
+import { drawData } from "./drawData.js";
+import data from "./fetchData.js";
+
+const dataSet = new Set();
+dataSet.add(data);
+
 //DOM
+
 const gallery = document.body.querySelector(".gallery");
 const tous = document.querySelector(".filter-tous");
 const objets = document.querySelector(".filter-objets");
 const appart = document.querySelector(".filter-appart");
 const hotel = document.querySelector(".filter-hotels");
 const button = document.getElementsByClassName("button");
-
-//Fetch
-const url = "http://localhost:5678/api/works";
-const response = await fetch(url);
-const data = await response.json();
-const dataSet = new Set();
-dataSet.add(data);
-
 //Button selection
 const addSelectClass = function () {
     removeSelectClass();
@@ -32,7 +32,7 @@ for (var i = 0; i < button.length; i++) {
 tous.addEventListener("click", () => {
     dataSet.clear();
     dataSet.add(data);
-    drawData(dataSet);
+    drawData(dataSet, gallery);
 });
 
 objets.addEventListener("click", () => {
@@ -42,7 +42,7 @@ objets.addEventListener("click", () => {
             return i.category.name === "Objets";
         })
     );
-    drawData(dataSet);
+    drawData(dataSet, gallery);
 });
 
 appart.addEventListener("click", () => {
@@ -52,7 +52,7 @@ appart.addEventListener("click", () => {
             return i.category.name === "Appartements";
         })
     );
-    drawData(dataSet);
+    drawData(dataSet, gallery);
 });
 
 hotel.addEventListener("click", () => {
@@ -62,26 +62,8 @@ hotel.addEventListener("click", () => {
             return i.category.name === "Hotels & restaurants";
         })
     );
-    drawData(dataSet);
+    drawData(dataSet, gallery);
 });
 
 //Draw data
-const drawData = (data) => {
-    while (gallery.hasChildNodes()) {
-        gallery.removeChild(gallery.firstChild);
-    }
-    for (let i of data.keys().next().value) {
-        //        console.log(i.title);
-        const fig = document.createElement("figure");
-        const img = document.createElement("img");
-        const fc = document.createElement("figcaption");
-
-        img.src = i.imageUrl;
-        fc.innerHTML = i.title;
-        fig.appendChild(img);
-        fig.appendChild(fc);
-        gallery.appendChild(fig);
-    }
-};
-
-drawData(dataSet);
+drawData(dataSet, gallery);
