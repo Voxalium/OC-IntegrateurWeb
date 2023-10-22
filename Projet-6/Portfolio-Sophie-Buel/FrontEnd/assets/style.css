@@ -356,10 +356,7 @@ footer nav ul {
     border-radius: 10px;
     text-align: center;
 }
-.gallery-modal {
-    margin: 60px 105px 10px;
-    border-bottom: 1px solid black;
-}
+
 .xmark {
     position: absolute;
     right: 0;
@@ -386,25 +383,34 @@ footer nav ul {
     cursor: pointer;
 }
 
-.modal-grid {
-    margin-top: 46px;
-    margin-bottom: 66px;
+.title-modal {
+    margin-top: 60px;
+    color: black;
+    font-size: 26px;
+}
+
+.container {
+    margin: 46px 105px 10px;
+    padding-bottom: 68px;
+    border-bottom: 1px solid #b3b3b3;
+}
+.gallery-modal {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 6px;
     row-gap: 20px;
 }
-.modal-grid figure img {
+.gallery-modal figure img {
     width: 80px;
     height: 104px;
 }
-.modal-grid figure figcaption {
+.gallery-modal figure figcaption {
     display: none;
 }
-.modal-grid figure {
+.gallery-modal figure {
     position: relative;
 }
-.modal-grid figure .trashCan {
+.gallery-modal figure .trashCan {
     display: block;
     position: absolute;
     top: 6px;
@@ -415,7 +421,38 @@ footer nav ul {
     padding: 2px;
 }
 .trashCan {
+    cursor: pointer;
     display: none;
     width: 5px;
     height: 5px;
+}
+
+.add-photo-modal .img-container {
+    height: 170px;
+    background-color: #e8f1f6;
+    margin-bottom: 30px;
+}
+
+.add-photo-modal {
+    display: flex;
+    flex-direction: column;
+}
+.add-photo-modal input {
+    border: none;
+    height: 50px;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+    margin-bottom: 20px;
+    padding-left: 16px;
+}
+
+.add-photo-modal label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.add-photo-modal select {
+    border: none;
+    background-color: white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+    height: 50px;
+    padding-left: 16px;
 }
