@@ -1,25 +1,22 @@
 const loginUrl = "http://localhost:5678/api/users/login";
-let token = "";
 const loginForm = document
     .getElementById("loginForm")
     .addEventListener("submit", function (e) {
         e.preventDefault();
-
         const email = document.querySelector("#email").value;
         const password = document.querySelector("#password").value;
         const loginData = {
             email,
             password,
         };
-
         const req = {
             method: "POST",
             headers: {
+                accept: "application/json",
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(loginData),
         };
-
         const erreur = document.querySelector("#erreur");
         erreur.innerHTML = "";
 
