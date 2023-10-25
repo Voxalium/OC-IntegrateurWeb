@@ -1,19 +1,25 @@
-//Draw data from fetch
+//Request delete
+const token = localStorage.getItem("token");
+const url = "http://localhost:5678/api/works/";
 
+//Draw data
 export const drawData = (data, container) => {
-    while (container.hasChildNodes()) {
-        container.removeChild(container.firstChild);
-    }
+    removeChild(container);
     for (let i of data.keys().next().value) {
+        const id = document.createElement("span");
         const fig = document.createElement("figure");
         const img = document.createElement("img");
         const fc = document.createElement("figcaption");
         const tc = document.createElement("img");
+
+        id.innerHTML = i.id;
+        id.style.display = "none";
         tc.className = "trashCan";
         tc.src = "assets/icons/trash-can-solid.png";
 
         img.src = i.imageUrl;
         fc.innerHTML = i.title;
+        fig.appendChild(id);
         fig.appendChild(img);
         fig.appendChild(fc);
         fig.appendChild(tc);
@@ -22,31 +28,21 @@ export const drawData = (data, container) => {
 };
 
 //Remove child inside container
-export const removeChild = (container) => {
-    while (container.hasChildNodes()) {
-        container.removeChild(container.firstChild);
-    }
+const removeChild = (container) => {
+    container.innerHTML = "";
 };
 
-//Draw data from fetch inside container
-export const createGallery = (container, title, button, dataSet) => {
+//Draw gallery
+export const drawGallery = (container, title, button, dataSet) => {
     removeChild(container);
     drawData(dataSet, container);
     container.className = "container gallery-modal";
     title.innerHTML = "Galerie photo";
     button.innerHTML = "Ajouter une photo";
-
-    const deleteButtons = document.querySelectorAll(".trashCan");
-
-    deleteButtons.forEach((deleteButton) => {
-        deleteButton.addEventListener("click", () => {
-            const img = deleteButton.parentElement;
-            img.remove();
-        });
-    });
 };
 
-export const createAddPhoto = (container, title, button) => {
+//Draw AddPhoto
+export const drawAddPhoto = (container, title, button) => {
     removeChild(container);
     container.className = "container add-photo-modal";
     title.innerHTML = "Ajout photo";
@@ -78,10 +74,6 @@ export const createAddPhoto = (container, title, button) => {
     const addButton = imgContainer.querySelector(".add-photo-button");
     const addText = imgContainer.querySelector(".add-photo-text");
 
-    addButton.addEventListener("click", () => {
-        inputFile.click();
-    });
-
     inputFile.addEventListener("change", () => {
         const file = inputFile.files[0];
         if (file) {
@@ -94,6 +86,17 @@ export const createAddPhoto = (container, title, button) => {
             };
             rd.readAsDataURL(file);
         }
+    });
+    addButton.addEventListener("click", () => {
+        inputFile.click();
+    });
+
+    const submitButton = document.getElementById("submit");
+    submitButton.addEventListener("click", (e) => {
+        e.preventDefault();
+    });
+    button.addEventListener("click", () => {
+        submitButton.click();
     });
 };
 
@@ -141,5 +144,74 @@ function createSubmitButton() {
     const submitButton = document.createElement("button");
     submitButton.setAttribute("type", "submit");
     submitButton.style.display = "none";
+    submitButton.style.height = "16px";
+    submitButton.setAttribute("id", "submit");
     return submitButton;
+}
+
+export function deletePhoto(deleteButtons) {
+    deleteButtons.forEach((deleteButton) => {
+        deleteButton.addEventListener("click", () => {
+            const img = deleteButton.parentElement;
+            img.remove();
+            const id = deleteButton.parentElement.childNodes[0].innerHTML;
+            deleteDb(id);
+        });
+    });
+}
+function addDb(id, title, imgUrl, category) {
+    const formData = new FormData();
+    formData.append("id", id);
+    formData.append("title", title);
+    formData.append("imageUrl", imgUrl);
+    formData.append("categoryId", category);
+    formData.append("userId", 0);
+
+    const req = {
+        method: "POST",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+    };
+    const info = document.querySelector("#info");
+    info.innerHTML = "";
+    fetch(formData, req)
+        .then((res) => {
+            if (res.status === 201) {
+                info.innerHTML = "Données envoyées avec succès";
+                return res.json();
+            } else if (res.status === 400) {
+                console.error("Bad Request");
+                throw new Error("Mauvaise requête");
+            } else if (res.status === 401) {
+                console.error("Unauthorized");
+                throw new Error("Non autorisé");
+            } else {
+                console.error("Unexpected error");
+                throw new Error("Erreur inattendu");
+            }
+        })
+        .catch((error) => {
+            info.innerHTML = error.message;
+        });
+}
+
+function deleteDb(id) {
+    const req = {
+        method: "DELETE",
+        headers: {
+            accept: "*/*",
+            Authorization: `Bearer ${token}`,
+        },
+    };
+    fetch(`${url}${id}`, req).then((res) => {
+        if (res.status === 204) {
+            console.log("Item deleted");
+        } else if (res.status === 401) {
+            console.error("Unauthorized");
+        } else {
+            console.error("Unexpected behaviour");
+        }
+    });
 }
