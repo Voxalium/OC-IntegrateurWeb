@@ -216,11 +216,15 @@ li:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
-    grid-row-gap: 18px;
+    grid-row-gap: 45px;
 }
 
 .gallery img {
     width: 100%;
+    height: 100%;
+}
+figcaption {
+    margin-top: 8px;
 }
 .filters {
     display: flex;
@@ -437,6 +441,7 @@ footer nav ul {
 #modalForm {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .add-photo-modal .img-container {
     display: flex;
@@ -490,4 +495,24 @@ footer nav ul {
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
     height: 50px;
     padding-left: 16px;
+}
+
+#info-modal {
+    margin-top: 16px;
+}
+
+#submit {
+    position: absolute;
+    border: none;
+    height: 36px;
+    width: 237px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+    border-radius: 60px;
+    background-color: #a7a7a7;
+    color: white;
+    font-size: 14px;
+    font-family: Syne;
+    cursor: pointer;
 }
