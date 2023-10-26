@@ -1,6 +1,6 @@
+import * as ui from "./ui.js";
+import * as req from "./request.js";
 //Request delete
-const token = localStorage.getItem("token");
-const url = "http://localhost:5678/api/works/";
 
 //Draw data
 export const drawData = (data, container) => {
@@ -39,6 +39,7 @@ export const drawGallery = (container, title, button, dataSet) => {
     container.className = "container gallery-modal";
     title.innerHTML = "Galerie photo";
     button.innerHTML = "Ajouter une photo";
+    button.style.display = "flex";
 };
 
 //Draw AddPhoto
@@ -46,27 +47,26 @@ export const drawAddPhoto = (container, title, button) => {
     removeChild(container);
     container.className = "container add-photo-modal";
     title.innerHTML = "Ajout photo";
-    button.innerHTML = "Valider";
-
+    button.style.display = "none";
     // Create and append form
-    const addForm = createForm();
+    const addForm = ui.createForm();
     container.appendChild(addForm);
 
     // Create and append image container
-    const imgContainer = createImageContainer();
+    const imgContainer = ui.createImageContainer();
     addForm.appendChild(imgContainer);
 
     // Create and append input elements
-    addForm.appendChild(createLabel("Titre"));
-    addForm.appendChild(createInput("text", "titleInput"));
-    addForm.appendChild(createLabel("Categorie"));
-    addForm.appendChild(createSelect());
-    addForm.appendChild(createSubmitButton());
+    addForm.appendChild(ui.createLabel("Titre"));
+    addForm.appendChild(ui.createInput("text", "titleInput"));
+    addForm.appendChild(ui.createLabel("Categorie"));
+    addForm.appendChild(ui.createSelect());
+    addForm.appendChild(ui.createSubmitButton());
+    addForm.appendChild(ui.createInfo());
 
-    const inputFile = createInput("file", "add-image");
-    inputFile.accept = "image/*";
+    const inputFile = ui.createInput("file", "add-image");
     inputFile.style.display = "none";
-
+    inputFile.accept = "image/*";
     addForm.appendChild(inputFile);
 
     // Add event listeners
@@ -91,63 +91,11 @@ export const drawAddPhoto = (container, title, button) => {
         inputFile.click();
     });
 
-    const submitButton = document.getElementById("submit");
-    submitButton.addEventListener("click", (e) => {
-        e.preventDefault();
-    });
-    button.addEventListener("click", () => {
-        submitButton.click();
-    });
+    const titleInput = document.querySelector("#titleInput");
+    titleInput.addEventListener("input", ui.validateForm);
+    inputFile.addEventListener("change", ui.validateForm);
+    addForm.addEventListener("submit", req.addDb);
 };
-
-function createForm() {
-    const form = document.createElement("form");
-    form.setAttribute("id", "modalForm");
-    return form;
-}
-function createImageContainer() {
-    const imgContainer = document.createElement("div");
-    imgContainer.className = "img-container";
-    imgContainer.innerHTML = `
-        <img class="add-photo-image" src="../../assets/icons/addphoto.png">
-        <span class="add-photo-button">+ Ajouter photo</span>
-        <p class="add-photo-text">jpg, png : 4mo max</p>
-    `;
-    return imgContainer;
-}
-function createLabel(text) {
-    const label = document.createElement("label");
-    label.innerHTML = text;
-    return label;
-}
-function createInput(type, id) {
-    const input = document.createElement("input");
-    input.type = type;
-    input.setAttribute("id", id);
-    input.required = true;
-    return input;
-}
-function createSelect() {
-    const select = document.createElement("select");
-    const options = ["Objets", "Appartements", "Hôtels et restaurants"];
-    select.required = true;
-
-    for (let option of options) {
-        const opt = document.createElement("option");
-        opt.value = option;
-        opt.text = option;
-        select.add(opt);
-    }
-    return select;
-}
-function createSubmitButton() {
-    const submitButton = document.createElement("button");
-    submitButton.setAttribute("type", "submit");
-    submitButton.style.display = "none";
-    submitButton.style.height = "16px";
-    submitButton.setAttribute("id", "submit");
-    return submitButton;
-}
 
 export function deletePhoto(deleteButtons) {
     deleteButtons.forEach((deleteButton) => {
@@ -155,63 +103,7 @@ export function deletePhoto(deleteButtons) {
             const img = deleteButton.parentElement;
             img.remove();
             const id = deleteButton.parentElement.childNodes[0].innerHTML;
-            deleteDb(id);
+            req.deleteDb(id);
         });
-    });
-}
-function addDb(id, title, imgUrl, category) {
-    const formData = new FormData();
-    formData.append("id", id);
-    formData.append("title", title);
-    formData.append("imageUrl", imgUrl);
-    formData.append("categoryId", category);
-    formData.append("userId", 0);
-
-    const req = {
-        method: "POST",
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-    };
-    const info = document.querySelector("#info");
-    info.innerHTML = "";
-    fetch(formData, req)
-        .then((res) => {
-            if (res.status === 201) {
-                info.innerHTML = "Données envoyées avec succès";
-                return res.json();
-            } else if (res.status === 400) {
-                console.error("Bad Request");
-                throw new Error("Mauvaise requête");
-            } else if (res.status === 401) {
-                console.error("Unauthorized");
-                throw new Error("Non autorisé");
-            } else {
-                console.error("Unexpected error");
-                throw new Error("Erreur inattendu");
-            }
-        })
-        .catch((error) => {
-            info.innerHTML = error.message;
-        });
-}
-
-function deleteDb(id) {
-    const req = {
-        method: "DELETE",
-        headers: {
-            accept: "*/*",
-            Authorization: `Bearer ${token}`,
-        },
-    };
-    fetch(`${url}${id}`, req).then((res) => {
-        if (res.status === 204) {
-            console.log("Item deleted");
-        } else if (res.status === 401) {
-            console.error("Unauthorized");
-        } else {
-            console.error("Unexpected behaviour");
-        }
     });
 }
