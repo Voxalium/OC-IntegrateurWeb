@@ -1,6 +1,5 @@
 import { drawPreview } from "./drawData.js";
 import { fetchData } from "./fetchData.js";
-import { validateForm } from "./ui.js";
 
 const token = localStorage.getItem("token");
 const urlWorks = "http://localhost:5678/api/works/";
@@ -39,8 +38,6 @@ export function addDb(e) {
             if (res.status === 201) {
                 info.style.color = "green";
                 info.innerHTML = "Données envoyées avec succès";
-        const submitButton = document.querySelector('#submit');
-        submitButton.style.backgroundColor = "#1d6154"
                 drawPreview();
             } else if (res.status === 400) {
                 console.error("Bad Request");

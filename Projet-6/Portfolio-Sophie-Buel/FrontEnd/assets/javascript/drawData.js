@@ -114,10 +114,11 @@ export function drawPreview() {
     const addText = document.querySelector(".add-photo-text");
     const imageInput = document.querySelector("#add-image");
     const titleInput = document.querySelector("#titleInput");
+    const submitButton = document.querySelector("#submit");
     addButton.style.display = "flex";
     addText.style.display = "flex";
     addImage.src = "../../assets/icons/addphoto.png";
     titleInput.value = "";
     imageInput.value = "";
-    submitButton.style.backgroundColor = "#1d6154";
+    submitButton.style.backgroundColor = "#a7a7a7";
 }
