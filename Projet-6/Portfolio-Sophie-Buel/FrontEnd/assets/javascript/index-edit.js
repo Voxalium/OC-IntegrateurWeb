@@ -23,6 +23,8 @@ edit.addEventListener("click", () => {
 
 arrow.addEventListener("click", () => {
     drawGallery(container, title, button, dataSet);
+    const deleteButtons = document.querySelectorAll(".trashCan");
+    deletePhoto(deleteButtons);
     arrow.style.display = "none";
 });
 
@@ -40,7 +42,7 @@ xmark.addEventListener("click", () => {
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
-        
-    fetchData(dataSet, gallery, "Tous");
+
+        fetchData(dataSet, gallery, "Tous");
     }
 });
