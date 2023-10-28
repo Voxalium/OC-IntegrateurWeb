@@ -107,3 +107,17 @@ export function deletePhoto(deleteButtons) {
         });
     });
 }
+
+export function drawPreview() {
+    const addImage = document.querySelector(".add-photo-image");
+    const addButton = document.querySelector(".add-photo-button");
+    const addText = document.querySelector(".add-photo-text");
+    const imageInput = document.querySelector("#add-image");
+    const titleInput = document.querySelector("#titleInput");
+    addButton.style.display = "flex";
+    addText.style.display = "flex";
+    addImage.src = "../../assets/icons/addphoto.png";
+    titleInput.value = "";
+    imageInput.value = "";
+    submitButton.style.backgroundColor = "#1d6154";
+}

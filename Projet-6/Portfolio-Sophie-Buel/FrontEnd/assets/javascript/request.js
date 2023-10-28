@@ -1,3 +1,7 @@
+import { drawPreview } from "./drawData.js";
+import { fetchData } from "./fetchData.js";
+import { validateForm } from "./ui.js";
+
 const token = localStorage.getItem("token");
 const urlWorks = "http://localhost:5678/api/works/";
 const loginUrl = "http://localhost:5678/api/users/login";
@@ -33,9 +37,11 @@ export function addDb(e) {
     fetch(urlWorks, req)
         .then((res) => {
             if (res.status === 201) {
-                info.style.color = "green"
+                info.style.color = "green";
                 info.innerHTML = "Données envoyées avec succès";
-                return res.json();
+        const submitButton = document.querySelector('#submit');
+        submitButton.style.backgroundColor = "#1d6154"
+                drawPreview();
             } else if (res.status === 400) {
                 console.error("Bad Request");
                 throw new Error("Mauvaise requête");
@@ -62,6 +68,10 @@ export function deleteDb(id) {
     };
     fetch(`${urlWorks}${id}`, req).then((res) => {
         if (res.status === 204) {
+            const gallery = document.querySelector(".gallery");
+            const dataSet = new Set();
+
+            fetchData(dataSet, gallery, "Tous");
             console.info("Item deleted");
         } else if (res.status === 401) {
             console.error("Unauthorized");
