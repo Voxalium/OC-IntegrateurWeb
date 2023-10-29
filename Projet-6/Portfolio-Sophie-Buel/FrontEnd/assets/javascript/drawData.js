@@ -1,8 +1,7 @@
 import * as ui from "./ui.js";
 import * as req from "./request.js";
-//Request delete
 
-//Draw data
+//Draw data in container
 export const drawData = (data, container) => {
     removeChild(container);
     for (let i of data.keys().next().value) {
@@ -74,6 +73,7 @@ export const drawAddPhoto = (container, title, button) => {
     const addButton = imgContainer.querySelector(".add-photo-button");
     const addText = imgContainer.querySelector(".add-photo-text");
 
+    // Input file -> Image
     inputFile.addEventListener("change", () => {
         const file = inputFile.files[0];
         if (file) {
@@ -87,6 +87,7 @@ export const drawAddPhoto = (container, title, button) => {
             rd.readAsDataURL(file);
         }
     });
+    // Use another button for input file
     addButton.addEventListener("click", () => {
         inputFile.click();
     });
@@ -97,6 +98,7 @@ export const drawAddPhoto = (container, title, button) => {
     addForm.addEventListener("submit", req.addDb);
 };
 
+// Delete photo with trash can icons
 export function deletePhoto(deleteButtons) {
     deleteButtons.forEach((deleteButton) => {
         deleteButton.addEventListener("click", () => {
@@ -108,6 +110,7 @@ export function deletePhoto(deleteButtons) {
     });
 }
 
+// Draw the preview image from Input File
 export function drawPreview() {
     const addImage = document.querySelector(".add-photo-image");
     const addButton = document.querySelector(".add-photo-button");

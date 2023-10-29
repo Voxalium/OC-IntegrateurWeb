@@ -5,6 +5,7 @@ const token = localStorage.getItem("token");
 const urlWorks = "http://localhost:5678/api/works/";
 const loginUrl = "http://localhost:5678/api/users/login";
 
+//Add photo request
 export function addDb(e) {
     e.preventDefault();
 
@@ -55,6 +56,7 @@ export function addDb(e) {
         });
 }
 
+//Delete photo request
 export function deleteDb(id) {
     const req = {
         method: "DELETE",
@@ -78,7 +80,8 @@ export function deleteDb(id) {
     });
 }
 
-export function handleFormSubmit(e) {
+//Login form request
+export function loginSubmit(e) {
     e.preventDefault();
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
