@@ -6,6 +6,7 @@ const filters = document.querySelector(".filters");
 
 fetchData(dataSet, gallery, "Tous");
 
+//Event for filters
 filters.addEventListener("click", (e) => {
     const filter = e.target.id;
     const buttons = document.querySelectorAll(".button");
