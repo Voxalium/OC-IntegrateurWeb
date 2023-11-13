@@ -114,7 +114,7 @@ export function loginSubmit(e) {
         })
         .then((data) => {
             localStorage.setItem("token", data.token);
-            window.location.href = "../../index-edit.html";
+            window.location.href = "../../index.html";
         })
         .catch((error) => {
             erreur.setAttribute("id", "erreur");

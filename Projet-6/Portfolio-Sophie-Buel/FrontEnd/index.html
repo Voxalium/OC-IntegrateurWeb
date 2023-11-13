@@ -14,13 +14,17 @@
         <link rel="stylesheet" href="./assets/style.css" />
     </head>
     <body>
+        <aside class="edit-mode">
+            <img src="assets/icons/edit.svg" alt="edit-logo" />
+            <p>Mode édition</p>
+        </aside>
         <header>
             <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
             <nav>
                 <ul>
-                    <li style="font-weight: 900">projets</li>
+                    <li id="projets">projets</li>
                     <li>contact</li>
-                    <li><a href="login.html">login</a></li>
+                    <li id="login"><a href="login.html">login</a></li>
                     <li>
                         <img
                             src="./assets/icons/instagram.png"
@@ -58,6 +62,14 @@
             </section>
             <section id="portfolio">
                 <h2>Mes Projets</h2>
+                <a href="#modal" class="edit-projects">
+                    <img
+                        src="assets/icons/edit.svg"
+                        alt="edit-logo"
+                        style="filter: invert(1)"
+                    />
+                    <p>Modifier</p>
+                </a>
                 <div class="filters">
                     <div id="Tous" class="button button-selected">Tous</div>
                     <div id="Objets" class="button">Objets</div>
@@ -96,6 +108,24 @@
             </nav>
         </footer>
 
+        <aside id="modal" class="modal" style="display: none">
+            <div class="wrapper">
+                <img
+                    class="arrow-left"
+                    src="assets/icons/arrow-left.png"
+                    alt="arrow left button"
+                />
+                <img
+                    class="xmark"
+                    src="assets/icons/xmark.svg"
+                    alt="close-button"
+                />
+
+                <h2 class="title-modal"></h2>
+                <div class="container"></div>
+                <a class="button-modal"></a>
+            </div>
+        </aside>
         <script type="module" src="assets/javascript/index.js"></script>
     </body>
 </html>

@@ -125,3 +125,4 @@ export function drawPreview() {
     imageInput.value = "";
     submitButton.style.backgroundColor = "#a7a7a7";
 }
+

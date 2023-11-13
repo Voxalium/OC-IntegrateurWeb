@@ -312,7 +312,7 @@ footer nav ul {
 .edit-mode {
     background-color: black;
     height: 60px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -325,11 +325,12 @@ footer nav ul {
 }
 
 .edit-projects {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     cursor: pointer;
+    transform: translate(150px, -50px);
 }
 .edit-projects:hover {
     color: #b1663c;
