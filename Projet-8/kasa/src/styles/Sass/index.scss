@@ -4,7 +4,23 @@
     font-family: "Montserrat";
     font-weight: 400;
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home,
+.apropos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 @import "./Banner.scss";
 @import "./Header.scss";
 @import "./Gallery.scss";
+@import "./Accordion.scss";
 @import "./Footer.scss";

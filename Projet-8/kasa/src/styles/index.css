@@ -4,6 +4,18 @@
   font-family: "Montserrat";
   font-weight: 400; }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
+
+.home,
+.apropos {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
 .banner {
   position: relative;
   color: white;
@@ -12,6 +24,7 @@
   justify-content: center;
   height: 223px;
   max-width: 1240px;
+  width: 100%;
   background-position-y: 50%;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0); }
@@ -33,7 +46,9 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  max-width: 1240px;
+  width: 100%; }
 
 nav {
   display: flex;
@@ -46,10 +61,14 @@ a {
 .gallery {
   height: 830px; }
 
+.accordion {
+  height: 400px; }
+
 footer {
   color: white;
   background-color: black;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   footer img {
     width: 122px;
     height: 40px;
