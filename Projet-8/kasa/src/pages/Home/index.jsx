@@ -7,7 +7,7 @@ import bannerImg from "../../assets/IMG.png";
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <Banner
                 title="Chez vous, partout ou ailleurs"
                 img={bannerImg}

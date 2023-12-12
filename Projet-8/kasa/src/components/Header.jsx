@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <header>
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo kasa" />
             <nav>
                 <Link to="/">Accueil </Link>
                 <Link to="/apropos">À propos</Link>
