@@ -1,0 +1,27 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h3 {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        color: white;
+        background-color: $red;
+        height: 52px;
+        font-size: 24px;
+    }
+    ul {
+        background-color: $gray;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        li {
+            list-style: none;
+            color: $red;
+        }
+        a {
+            font-size: 18px;
+        }
+    }
+}
