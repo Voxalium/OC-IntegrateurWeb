@@ -17,16 +17,30 @@
 a {
     color: $red;
     cursor: pointer;
+    text-decoration: none;
     &:hover {
         text-decoration: underline $red;
     }
 }
 .home,
-.apropos {
+.apropos,
+.logements {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+.logements {
+    h3 {
+        color: $red;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    p {
+        color: $red;
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
 
 .error {

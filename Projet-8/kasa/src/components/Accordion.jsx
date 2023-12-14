@@ -1,22 +1,13 @@
 import Dropdown from "./Dropdown";
 
 function Accordion() {
-    let equipement = [
-        "Climatisation",
-        "Wifi",
-        "Cuisine",
-        "Espace de travail",
-        "Fer à repasser",
-        "Sèche-cheveux",
-        "Cintre",
-    ];
-
-    let respect = [1, 2, 3, 4];
+    let fiabilite = ["Lorem", "ipsum", "dolor", "sit"];
+    let respect = ["Lorem", "ipsum", "dolor", "sit"];
     let service = ["Lorem", "ipsum", "dolor", "sit"];
-    let securite = ["Lorem", "ipsum", "dolor", "sit", "amet"];
+    let securite = ["Lorem", "ipsum", "dolor", "sit"];
     return (
         <div className="accordion">
-            <Dropdown title="Équipements" items={equipement} />
+            <Dropdown title="Fiabilité" items={fiabilite} />
             <Dropdown title="Respect" items={respect} />
             <Dropdown title="Service" items={service} />
             <Dropdown title="Sécurité" items={securite} />
