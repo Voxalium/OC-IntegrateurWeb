@@ -5,7 +5,7 @@ import Error from "../pages/Error";
 import Apropos from "../pages/Apropos";
 import Header from "./Header";
 import Footer from "./Footer";
-
+import Logements from "../pages/Logements";
 function Routing() {
     return (
         <Router>
@@ -14,6 +14,7 @@ function Routing() {
                 <Route path="*" element={<Error />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/apropos" element={<Apropos />} />
+                <Route path="/logements" element={<Logements />} />
             </Routes>
             <Footer />
         </Router>
