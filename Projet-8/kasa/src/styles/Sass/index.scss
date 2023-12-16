@@ -31,15 +31,37 @@ a {
     width: 100%;
 }
 .logements {
-    h3 {
-        color: $red;
-        font-size: 36px;
-        font-weight: 500;
+    &-info {
+        width: 100%;
+        max-width: 1240px;
+
+        h3 {
+            color: $red;
+            font-size: 36px;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+        p {
+            color: $red;
+            font-size: 18px;
+            font-weight: 500;
+        }
     }
-    p {
-        color: $red;
-        font-size: 18px;
-        font-weight: 500;
+    &-tags {
+        width: 100%;
+        margin-top: 10px;
+        max-width: 1240px;
+        display: flex;
+        gap: 10px;
+    }
+    &-dropdown {
+        margin-top: 24px;
+        margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 76px;
+        width: 100%;
+        max-width: 1240px;
     }
 }
 
@@ -69,4 +91,6 @@ a {
 @import "./Card.scss";
 @import "./Accordion.scss";
 @import "./Dropdown.scss";
+@import "./Slideshow.scss";
+@import "./Tag.scss";
 @import "./Footer.scss";
