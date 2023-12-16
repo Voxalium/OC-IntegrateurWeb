@@ -25,14 +25,32 @@ a {
   align-items: center;
   width: 100%; }
 
-.logements h3 {
-  color: #ff6060;
-  font-size: 36px;
-  font-weight: 500; }
-.logements p {
-  color: #ff6060;
-  font-size: 18px;
-  font-weight: 500; }
+.logements-info {
+  width: 100%;
+  max-width: 1240px; }
+  .logements-info h3 {
+    color: #ff6060;
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 30px; }
+  .logements-info p {
+    color: #ff6060;
+    font-size: 18px;
+    font-weight: 500; }
+.logements-tags {
+  width: 100%;
+  margin-top: 10px;
+  max-width: 1240px;
+  display: flex;
+  gap: 10px; }
+.logements-dropdown {
+  margin-top: 24px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 76px;
+  width: 100%;
+  max-width: 1240px; }
 
 .error {
   color: #ff6060;
@@ -87,7 +105,9 @@ nav {
   align-items: center; }
   nav a {
     margin-left: 57px;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500; }
 
 .gallery {
   display: grid;
@@ -162,7 +182,7 @@ nav {
     .dropdown ul li {
       list-style: none;
       color: #ff6060; }
-    .dropdown ul a {
+    .dropdown ul p {
       font-size: 18px; }
   .dropdown .arrow {
     position: absolute;
@@ -170,6 +190,90 @@ nav {
     padding-top: 12px;
     padding-right: 15px;
     cursor: pointer; }
+
+.slideshow {
+  position: relative;
+  background-color: #ff6060;
+  border-radius: 25px;
+  height: 415px;
+  width: 100%;
+  max-width: 1240px; }
+  .slideshow-arrow {
+    position: absolute;
+    transform: translateY(200%);
+    cursor: pointer; }
+  .slideshow .left-arrow {
+    left: 0;
+    margin-left: 24px; }
+  .slideshow .right-arrow {
+    right: 0;
+    margin-right: 24px; }
+
+.slideshow {
+  position: relative;
+  background-color: #ff6060;
+  border-radius: 25px;
+  height: 415px;
+  width: 100%;
+  max-width: 1240px; }
+  .slideshow-arrow {
+    position: absolute;
+    transform: translateY(200%);
+    cursor: pointer; }
+  .slideshow .left-arrow {
+    left: 0;
+    margin-left: 24px; }
+  .slideshow .right-arrow {
+    right: 0;
+    margin-right: 24px; }
+
+.slideshow {
+  position: relative;
+  background-color: #ff6060;
+  border-radius: 25px;
+  height: 415px;
+  width: 100%;
+  max-width: 1240px; }
+  .slideshow-arrow {
+    position: absolute;
+    transform: translateY(200%);
+    cursor: pointer; }
+  .slideshow .left-arrow {
+    left: 0;
+    margin-left: 24px; }
+  .slideshow .right-arrow {
+    right: 0;
+    margin-right: 24px; }
+
+.slideshow {
+  position: relative;
+  background-color: #ff6060;
+  border-radius: 25px;
+  height: 415px;
+  width: 100%;
+  max-width: 1240px; }
+  .slideshow-arrow {
+    position: absolute;
+    transform: translateY(200%);
+    cursor: pointer; }
+  .slideshow .left-arrow {
+    left: 0;
+    margin-left: 24px; }
+  .slideshow .right-arrow {
+    right: 0;
+    margin-right: 24px; }
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 10px;
+  color: white;
+  width: 115px;
+  height: 25px;
+  font-size: 14px;
+  font-weight: 500; }
 
 footer {
   color: white;
