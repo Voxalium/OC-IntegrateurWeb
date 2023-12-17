@@ -1,14 +1,22 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Card({ title, img }) {
+function Card({ title, img, id }) {
     const cardImg = { backgroundImage: `url(${img})` };
+    const navigate = useNavigate();
+
+    const handleClick = (id) => {
+        navigate(`/logements/${id}`);
+    };
+
     return (
-        <Link to="/logements">
-            <article style={cardImg} className="card">
-                <div className="carImg-overlay"></div>
-                <p className="card-title">{title}</p>
-            </article>
-        </Link>
+        <article
+            onClick={() => handleClick(id)}
+            style={cardImg}
+            className="card"
+        >
+            <div className="carImg-overlay"></div>
+            <p className="card-title">{title}</p>
+        </article>
     );
 }
 

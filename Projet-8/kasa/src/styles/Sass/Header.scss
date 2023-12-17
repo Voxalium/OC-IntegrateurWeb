@@ -16,4 +16,7 @@ nav {
         font-size: 24px;
         font-weight: 500;
     }
+    a.active {
+        text-decoration: underline 2px solid $red;
+    }
 }

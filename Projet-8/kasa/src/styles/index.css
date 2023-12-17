@@ -108,6 +108,8 @@ nav {
     text-decoration: none;
     font-size: 24px;
     font-weight: 500; }
+  nav a.active {
+    text-decoration: underline 2px solid #ff6060; }
 
 .gallery {
   display: grid;
