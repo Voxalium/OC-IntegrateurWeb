@@ -1,11 +1,12 @@
 import Card from "./Card";
-import data from "../datas/logements.json";
 
-function Gallery() {
+function Gallery(props) {
+    const data = props.data;
     return (
         <div className="gallery">
             {data.map((logement) => (
                 <Card
+                    id={logement.id}
                     key={logement.id}
                     title={logement.title}
                     img={logement.cover}
