@@ -32,20 +32,26 @@ a {
 }
 .logements {
     &-info {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         max-width: 1240px;
+        margin-top: 30px;
 
         h3 {
             color: $red;
             font-size: 36px;
             font-weight: 500;
-            margin-top: 30px;
         }
         p {
             color: $red;
             font-size: 18px;
             font-weight: 500;
         }
+    }
+    &-description {
+        display: flex;
+        flex-direction: column;
     }
     &-tags {
         width: 100%;
@@ -54,6 +60,7 @@ a {
         display: flex;
         gap: 10px;
     }
+
     &-dropdown {
         margin-top: 24px;
         margin-bottom: 60px;
@@ -93,4 +100,5 @@ a {
 @import "./Dropdown.scss";
 @import "./Slideshow.scss";
 @import "./Tag.scss";
+@import "./Profile.scss";
 @import "./Footer.scss";

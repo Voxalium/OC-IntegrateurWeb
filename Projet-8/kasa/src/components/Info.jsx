@@ -4,7 +4,7 @@ function Info(props) {
     const location = props.location;
 
     return (
-        <section className="logements-info">
+        <section>
             <h3>{title}</h3>
             <p>{location}</p>
         </section>
