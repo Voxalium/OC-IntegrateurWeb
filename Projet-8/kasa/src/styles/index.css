@@ -7,8 +7,7 @@
 #root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%; }
+  align-items: center; }
 
 a {
   color: #ff6060;
@@ -23,7 +22,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; }
+  width: 90%; }
 
 .logements-info {
   display: flex;
@@ -44,7 +43,7 @@ a {
   flex-direction: column; }
 .logements-tags {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   max-width: 1240px;
   display: flex;
   gap: 10px; }
@@ -56,6 +55,10 @@ a {
   grid-column-gap: 76px;
   width: 100%;
   max-width: 1240px; }
+.logements-host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
 
 .error {
   color: #ff6060;
@@ -72,6 +75,15 @@ a {
   .error a {
     font-size: 18px;
     font-weight: 500; }
+  @media (max-width: 768px) {
+    .error h1 {
+      font-size: 96px; }
+    .error p {
+      font-size: 18px;
+      padding-left: 20px;
+      padding-right: 20px; }
+    .error a {
+      font-size: 14px; } }
 
 .banner {
   position: relative;
@@ -96,6 +108,13 @@ a {
   .banner h1 {
     z-index: 10;
     font-weight: 500; }
+  @media (max-width: 768px) {
+    .banner {
+      height: 111px; }
+      .banner h1 {
+        font-size: 24px;
+        padding-left: 16px;
+        padding-right: 16px; } }
 
 header {
   display: flex;
@@ -103,24 +122,34 @@ header {
   margin-top: 45px;
   margin-bottom: 50px;
   max-width: 1240px;
-  width: 100%; }
-
-nav {
-  display: flex;
-  align-items: center; }
-  nav a {
-    margin-left: 57px;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 500; }
-  nav a.active {
-    text-decoration: underline 2px solid #ff6060; }
+  width: 90%; }
+  header nav {
+    display: flex;
+    align-items: center; }
+    header nav a {
+      margin-left: 57px;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 500; }
+    header nav a.active {
+      text-decoration: underline 2px solid #ff6060; }
+    @media (max-width: 768px) {
+      header nav a {
+        margin-left: 26px;
+        font-size: 12px;
+        text-transform: uppercase; } }
+  @media (max-width: 768px) {
+    header {
+      margin-top: 20px;
+      margin-bottom: 27px; }
+      header img {
+        width: 145px; } }
 
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
   row-gap: 50px;
+  column-gap: 60px;
   height: 100%;
   background-color: #f6f6f6;
   max-width: 1240px;
@@ -130,11 +159,21 @@ nav {
   border-radius: 25px;
   padding-top: 56px;
   padding-bottom: 43px; }
+  @media (max-width: 1200px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      padding-top: 20px;
+      margin-top: 0;
+      gap: 20px;
+      background-color: transparent; } }
 
 .card {
   position: relative;
   height: 340px;
-  width: 340px;
+  width: 100%;
   background-color: #ff6060;
   border-radius: 10px;
   background-size: cover;
@@ -157,6 +196,9 @@ nav {
     padding-right: 20px;
     font-size: 18px;
     font-weight: 500; }
+  @media (max-width: 768px) {
+    .card {
+      height: 255px; } }
 
 .accordion {
   display: flex;
@@ -199,6 +241,9 @@ nav {
     cursor: pointer; }
 
 .slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   background-color: #ff6060;
   border-radius: 25px;
@@ -209,60 +254,18 @@ nav {
     position: absolute;
     transform: translateY(200%);
     cursor: pointer; }
-  .slideshow .left-arrow {
-    left: 0;
-    margin-left: 24px; }
-  .slideshow .right-arrow {
-    right: 0;
-    margin-right: 24px; }
-
-.slideshow {
-  position: relative;
-  background-color: #ff6060;
-  border-radius: 25px;
-  height: 415px;
-  width: 100%;
-  max-width: 1240px; }
-  .slideshow-arrow {
+  .slideshow-numbers {
     position: absolute;
-    transform: translateY(200%);
-    cursor: pointer; }
-  .slideshow .left-arrow {
-    left: 0;
-    margin-left: 24px; }
-  .slideshow .right-arrow {
-    right: 0;
-    margin-right: 24px; }
-
-.slideshow {
-  position: relative;
-  background-color: #ff6060;
-  border-radius: 25px;
-  height: 415px;
-  width: 100%;
-  max-width: 1240px; }
-  .slideshow-arrow {
-    position: absolute;
-    transform: translateY(200%);
-    cursor: pointer; }
-  .slideshow .left-arrow {
-    left: 0;
-    margin-left: 24px; }
-  .slideshow .right-arrow {
-    right: 0;
-    margin-right: 24px; }
-
-.slideshow {
-  position: relative;
-  background-color: #ff6060;
-  border-radius: 25px;
-  height: 415px;
-  width: 100%;
-  max-width: 1240px; }
-  .slideshow-arrow {
-    position: absolute;
-    transform: translateY(200%);
-    cursor: pointer; }
+    bottom: 0;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500; }
+  .slideshow .img-logement {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover; }
   .slideshow .left-arrow {
     left: 0;
     margin-left: 24px; }
@@ -286,9 +289,12 @@ nav {
 .profile-info {
   display: flex;
   align-items: center;
-  gap: 10px; }
+  gap: 10px;
+  margin-bottom: 20px; }
   .profile-info p {
-    white-space: pre-line; }
+    white-space: pre-line;
+    line-height: 140%;
+    text-align: end; }
   .profile-info img {
     width: 64px;
     border-radius: 50%; }
@@ -305,5 +311,11 @@ footer {
     margin-bottom: 30px; }
   footer p {
     padding-bottom: 30px; }
+  @media (max-width: 768px) {
+    footer img {
+      margin-bottom: 10px; }
+    footer p {
+      font-size: 12px;
+      padding-bottom: 58px; } }
 
 /*# sourceMappingURL=index.css.map */
