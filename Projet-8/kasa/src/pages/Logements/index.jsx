@@ -4,12 +4,13 @@ import Info from "../../components/Info";
 import Tag from "../../components/Tag";
 import Profile from "../../components/Profile";
 import { useLoaderData } from "react-router-dom";
+import Stars from "../../components/Stars";
 
 function Logements() {
     const data = useLoaderData();
     return (
         <div className="logements">
-            <Slideshow />
+            <Slideshow pictures={data.pictures} />
 
             <div className="logements-info">
                 <div className="logements-description">
@@ -20,11 +21,13 @@ function Logements() {
                         ))}
                     </section>
                 </div>
+
                 <div className="logements-host">
                     <Profile
                         name={data.host.name}
                         picture={data.host.picture}
                     />
+                    <Stars rating={data.rating} />
                 </div>
             </div>
             <section className="logements-dropdown">

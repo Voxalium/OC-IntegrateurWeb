@@ -4,19 +4,35 @@ header {
     margin-top: 45px;
     margin-bottom: 50px;
     max-width: 1240px;
-    width: 100%;
-}
+    width: 90%;
 
-nav {
-    display: flex;
-    align-items: center;
-    a {
-        margin-left: 57px;
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: 500;
+    nav {
+        display: flex;
+        align-items: center;
+        a {
+            margin-left: 57px;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        a.active {
+            text-decoration: underline 2px solid $red;
+        }
+
+        @media (max-width: 768px) {
+            a {
+                margin-left: 26px;
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
     }
-    a.active {
-        text-decoration: underline 2px solid $red;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+        margin-bottom: 27px;
+        img {
+            width: 145px;
+        }
     }
 }

@@ -10,7 +10,7 @@ function Slideshow(props) {
     function handleClick(increment) {
         const newIndex =
             (index + increment + pictures.length) % pictures.length;
-        setIndex(newIndex);
+        setIndex(index + 1);
     }
     return (
         <div className="slideshow">
@@ -20,19 +20,19 @@ function Slideshow(props) {
                 alt="image logement"
             />
             <img
-                onClick={() => handleClick(-1)}
+                onClick={()=>handleClick(-1)}
                 className="slideshow-arrow left-arrow"
                 src={arrowLeft}
                 alt="left arrow"
             />
             <img
-                onClick={() => handleClick(+1)}
+                onClick={()=>handleClick(+1)}
                 className="slideshow-arrow right-arrow"
                 src={arrowRight}
                 alt="right arrow"
             />
             <span className="slideshow-numbers">
-                {index + 1}/{pictures.length}
+                {i + 1}/{pictures.length}
             </span>
         </div>
     );

@@ -11,7 +11,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 a {
@@ -28,7 +27,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
 }
 .logements {
     &-info {
@@ -55,7 +54,7 @@ a {
     }
     &-tags {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 20px;
         max-width: 1240px;
         display: flex;
         gap: 10px;
@@ -69,6 +68,11 @@ a {
         grid-column-gap: 76px;
         width: 100%;
         max-width: 1240px;
+    }
+    &-host {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 
@@ -89,6 +93,19 @@ a {
     a {
         font-size: 18px;
         font-weight: 500;
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 96px;
+        }
+        p {
+            font-size: 18px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        a {
+            font-size: 14px;
+        }
     }
 }
 

@@ -12,4 +12,14 @@ footer {
     p {
         padding-bottom: 30px;
     }
+
+    @media (max-width: 768px) {
+        img {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 12px;
+            padding-bottom: 58px;
+        }
+    }
 }
