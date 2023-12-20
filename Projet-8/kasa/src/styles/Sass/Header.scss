@@ -16,7 +16,7 @@ header {
             font-weight: 500;
         }
         a.active {
-            text-decoration: underline 2px solid $red;
+            text-decoration: underline solid $red;
         }
 
         @media (max-width: 768px) {

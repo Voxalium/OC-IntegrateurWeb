@@ -14,5 +14,9 @@
             width: 64px;
             border-radius: 50%;
         }
+
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+        }
     }
 }
