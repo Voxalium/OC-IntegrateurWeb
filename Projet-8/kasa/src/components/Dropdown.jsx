@@ -11,11 +11,11 @@ function Dropdown(props) {
         <li key={item.toString()}>{item}</li>
     ));
     return (
-        <article className="dropdown">
+        <article className={`dropdown ${isOpen ? "open" : ""}`}>
             <h3 onClick={() => setIsOpen((prev) => !prev)}>
                 {title} <Arrow isOpen={isOpen} />
             </h3>
-            {isOpen && <ul>{listItems} </ul>}
+            <ul>{listItems} </ul>
         </article>
     );
 }

@@ -1,13 +1,17 @@
 .tag {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-color: $red;
     border-radius: 10px;
     color: white;
+    min-width: 115px;
     height: 25px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 2px 5px;
     font-size: 14px;
     font-weight: 500;
+    @media (max-width: 768px) {
+        height: 18px;
+        border-radius: 5px;
+    }
 }

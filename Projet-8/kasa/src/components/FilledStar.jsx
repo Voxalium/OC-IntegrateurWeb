@@ -1,7 +1,7 @@
 import FilledStarImg from "../assets/star-active.png";
 
 function FilledStar() {
-    return <img src={FilledStarImg} alt="filled start" />;
+    return <img className="star" src={FilledStarImg} alt="filled start" />;
 }
 
 export default FilledStar;
