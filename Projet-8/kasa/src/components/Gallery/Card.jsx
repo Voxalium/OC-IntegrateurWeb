@@ -14,7 +14,6 @@ function Card({ title, img, id }) {
             style={cardImg}
             className="card"
         >
-            <div className="carImg-overlay"></div>
             <p className="card-title">{title}</p>
         </article>
     );

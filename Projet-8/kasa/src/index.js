@@ -1,72 +1,17 @@
+//React
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+
 //CSS
 import "./styles/index.css";
 
-//Pages
-import Home from "./pages/Home";
-import Apropos from "./pages/Apropos";
-import Error from "./pages/Error";
-import Logements from "./pages/Logements";
-
-//Component
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-
-//Data
-import data from "./datas/logements.json";
-
-//Routing
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Root />,
-        errorElement: (
-            <>
-                <Header /> <Error /> <Footer />
-            </>
-        ),
-        children: [
-            {
-                index: true,
-                element: <Home />,
-                loader: () => data,
-            },
-            {
-                path: "apropos",
-                element: <Apropos />,
-            },
-            {
-                path: "logements/:id",
-                element: <Logements />,
-                loader: ({ params }) => {
-                    const logementId = params.id;
-                    const logementData = data.find(
-                        (logement) => logement.id === logementId
-                    );
-                    return logementData;
-                },
-            },
-        ],
-    },
-]);
-
-//Routing Template
-function Root() {
-    return (
-        <>
-            <Header />
-            <Outlet />
-            <Footer />
-        </>
-    );
-}
+//Router
+import Router from "./components/Router/Router.jsx";
 
 //React Root
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <Router />
     </React.StrictMode>
 );
