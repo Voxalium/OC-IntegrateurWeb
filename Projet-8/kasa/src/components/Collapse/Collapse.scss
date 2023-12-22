@@ -1,0 +1,45 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h3 {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        color: white;
+        background-color: $red;
+        height: 52px;
+        font-size: 24px;
+        @media (max-width: 768px) {
+            height: 30px;
+        }
+    }
+    ul {
+        background-color: $gray;
+        border-radius: 0 0 5px 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0s ease-in;
+        li {
+            list-style: none;
+            color: $red;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .arrow {
+        position: absolute;
+        display: flex;
+        right: 0;
+        padding-right: 15px;
+        cursor: pointer;
+    }
+    &.open ul {
+        padding: 20px;
+        max-height: 500px;
+        transition: max-height 0.5s;
+    }
+}

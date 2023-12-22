@@ -1,0 +1,22 @@
+.profile {
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        p {
+            white-space: pre-line;
+            line-height: 140%;
+            text-align: end;
+        }
+
+        img {
+            width: 64px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+}

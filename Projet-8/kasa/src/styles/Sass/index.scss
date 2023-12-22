@@ -1,5 +1,4 @@
 @import "./variables.scss";
-
 * {
     margin: 0;
     padding: 0;
@@ -144,14 +143,14 @@ a {
         }
     }
 }
-
-@import "./Banner.scss";
-@import "./Header.scss";
-@import "./Gallery.scss";
-@import "./Card.scss";
-@import "./Accordion.scss";
-@import "./Dropdown.scss";
-@import "./Slideshow.scss";
-@import "./Tag.scss";
-@import "./Profile.scss";
-@import "./Footer.scss";
+//Components
+@import "../../components/Banner/Banner.scss";
+@import "../../components/Header/Header.scss";
+@import "../../components/Gallery/Gallery.scss";
+@import "../../components/Gallery/Card.scss";
+@import "../../components/Accordion/Accordion.scss";
+@import "../../components/Collapse/Collapse.scss";
+@import "../../components/Logement/Slideshow.scss";
+@import "../../components/Logement/Tag.scss";
+@import "../../components/Logement/Profile.scss";
+@import "../../components/Footer/Footer.scss";

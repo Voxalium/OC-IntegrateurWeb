@@ -1,24 +1,21 @@
 import { useLoaderData } from "react-router-dom";
 
 //Components
-import Dropdown from "../../components/Dropdown";
-import Slideshow from "../../components/Slideshow";
-import Info from "../../components/Info";
-import Tag from "../../components/Tag";
-import Profile from "../../components/Profile";
-import Stars from "../../components/Stars";
+import Collapse from "../../components/Collapse/Collapse.jsx";
+import Slideshow from "../../components/Logement/Slideshow.jsx";
+import Info from "../../components/Logement/Info.jsx";
+import Tag from "../../components/Logement/Tag.jsx";
+import Profile from "../../components/Logement/Profile.jsx";
+import Stars from "../../components/Stars/Stars.jsx";
 
 function Logements() {
     const data = useLoaderData();
     return (
         <div className="logements">
-
             <Slideshow pictures={data.pictures} />
 
             <div className="logements-info">
-
                 <div className="logements-description">
-
                     <Info title={data.title} location={data.location} />
 
                     <section className="logements-tags">
@@ -26,7 +23,6 @@ function Logements() {
                             <Tag key={tag} tag={tag} />
                         ))}
                     </section>
-
                 </div>
 
                 <div className="logements-host">
@@ -38,8 +34,8 @@ function Logements() {
                 </div>
             </div>
             <section className="logements-dropdown">
-                <Dropdown title="Description" items={[data.description]} />
-                <Dropdown title="Équipements" items={data.equipments} />
+                <Collapse title="Description" items={[data.description]} />
+                <Collapse title="Équipements" items={data.equipments} />
             </section>
         </div>
     );

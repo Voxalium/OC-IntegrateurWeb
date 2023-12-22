@@ -11,8 +11,8 @@ import Error from "./pages/Error";
 import Logements from "./pages/Logements";
 
 //Component
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 //Data
 import data from "./datas/logements.json";
@@ -52,6 +52,7 @@ const router = createBrowserRouter([
     },
 ]);
 
+//Routing Template
 function Root() {
     return (
         <>
@@ -62,6 +63,7 @@ function Root() {
     );
 }
 
+//React Root
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
