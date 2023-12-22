@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Arrow from "./Arrow";
 
-function Dropdown(props) {
+function Collapse(props) {
     const items = props.items;
     const title = props.title;
 
@@ -20,4 +20,4 @@ function Dropdown(props) {
     );
 }
 
-export default Dropdown;
+export default Collapse;
