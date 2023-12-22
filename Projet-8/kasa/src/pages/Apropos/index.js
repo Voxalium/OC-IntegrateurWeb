@@ -1,6 +1,9 @@
-import Banner from "../../components/Banner";
 import bannerImg from "../../assets/IMG2.png";
-import Accordion from "../../components/Accordion";
+
+//components
+import Banner from "../../components/Banner/Banner.jsx";
+import Accordion from "../../components/Accordion/Accordion.jsx";
+
 function Apropos() {
     return (
         <div className="apropos">

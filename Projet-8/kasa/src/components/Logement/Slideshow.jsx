@@ -1,6 +1,6 @@
 import { useState } from "react";
-import arrowLeft from "../assets/arrow-left.svg";
-import arrowRight from "../assets/arrow-right.svg";
+import arrowLeft from "../../assets/arrow-left.svg";
+import arrowRight from "../../assets/arrow-right.svg";
 
 function Slideshow(props) {
     const pictures = props.pictures;

@@ -1,4 +1,4 @@
-import Dropdown from "./Dropdown";
+import Collapse from "../Collapse/Collapse.jsx";
 
 function Accordion() {
     let fiabilite = [
@@ -15,10 +15,10 @@ function Accordion() {
     ];
     return (
         <div className="accordion">
-            <Dropdown title="Fiabilité" items={fiabilite} />
-            <Dropdown title="Respect" items={respect} />
-            <Dropdown title="Service" items={service} />
-            <Dropdown title="Sécurité" items={securite} />
+            <Collapse title="Fiabilité" items={fiabilite} />
+            <Collapse title="Respect" items={respect} />
+            <Collapse title="Service" items={service} />
+            <Collapse title="Sécurité" items={securite} />
         </div>
     );
 }
