@@ -262,10 +262,12 @@ header {
     color: white;
     background-color: #ff6060;
     height: 52px;
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: 500; }
     @media (max-width: 768px) {
       .dropdown h3 {
-        height: 30px; } }
+        height: 30px;
+        font-size: 13px; } }
   .dropdown ul {
     background-color: #f6f6f6;
     border-radius: 0 0 5px 5px;
@@ -274,9 +276,11 @@ header {
     transition: max-height 0s ease-in; }
     .dropdown ul li {
       list-style: none;
-      color: #ff6060; }
-    .dropdown ul p {
+      color: #ff6060;
       font-size: 18px; }
+      @media (max-width: 768px) {
+        .dropdown ul li {
+          font-size: 12px; } }
   .dropdown .arrow {
     position: absolute;
     display: flex;
@@ -287,6 +291,9 @@ header {
     padding: 20px;
     max-height: 500px;
     transition: max-height 0.5s; }
+    @media (max-width: 768px) {
+      .dropdown.open ul {
+        padding: 13px; } }
 
 .slideshow {
   display: flex;
@@ -321,12 +328,18 @@ header {
     height: 415px;
     border-radius: 25px;
     object-fit: cover; }
+    @media (max-width: 738px) {
+      .slideshow .img-logement {
+        height: 255px; } }
   .slideshow .left-arrow {
     left: 0;
     margin-left: 24px; }
   .slideshow .right-arrow {
     right: 0;
     margin-right: 24px; }
+  @media (max-width: 738px) {
+    .slideshow {
+      height: 255px; } }
 
 .tag {
   display: flex;
@@ -343,7 +356,8 @@ header {
   @media (max-width: 768px) {
     .tag {
       height: 18px;
-      border-radius: 5px; } }
+      border-radius: 5px;
+      font-size: 10px; } }
 
 .profile-info {
   display: flex;
@@ -354,6 +368,9 @@ header {
     white-space: pre-line;
     line-height: 140%;
     text-align: end; }
+    @media (max-width: 768px) {
+      .profile-info p {
+        font-size: 12px; } }
   .profile-info img {
     width: 64px;
     border-radius: 50%; }
