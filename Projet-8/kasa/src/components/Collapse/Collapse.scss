@@ -12,8 +12,10 @@
         background-color: $red;
         height: 52px;
         font-size: 24px;
+        font-weight: 500;
         @media (max-width: 768px) {
             height: 30px;
+            font-size: 13px;
         }
     }
     ul {
@@ -25,9 +27,10 @@
         li {
             list-style: none;
             color: $red;
-        }
-        p {
             font-size: 18px;
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     }
     .arrow {
@@ -41,5 +44,8 @@
         padding: 20px;
         max-height: 500px;
         transition: max-height 0.5s;
+        @media (max-width: 768px) {
+            padding: 13px;
+        }
     }
 }
