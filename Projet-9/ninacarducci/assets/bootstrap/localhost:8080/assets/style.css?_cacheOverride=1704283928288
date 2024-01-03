@@ -45,11 +45,6 @@ h1,
     font-weight: 500;
     line-height: 1.2;
 }
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1320px;
-}
 
 .nav ul {
     display: flex;
@@ -115,7 +110,6 @@ h1,
     font-style: italic;
     font-size: 16px;
     line-height: 1.2;
-    width: 60%;
 }
 #about-me p {
     width: 80%;
@@ -123,11 +117,14 @@ h1,
     line-height: 1.5;
 }
 
+#gallery {
+    /*	min-height: 100vh; */
+}
 .title {
     text-align: center;
-    padding-block: 2em;
+    /* padding-block: 2em; */
     font-weight: 500;
-    font-size: 1.75rem;
+    font-size: 26px;
 }
 .gallery .nav {
     justify-content: center;
@@ -180,7 +177,7 @@ h1,
     font-family: Spectral;
     font-style: italic;
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 35px;
 }
 .quote__author {
     font-family: Spectral;
@@ -207,7 +204,10 @@ h1,
 #services .container {
     justify-content: space-between;
     display: flex;
+    justify-content: center;
     padding: 2em 0;
+    gap: 20px;
+    width: 100%;
 }
 
 .service {
@@ -220,12 +220,6 @@ h1,
     flex-direction: column;
     justify-content: space-between;
     z-index: 1;
-}
-.service h3 {
-    font-size: 1.75rem;
-}
-.service h4 {
-    font-size: 1.5rem;
 }
 
 #contact {
