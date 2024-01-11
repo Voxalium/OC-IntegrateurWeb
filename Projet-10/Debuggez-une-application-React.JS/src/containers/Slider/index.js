@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { useData } from "../../contexts/DataContext";
 import { getMonth } from "../../helpers/Date";
-
 import "./style.scss";
 
 const Slider = () => {
     const { data } = useData();
     const [index, setIndex] = useState(0);
+
     const byDateDesc = data?.focus.sort((evtA, evtB) =>
-        new Date(evtB.date) < new Date(evtA.date) ? -1 : 1
+        // Changement de "<" en ">"
+        new Date(evtA.date) > new Date(evtB.date) ? -1 : 1
     );
+
     const nextCard = () => {
         setTimeout(
-            () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
+            // Ajout de index + 1 pour fix le depassement
+            // Ajout de ? pour test byDateDesc
+            () => setIndex(index + 1 < byDateDesc?.length ? index + 1 : 0),
             5000
         );
     };
@@ -22,14 +26,17 @@ const Slider = () => {
     return (
         <div className="SlideCardList">
             {byDateDesc?.map((event, idx) => (
-                <>
+                // Remplacement fragment par une <div>
+                // Key event.title pour slide
+                // Alt img event.title
+                // Key _.title pour Radio
+                <div key={`slide-${event.title}`}>
                     <div
-                        key={event.title}
                         className={`SlideCard SlideCard--${
                             index === idx ? "display" : "hide"
                         }`}
                     >
-                        <img src={event.cover} alt="forum" />
+                        <img src={event.cover} alt={event.description} />
                         <div className="SlideCard__descriptionContainer">
                             <div className="SlideCard__description">
                                 <h3>{event.title}</h3>
@@ -42,15 +49,16 @@ const Slider = () => {
                         <div className="SlideCard__pagination">
                             {byDateDesc.map((_, radioIdx) => (
                                 <input
-                                    key={`${event.id}`}
+                                    key={`radio-${_.title}`}
                                     type="radio"
                                     name="radio-button"
-                                    checked={idx === radioIdx}
+                                    checked={index === radioIdx}
+                                    readOnly
                                 />
                             ))}
                         </div>
                     </div>
-                </>
+                </div>
             ))}
         </div>
     );
