@@ -1,0 +1,27 @@
+.header {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-100px);
+    }
+    .nav {
+        font-weight: 400;
+        font-size: 28px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-14px);
+        display: flex;
+        gap: 50px;
+        padding-right: 60px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
