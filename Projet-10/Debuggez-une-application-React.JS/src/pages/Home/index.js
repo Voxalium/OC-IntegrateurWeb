@@ -76,7 +76,10 @@ const Page = () => {
                         Une équipe d’experts dédiés à l’ogranisation de vos
                         événements
                     </p>
-                    <div className="ListContainer">
+                    <div
+                        className="ListContainer"
+                        data-testid="peoples-container-test-id"
+                    >
                         <PeopleCard
                             imageSrc="/images/stephanie-liverani-Zz5LQe-VSMY-unsplash.png"
                             name="Samira"
@@ -131,17 +134,19 @@ const Page = () => {
                     </Modal>
                 </div>
             </main>
-            <footer className="row">
+            <footer className="row" data-testid="footer-test-id">
                 <div className="col presta">
                     <h3>Notre derniére prestation</h3>
-        {last &&
-                    <EventCard
-                        imageSrc={last?.cover}
-                        title={last?.title}
-                        date={new Date(last?.date)}
-                        small
-                        label="boom"
-                    />}
+                    {last && (
+                        <EventCard
+                            imageSrc={last?.cover}
+                            title={last?.title}
+                            date={new Date(last?.date)}
+                            small
+                            label="boom"
+                            data-testid="last-test-id"
+                        />
+                    )}
                 </div>
                 <div className="col contact">
                     <h3>Contactez-nous</h3>

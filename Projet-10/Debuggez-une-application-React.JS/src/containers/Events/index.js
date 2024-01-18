@@ -47,7 +47,7 @@ const EventList = () => {
                             value ? changeType(value) : changeType(null)
                         }
                     />
-                    <div id="events" className="ListContainer">
+                    <div id="events" data-testid="events-test-id" className="ListContainer">
                         {filteredEvents.map((event) => (
                             <Modal
                                 key={event.id}
@@ -68,7 +68,7 @@ const EventList = () => {
                     <div className="Pagination">
                         {[...Array(pageNumber || 0)].map((_, n) => (
                             <a
-                          // eslint-disable-next-line react/no-array-index-key
+                                // eslint-disable-next-line react/no-array-index-key
                                 key={n + 1}
                                 href="#events"
                                 onClick={() => setCurrentPage(n + 1)}
