@@ -7,7 +7,7 @@ import Logged from "../../pages/Logged/Logged.jsx";
 import Error from "../../pages/Error/Error.jsx";
 
 //component
-import Header from "../Header/Header.jsx";
+import Nav from "../Nav/Nav.jsx";
 import Footer from "../Footer/Footer.jsx";
 
 //Routing
@@ -18,7 +18,7 @@ function Router() {
             element: <Root />,
             errorElement: (
                 <>
-                    <Header />
+                    <Nav />
                     <Error />
                     <Footer />
                 </>
@@ -46,7 +46,7 @@ function Router() {
 function Root() {
     return (
         <>
-            <Header />
+            <Nav />
             <Outlet />
             <Footer />
         </>
