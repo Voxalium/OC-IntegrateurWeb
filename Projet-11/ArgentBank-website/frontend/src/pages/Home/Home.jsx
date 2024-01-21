@@ -6,7 +6,7 @@ import security from "../../assets/icon-security.png";
 
 function Home() {
     return (
-        <div className="page-home">
+        <main>
             <Hero />
             <section className="features">
                 <h2 className="sr-only">Features</h2>
@@ -26,7 +26,7 @@ function Home() {
                     text="We use top of the line encryption to make sure your data and money is always safe. "
                 />
             </section>
-        </div>
+        </main>
     );
 }
 
