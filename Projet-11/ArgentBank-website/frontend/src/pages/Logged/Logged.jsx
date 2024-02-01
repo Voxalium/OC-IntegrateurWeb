@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import Account from "../../components/Account/Account";
 function Logged() {
+    document.title = "Argent Bank - User"
     return (
         <main className="main bg-dark">
             <Header />

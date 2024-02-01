@@ -5,6 +5,7 @@ import money from "../../assets/icon-money.png";
 import security from "../../assets/icon-security.png";
 
 function Home() {
+    document.title="Argent Bank - Home"
     return (
         <main>
             <Hero />
