@@ -26,6 +26,9 @@ body,
     margin-top: 26px;
     color: white;
 }
+.error-message {
+    color: red;
+}
 .main {
     flex: 1;
 }
