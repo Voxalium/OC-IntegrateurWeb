@@ -19,9 +19,9 @@ function SignInContent() {
 
     const error = useSelector((state) => state.loginReducer.error);
     //Navigate
-    const onSucess = () => {
+    const onSucess = (token) => {
         navigate("/logged");
-        dispatch(loginSucess());
+        dispatch(loginSucess(token));
     };
     //Fail
     const onFail = () => {

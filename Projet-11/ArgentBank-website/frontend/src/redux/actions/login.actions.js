@@ -2,9 +2,10 @@ export const LOGIN_SUCESS = "LOGIN_SUCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const LOGOUT = "LOGOUT";
 
-export const loginSucess = () => {
+export const loginSucess = (token) => {
     return {
         type: LOGIN_SUCESS,
+        payload: token,
     };
 };
 
