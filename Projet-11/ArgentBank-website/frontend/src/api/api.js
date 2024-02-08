@@ -7,7 +7,7 @@ export const handleSubmit = (
     email,
     password,
     rememberMe,
-    onSucessCallback,
+    onSuccessCallback,
     onFailCallback,
     e
 ) => {
@@ -34,13 +34,68 @@ export const handleSubmit = (
                 ? localStorage.setItem("token", data.body.token)
                 : sessionStorage.setItem("token", data.body.token);
 
-            onSucessCallback(data.body.token);
+            onSuccessCallback(data.body.token);
         })
         .catch((error) => {
             console.error(error);
         });
 };
 
+//GET PROFILE
+export const getProfile = (token, onSuccessCallback) => {
+    const REQ = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+    };
+    fetch(PROFILE_URL, REQ)
+        .then((res) => {
+            if (res.ok) {
+                return res.json();
+            } else if (res.status === 400) {
+                throw new Error("Invalid Field");
+            } else if (res.status === 401) {
+                throw new Error("Unauthorized");
+            } else if (res.status === 500) {
+                throw new Error("Internal Server Error");
+            }
+        })
+        .then((data) => {
+            const userData = data.body;
+            onSuccessCallback(userData);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+};
+
+//UPDATE PROFILE
+export const updateProfile = (userName, e) => {
+    e.preventDefault();
+
+    const REQ = {
+        method: "PUT",
+        header: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userName }),
+    };
+
+    fetch(PROFILE_URL, REQ)
+        .then((res) => {
+            if (res.ok) {
+                return res.json();
+            } else if (res.status === 400) {
+                //Fail Callback
+                throw new Error("Invalid Field");
+            } else if (res.status === 500) {
+                throw new Error("Internal Server Error");
+            }
+        })
+        .then((data) => {
+            //Success Callback
+        });
+};
 //SIGNUP
 export const handleSignup = (
     email,
@@ -76,57 +131,9 @@ export const handleSignup = (
             }
         })
         .then((data) => {
-            //Sucess Callback
-        });
-};
-//GET PROFILE
-export const getProfile = (token) => {
-    const REQ = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-        },
-    };
-    fetch(PROFILE_URL, REQ)
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            } else if (res.status === 400) {
-                throw new Error("Invalid Field");
-            } else if (res.status === 401) {
-                throw new Error("Unauthorized");
-            } else if (res.status === 500) {
-                throw new Error("Internal Server Error");
-            }
+            //Success Callback
         })
-        .then((data) => {
-            const userName = data.body.userName;
-        });
-};
-
-//UPDATE PROFILE
-export const updateProfile = (userName, e) => {
-    e.preventDefault();
-
-    const REQ = {
-        method: "PUT",
-        header: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userName }),
-    };
-
-    fetch(PROFILE_URL, REQ)
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            } else if (res.status === 400) {
-                //Fail Callback
-                throw new Error("Invalid Field");
-            } else if (res.status === 500) {
-                throw new Error("Internal Server Error");
-            }
-        })
-        .then((data) => {
-            //Sucess Callback
+        .catch((error) => {
+            console.error(error);
         });
 };

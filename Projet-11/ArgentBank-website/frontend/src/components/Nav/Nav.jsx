@@ -2,12 +2,19 @@ import logo from "../../assets/argentBankLogo.png";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/actions/login.actions";
+import { useEffect, useState } from "react";
 function Nav() {
+    const [firstName, setFirstName] = useState("");
     const dispatch = useDispatch();
     const isConnected = useSelector((state) => state.loginReducer.isConnected);
-    //GETUSERNAME !
-    // const firstName = useSelector...
 
+    const data = useSelector((state) => state.userReducer.userData.firstName);
+
+    useEffect(() => {
+        if (isConnected && data) {
+            setFirstName(data);
+        }
+    }, [isConnected, data]);
     const handleLogout = () => {
         dispatch(logout());
         sessionStorage.clear();
@@ -24,13 +31,21 @@ function Nav() {
                 <h1 className="sr-only">Argent Bank</h1>
             </NavLink>
             {isConnected ? (
-                <NavLink
-                    to="/"
-                    onClick={handleLogout}
-                    className="main-nav-item"
-                >
-                    <i className="fa fa-sign-out"></i> Sign Out
-                </NavLink>
+                <div>
+                    <NavLink to="/profile" className="main-nav-item">
+                        <i className="fa fa-user-circle firstName">
+                            {" "}
+                            {firstName}
+                        </i>
+                    </NavLink>
+                    <NavLink
+                        to="/"
+                        onClick={handleLogout}
+                        className="main-nav-item"
+                    >
+                        <i className="fa fa-sign-out"></i> Sign Out
+                    </NavLink>
+                </div>
             ) : (
                 <NavLink to="/signin" className="main-nav-item">
                     <i className="fa fa-user-circle"></i> Sign In

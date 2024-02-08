@@ -20,7 +20,7 @@ function SignInContent() {
     const error = useSelector((state) => state.loginReducer.error);
     //Navigate
     const onSucess = (token) => {
-        navigate("/logged");
+        navigate("/profile");
         dispatch(loginSucess(token));
     };
     //Fail

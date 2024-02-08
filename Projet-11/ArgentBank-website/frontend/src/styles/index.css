@@ -13,7 +13,10 @@ body,
     flex-direction: column;
     min-height: 100vh;
 }
-
+.firstName {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .error-container {
     display: flex;
     flex-direction: column;

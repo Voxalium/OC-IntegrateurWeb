@@ -33,7 +33,7 @@ function Router() {
                     element: <Signin />,
                 },
                 {
-                    path: "logged",
+                    path: "profile",
                     element: <Logged />,
                 },
             ],
