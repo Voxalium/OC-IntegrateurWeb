@@ -1,11 +1,13 @@
 import Header from "../../components/Header/Header";
 import Account from "../../components/Account/Account";
+import EditProfile from "../../components/EditProfile/EditProfile";
 import data from "../../data/mockData.json";
 function Logged() {
     document.title = "Argent Bank - User";
     return (
         <main className="main bg-dark">
             <Header />
+            <EditProfile />
             <h2 className="sr-only">Accounts</h2>
             {data?.map((content, index) => (
                 <Account

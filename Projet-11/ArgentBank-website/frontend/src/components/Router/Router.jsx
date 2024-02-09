@@ -1,4 +1,9 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+    createBrowserRouter,
+    Outlet,
+    RouterProvider,
+    useNavigate,
+} from "react-router-dom";
 
 //pages
 import Home from "../../pages/Home/Home.jsx";
@@ -9,9 +14,12 @@ import Error from "../../pages/Error/Error.jsx";
 //component
 import Nav from "../Nav/Nav.jsx";
 import Footer from "../Footer/Footer.jsx";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 //Routing
 function Router() {
+    const isConnected = useSelector((state) => state.loginReducer.isConnected);
     const router = createBrowserRouter([
         {
             path: "/",
@@ -34,12 +42,21 @@ function Router() {
                 },
                 {
                     path: "profile",
-                    element: <Logged />,
+                    element: isConnected ? <Logged /> : <Unauthorized />,
                 },
             ],
         },
     ]);
     return <RouterProvider router={router} />;
+}
+
+//Prevent navigation to Logged if we're not connected
+function Unauthorized() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        navigate("/signin");
+    }, [navigate]);
+    return null;
 }
 
 //Template
