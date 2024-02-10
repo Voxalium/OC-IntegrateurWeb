@@ -1,4 +1,4 @@
-import { LOGIN_SUCESS, LOGIN_FAIL, LOGOUT } from "../actions/login.actions";
+import { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from "../actions/login.actions";
 
 const initialState = {
     isConnected: false,
@@ -8,7 +8,7 @@ const initialState = {
 
 export default function loginReducer(state = initialState, action) {
     switch (action.type) {
-        case LOGIN_SUCESS:
+        case LOGIN_SUCCESS:
             return {
                 ...state,
                 isConnected: true,

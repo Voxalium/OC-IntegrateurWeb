@@ -1,4 +1,4 @@
-import logo from "../../assets/argentBankLogo.png";
+import logo from "../../assets/argentBankLogo.webp";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/actions/login.actions";

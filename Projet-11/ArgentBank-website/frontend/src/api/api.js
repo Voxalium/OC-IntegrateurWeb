@@ -72,12 +72,15 @@ export const getProfile = (token, onSuccessCallback) => {
 };
 
 //UPDATE PROFILE
-export const updateProfile = (userName, e) => {
+export const updateProfile = (token, userName, onSuccessCallback, e) => {
     e.preventDefault();
 
     const REQ = {
         method: "PUT",
-        header: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
         body: JSON.stringify({ userName }),
     };
 
@@ -93,7 +96,11 @@ export const updateProfile = (userName, e) => {
             }
         })
         .then((data) => {
-            //Success Callback
+            const userName = data.body.userName;
+            onSuccessCallback(userName);
+        })
+        .catch((error) => {
+            console.log(error);
         });
 };
 //SIGNUP

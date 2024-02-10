@@ -5,7 +5,11 @@ html {
     text-align: center;
     color: #2c3e50;
 }
-
+#readOnly-input {
+    background-color: gray;
+    border-color: gray;
+    pointer-events: none;
+}
 body,
 #root {
     margin: 0;
@@ -53,6 +57,7 @@ body,
 
 .edit-buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 1.5rem;
 }
@@ -125,7 +130,7 @@ body,
 }
 
 .hero {
-    background-image: url("../assets/bank-tree.jpeg");
+    background-image: url("../assets/bank-tree.webp");
     background-position: 0 -50px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -341,5 +346,12 @@ body,
 
     .transaction-button {
         width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .edit-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }

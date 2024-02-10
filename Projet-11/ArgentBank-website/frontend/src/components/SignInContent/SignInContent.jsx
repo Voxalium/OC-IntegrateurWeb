@@ -5,7 +5,7 @@ import { useState } from "react";
 import { handleSubmit } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { loginFail, loginSucess } from "../../redux/actions/login.actions";
+import { loginFail, loginSuccess } from "../../redux/actions/login.actions";
 
 function SignInContent() {
     //HOOKS
@@ -19,13 +19,13 @@ function SignInContent() {
 
     const error = useSelector((state) => state.loginReducer.error);
     //Navigate
-    const onSucess = (token) => {
+    const onSuccess = (token) => {
         navigate("/profile");
-        dispatch(loginSucess(token));
+        dispatch(loginSuccess(token));
     };
     //Fail
     const onFail = () => {
-        setErrorMessage({ error });
+        setErrorMessage(error);
         dispatch(loginFail("Invalid Fields"));
     };
 
@@ -39,7 +39,7 @@ function SignInContent() {
                         email,
                         password,
                         rememberMe,
-                        onSucess,
+                        onSuccess,
                         onFail,
                         e
                     )

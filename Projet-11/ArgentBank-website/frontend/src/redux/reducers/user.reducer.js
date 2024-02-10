@@ -13,6 +13,7 @@ export default function userReducer(state = initialState, action) {
             return {
                 ...state,
                 userData: {
+                    ...state.userData,
                     userName: action.payload,
                 },
             };

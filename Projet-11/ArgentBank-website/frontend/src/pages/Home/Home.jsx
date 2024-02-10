@@ -1,11 +1,11 @@
 import Hero from "../../components/Hero/Hero";
 import FeatureItem from "../../components/FeatureItem/FeatureItem";
-import chat from "../../assets/icon-chat.png";
-import money from "../../assets/icon-money.png";
-import security from "../../assets/icon-security.png";
+import chat from "../../assets/icon-chat.webp";
+import money from "../../assets/icon-money.webp";
+import security from "../../assets/icon-security.webp";
 
 function Home() {
-    document.title="Argent Bank - Home"
+    document.title = "Argent Bank - Home";
     return (
         <main>
             <Hero />
