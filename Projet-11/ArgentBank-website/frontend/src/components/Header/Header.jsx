@@ -7,6 +7,12 @@ import EditProfile from "../EditProfile/EditProfile";
 function Header() {
     const info = useSelector((state) => state.userReducer.userData);
     const [userName, setUserName] = useState(info.userName || "");
+    const firstName = useSelector(
+        (state) => state.userReducer.userData.firstName
+    );
+    const lastName = useSelector(
+        (state) => state.userReducer.userData.lastName
+    );
     const dispatch = useDispatch();
     const [isEditing, setIsEditing] = useState(false);
 
@@ -35,7 +41,7 @@ function Header() {
         <div className="header">
             <h1>
                 Welcome back <br />
-                {userName}
+                {firstName} {lastName}
             </h1>
             <Button
                 title="Edit Name"

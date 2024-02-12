@@ -4,15 +4,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/actions/login.actions";
 import { useEffect, useState } from "react";
 function Nav() {
-    const [firstName, setFirstName] = useState("");
+    const [userName, setUserName] = useState("");
     const dispatch = useDispatch();
     const isConnected = useSelector((state) => state.loginReducer.isConnected);
 
-    const data = useSelector((state) => state.userReducer.userData.firstName);
+    const data = useSelector((state) => state.userReducer.userData.userName);
 
     useEffect(() => {
         if (isConnected && data) {
-            setFirstName(data);
+            setUserName(data);
         }
     }, [isConnected, data]);
     const handleLogout = () => {
@@ -35,7 +35,7 @@ function Nav() {
                     <NavLink to="/profile" className="main-nav-item">
                         <i className="fa fa-user-circle firstName">
                             {" "}
-                            {firstName}
+                            {userName}
                         </i>
                     </NavLink>
                     <NavLink

@@ -1,7 +1,7 @@
 import InputWrapper from "../Inputs/InputWrapper";
 import Button from "../Button/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { updateProfile } from "../../api/api";
 import { updateUserName } from "../../redux/actions/user.actions";
 function EditProfile({ onClick }) {
