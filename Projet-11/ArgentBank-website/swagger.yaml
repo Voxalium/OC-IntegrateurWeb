@@ -69,7 +69,7 @@ paths:
             # - application/json
             responses:
                 "200":
-                    description: User profile retrieved successully
+                    description: User profile retrieved successfully
                     schema:
                         $ref: "#/definitions/ApiResponse"
                 "400":
@@ -94,14 +94,14 @@ paths:
                 - application/json
             responses:
                 "200":
-                    description: User profile retrieved successully
+                    description: User profile retrieved successfully
                     schema:
                         $ref: "#/definitions/ApiResponse"
                 "400":
                     description: Invalid Fields
                 "500":
                     description: Internal Server Error
-    /user/account/:
+    /account:
         post:
             tags:
                 - Account Module
@@ -111,14 +111,14 @@ paths:
                 - Bearer[]
             responses:
                 "200":
-                    description: User's accounts retrieved successully
+                    description: User's accounts retrieved successfully
                     schema:
                         $ref: "#/definitions/AccountResponse"
                 "401":
                     description: Unauthorized
                 "500":
                     description: Internal Server Error
-    /user/account/{accountID}/transaction:
+    /account/{accountID}/transactions:
         post:
             tags:
                 - Account Module
@@ -134,11 +134,155 @@ paths:
                   type: string
             responses:
             "200":
-                description: Transactions retrieved successully
+                description: Transactions retrieved successfully
                 schema:
                     $ref: "#/definitions/TransactionsResponse"
             "401": Unauthorized
             "500": Internal Server Error
+    /account/{accountID}/transactions/{transactionID}/category:
+        put:
+            tags:
+                - Account Module
+            summary: Update Category
+            description: API for update category
+            security:
+                - Bearer[]
+            parameters:
+                - in: path
+                  name: accountID
+                  description: Account ID
+                  required: true
+                  type: string
+                - in: path
+                  name: transactionID
+                  description: Transaction ID
+                  required: true
+                  type: string
+                - in: body
+                  name: category
+                  description: Update Category
+                  required: true
+                  type: string
+            responses:
+                "200":
+                    description: Category modified successfully
+                    schema:
+                        $ref: "#/definitions/TransactionCategoryResponse"
+                "401":
+                    description: Unauthorized
+                "500":
+                    description: Internal Server Error
+
+    /account/{accountID}/transactions/{transactionID}/note:
+        post:
+            tags:
+                - Account Module
+            summary: Add Note
+            description: API for add note
+            security:
+                - Bearer[]
+            parameters:
+                - in: path
+                  name: accountID
+                  description: Account ID
+                  required: true
+                  type: string
+                - in: path
+                  name: transactionID
+                  description: Transaction ID
+                  required: true
+                  type: string
+                - in: body
+                  name: note
+                  description: Create note
+                  required: true
+                  type: string
+            responses:
+                "200":
+                    description: Note created successfully
+                    schema:
+                        $ref: "#/definitions/TransactionNoteResponse"
+                "401":
+                    description: Unauthorized
+                "500":
+                    description: Internal Server Error
+
+    /account/{accountID}/transactions/{transactionID}/note/{noteID}:
+        put:
+            tags:
+                - Account Module
+            summary: Update Note
+            description: API for update note
+            security:
+                - Bearer[]
+            parameters:
+                - in: path
+                  name: accountID
+                  description: Account ID
+                  required: true
+                  type: string
+                - in: path
+                  name: transactionID
+                  description: Transaction ID
+                  required: true
+                  type: string
+                - in: path
+                  name: noteID
+                  description: Note ID
+                  required: true
+                  type: string
+                - in: body
+                  name: note
+                  description: Update note
+                  required: true
+                  type: string
+            responses:
+                "200":
+                    description: Note modified successfully
+                    schema:
+                        $ref: "#/definitions/TransactionNoteResponse"
+                "401":
+                    description: Unauthorized
+                "500":
+                    description: Internal Server Error
+
+        delete:
+            tags:
+                - Account Module
+            summary: Delete Note
+            description: API for delete note
+            security:
+                - Bearer[]
+            parameters:
+                - in: path
+                  name: accountID
+                  description: Account ID
+                  required: true
+                  type: string
+                - in: path
+                  name: transactionID
+                  description: Transaction ID
+                  required: true
+                  type: string
+                - in: path
+                  name: noteID
+                  description: Note ID
+                  required: true
+                  type: string
+                - in: body
+                  name: note
+                  description: delete note
+                  required: true
+                  type: string
+            responses:
+                "200":
+                    description: Note deleted successfully
+                    schema:
+                        $ref: "#/definitions/TransactionNoteResponse"
+                "401":
+                    description: Unauthorized
+                "500":
+                    description: Internal Server Error
 
 securityDefinitions:
     Bearer:
@@ -194,4 +338,50 @@ definitions:
         type: object
         properties:
             userName:
+                type: string
+    AccountResponse:
+        type: object
+        properties:
+            accountID:
+                type: string
+            accountName:
+                type: string
+            accountCurrency:
+                type: string
+            currentBalance:
+                type: number
+                format: double
+    TransactionsResponse:
+        type: object
+        properties:
+            transactionID:
+                type: string
+            transactionType:
+                type: string
+            date:
+                type: string
+                format: date
+            description:
+                type: string
+            amount:
+                type: number
+                format: double
+            balance:
+                type: number
+                format: double
+            category:
+                type: string
+            note:
+                type: string
+    TransactionCategoryResponse:
+        type: object
+        properties:
+            category:
+                type: string
+    TransactionNoteResponse:
+        type: object
+        properties:
+            note:
+                type: string
+            noteID:
                 type: string
