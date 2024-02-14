@@ -1,16 +1,10 @@
-//API
-import { LOGIN_URL } from "../../api/api";
-import { LOGIN_REQ } from "../../api/api";
-
-//COMPONENTS
 import InputWrapper from "../Inputs/InputWrapper";
 import InputRemember from "../Inputs/InputRemember";
 import Button from "../Button/Button";
-
-//REACT
 import { useState } from "react";
+import { handleSubmit } from "../../api/api";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginFail, loginSuccess } from "../../redux/actions/login.actions";
 
 function SignInContent() {
@@ -23,35 +17,34 @@ function SignInContent() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            const res = await fetch(LOGIN_URL, LOGIN_REQ(email, password));
-            if (res.ok) {
-                const data = await res.json();
-                const token = data.body.token;
-                dispatch(loginSuccess(token));
-                sessionStorage.setItem("token", token);
-                if (rememberMe) {
-                    localStorage.setItem("token", token);
-                }
-                navigate("/profile");
-            } else {
-                const error = "Incorrect field";
-                setErrorMessage(error);
-                dispatch(loginFail(error));
-            }
-        } catch (error) {
-            console.error(error);
-        }
+    const error = useSelector((state) => state.loginReducer.error);
+    //Navigate
+    const onSuccess = (token) => {
+        navigate("/profile");
+        dispatch(loginSuccess(token));
+    };
+    //Fail
+    const onFail = () => {
+        setErrorMessage(error);
+        dispatch(loginFail("Invalid Fields"));
     };
 
     return (
         <section className="sign-in-content">
             <i className="fa fa-user-circle sign-in-icon"></i>
-            <h2>Sign In</h2>
-            <form onSubmit={handleSubmit}>
+            <h1>Sign In</h1>
+            <form
+                onSubmit={(e) =>
+                    handleSubmit(
+                        email,
+                        password,
+                        rememberMe,
+                        onSuccess,
+                        onFail,
+                        e
+                    )
+                }
+            >
                 <InputWrapper
                     title="Username"
                     id="username"
@@ -74,10 +67,8 @@ function SignInContent() {
                     checked={rememberMe}
                     set={(e) => setRememberMe(e.target.checked)}
                 />
-                {errorMessage && (
-                    <p className="error-message">{errorMessage}</p>
-                )}
                 <Button title="Sign In" className="sign-in-button" />
+                {errorMessage && <p className="error-message">{error}</p>}
             </form>
         </section>
     );

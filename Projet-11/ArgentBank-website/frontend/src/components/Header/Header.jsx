@@ -1,54 +1,63 @@
-import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProfile } from "../../api/api";
-import { userProfile } from "../../redux/actions/user.actions";
-import Button from "../Button/Button";
-import EditProfile from "../EditProfile/EditProfile";
+import { Navigate, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import { logout } from "../../redux/actions/login.actions.js";
+
+import Nav from "../Nav/Nav.jsx";
+
+import logo from "../../assets/argentBankLogo.webp";
 function Header() {
-    const info = useSelector((state) => state.userReducer.userData);
-    const [userName, setUserName] = useState(info.userName || "");
-    const firstName = useSelector(
-        (state) => state.userReducer.userData.firstName
+    const isConnected = useSelector((state) => state.loginReducer.isConnected);
+
+    const userName = useSelector(
+        (state) => state.userReducer.userData.userName
     );
-    const lastName = useSelector(
-        (state) => state.userReducer.userData.lastName
-    );
+
     const dispatch = useDispatch();
-    const [isEditing, setIsEditing] = useState(false);
+    const navigate = useNavigate();
 
-    const onEdit = () => {
-        setIsEditing(!isEditing);
-    };
-    const token = useSelector((state) => state.loginReducer.token);
-
-    useEffect(() => {
-        if (token) {
-            getProfile(token, onSuccess);
-        }
-    }, [token]);
-
-    useEffect(() => {
-        setUserName(info.userName);
-    });
-    const onSuccess = (data) => {
-        dispatch(userProfile(data));
-        setUserName(data.userName);
+    const logoutHandler = () => {
+        dispatch(logout());
+        sessionStorage.clear();
+        localStorage.clear();
+        navigate("/");
     };
 
-    return isEditing ? (
-        <EditProfile onClick={onEdit} />
-    ) : (
-        <div className="header">
-            <h1>
-                Welcome back <br />
-                {firstName} {lastName}
-            </h1>
-            <Button
-                title="Edit Name"
-                className="edit-button"
-                onClick={onEdit}
-            />
-        </div>
+    return (
+        <header>
+            <nav className="main-nav">
+                <NavLink to="/" className="main-nav-logo">
+                    <img
+                        src={logo}
+                        alt="Argent Bank Logo"
+                        className="main-nav-logo-image"
+                    />
+                    <h1 className="sr-only">Argent Bank</h1>
+                </NavLink>
+                {isConnected ? (
+                    <div>
+                        <NavLink to="/profile" className="main-nav-item">
+                            <i className="fa fa-user-circle firstName">
+                                {" "}
+                                {userName}
+                            </i>
+                        </NavLink>
+                        <NavLink
+                            to="/"
+                            onClick={logoutHandler}
+                            className="main-nav-item"
+                        >
+                            <i className=" fa fa-sign-out"></i> Sign Out
+                        </NavLink>
+                    </div>
+                ) : (
+                    <NavLink to="/login" className="main-nav-item">
+                        <i className="fa fa-user-circle"></i> Sign In
+                    </NavLink>
+                )}
+            </nav>
+        </header>
     );
 }
 

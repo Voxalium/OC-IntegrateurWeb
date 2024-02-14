@@ -14,11 +14,15 @@ import Error from "../../pages/Error/Error.jsx";
 //component
 import Nav from "../Nav/Nav.jsx";
 import Footer from "../Footer/Footer.jsx";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { loginSuccess } from "../../redux/actions/login.actions.js";
 
 //Routing
 function Router() {
+    const dispatch = useDispatch();
+    const token = sessionStorage.getItem("token") || localStorage.getItem("token");
+    if (token) dispatch(loginSuccess(token));
     const isConnected = useSelector((state) => state.loginReducer.isConnected);
     const router = createBrowserRouter([
         {
