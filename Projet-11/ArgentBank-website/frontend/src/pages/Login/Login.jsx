@@ -1,4 +1,5 @@
 import SignInContent from "../../components/SignInContent/SignInContent";
+
 function Login() {
     document.title = "Argent Bank - Log In";
     return (

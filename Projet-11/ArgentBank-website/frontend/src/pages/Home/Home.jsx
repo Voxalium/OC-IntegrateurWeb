@@ -3,9 +3,41 @@ import FeatureItem from "../../components/FeatureItem/FeatureItem";
 import chat from "../../assets/icon-chat.webp";
 import money from "../../assets/icon-money.webp";
 import security from "../../assets/icon-security.webp";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { PROFILE_URL, PROFILE_REQ } from "../../api/api.js";
+import { userProfile } from "../../redux/actions/user.actions.js";
 function Home() {
     document.title = "Argent Bank - Home";
+
+    const token = useSelector((state) => state.loginReducer.token);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (token) {
+            const userData = async () => {
+                try {
+                    const res = await fetch(PROFILE_URL, PROFILE_REQ(token));
+                    if (res.ok) {
+                        const data = await res.json();
+                        const userData = {
+                            id: data.body.id,
+                            email: data.body.email,
+                            firstName: data.body.firstName,
+                            lastName: data.body.lastName,
+                            userName: data.body.userName,
+                        };
+                        dispatch(userProfile(userData));
+                    } else {
+                        console.error("Error get profile");
+                    }
+                } catch (error) {
+                    console.log(error);
+                }
+            };
+            userData();
+        }
+    }, [dispatch, token]);
     return (
         <main>
             <Hero />

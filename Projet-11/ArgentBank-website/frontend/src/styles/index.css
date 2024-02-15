@@ -5,6 +5,9 @@ html {
     text-align: center;
     color: #2c3e50;
 }
+button{
+    cursor: pointer;
+}
 .background {
     min-height: 100vh;
     display: flex;

@@ -15,13 +15,11 @@ function Header() {
     );
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const logoutHandler = () => {
         dispatch(logout());
         sessionStorage.clear();
         localStorage.clear();
-        navigate("/");
     };
 
     return (
@@ -44,7 +42,7 @@ function Header() {
                             </i>
                         </NavLink>
                         <NavLink
-                            to="/"
+                            to="/login"
                             onClick={logoutHandler}
                             className="main-nav-item"
                         >

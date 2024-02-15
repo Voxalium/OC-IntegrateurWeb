@@ -12,8 +12,7 @@ import { loginSuccess } from "../../redux/actions/login.actions.js";
 //Routing
 function App() {
     const dispatch = useDispatch();
-    const token =
-        localStorage.getItem("token")
+    const token = localStorage.getItem("token");
     if (token) dispatch(loginSuccess(token));
     const isConnected = useSelector((state) => state.loginReducer.isConnected);
 
