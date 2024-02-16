@@ -1,0 +1,8 @@
+{
+    "booki": {
+        "title": "Agence de voyage Booki",
+        "description": "Le projet Booki",
+        "img": "./public/projects/booki1.webp",
+        "skills": ["HTML", "CSS"]
+    }
+}

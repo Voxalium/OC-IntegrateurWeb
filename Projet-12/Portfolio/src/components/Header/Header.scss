@@ -1,14 +1,9 @@
 .header {
-    position: relative;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 200px;
-
-    .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-100px);
-    }
+    height: 124px;
+    margin-bottom: 26px;
     .nav {
         font-weight: 400;
         font-size: 28px;

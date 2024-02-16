@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&display=swap");
+* {
+  font-family: "Noto Sans";
+  padding: 0;
+  margin: 0; }
+
+html,
+#mainDiv,
+body,
+#root {
+  height: 100%; }
+
+#mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+h1 {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 36px; }
+
+p {
+  max-width: 80%;
+  font-weight: 300;
+  font-size: 18px; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 124px;
+  margin-bottom: 26px; }
+  .header .nav {
+    font-weight: 400;
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-14px);
+    display: flex;
+    gap: 50px;
+    padding-right: 60px; }
+    .header .nav a {
+      text-decoration: none;
+      color: black; }
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  height: 50%; }
+  .info .text {
+    max-width: 50%; }
+  .info .profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; }
+  @media (min-width: 1240px) {
+    .info {
+      margin-left: 25%;
+      margin-right: 25%; } }
+
+.project {
+  background-color: #d9d9d9;
+  margin-top: 24px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 32px;
+  padding-right: 32px; }
+  .project h2 {
+    text-align: center; }
+  .project .project-desc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+    gap: 16px; }
+    .project .project-desc h3 {
+      text-align: center; }
+    .project .project-desc .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px; }
+      .project .project-desc .container img {
+        height: 300px;
+        border-radius: 20px; }
+      .project .project-desc .container p {
+        background-color: #121212;
+        padding: 14px;
+        border-radius: 20px;
+        width: 30%;
+        color: white; }
+  .project .skills {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px; }
+    .project .skills .skill-tag {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      min-width: 82px;
+      min-height: 14px;
+      background-color: red;
+      border-radius: 10px; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background-color: black;
+  color: white;
+  height: 100px; }
+  .footer .links img {
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%; }
+
+/*# sourceMappingURL=index.css.map */
