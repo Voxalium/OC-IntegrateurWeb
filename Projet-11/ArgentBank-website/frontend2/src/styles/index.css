@@ -5,14 +5,6 @@ html {
     text-align: center;
     color: #2c3e50;
 }
-button {
-    cursor: pointer;
-}
-.background {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 #readOnly-input {
     background-color: gray;
     border-color: gray;
@@ -36,7 +28,6 @@ body,
     align-items: center;
     height: 300px;
     color: white;
-    width: 100%;
 }
 .error-link {
     margin-top: 26px;
@@ -82,13 +73,11 @@ body,
     width: 150px;
 }
 .main {
-    display: flex;
     flex: 1;
 }
 
 .bg-dark {
     background-color: #12002b;
-    flex-direction: column;
 }
 
 .sr-only {
@@ -119,9 +108,6 @@ body,
 
 .main-nav a.router-link-exact-active {
     color: #42b983;
-}
-.main-nav div {
-    display: flex;
 }
 
 .main-nav-item {
@@ -239,11 +225,12 @@ body,
 }
 
 .sign-in-content {
+    box-sizing: border-box;
     background-color: white;
     width: 300px;
     margin: 0 auto;
+    margin-top: 3rem;
     padding: 2rem;
-    margin-top: 2em;
 }
 
 .sign-in-icon {
@@ -366,8 +353,5 @@ body,
     .edit-buttons {
         flex-direction: column;
         align-items: center;
-    }
-    .main-nav div {
-        flex-direction: column;
     }
 }
