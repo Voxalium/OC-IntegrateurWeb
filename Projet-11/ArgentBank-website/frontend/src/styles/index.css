@@ -5,7 +5,7 @@ html {
     text-align: center;
     color: #2c3e50;
 }
-button{
+button {
     cursor: pointer;
 }
 .background {
@@ -119,6 +119,9 @@ body,
 
 .main-nav a.router-link-exact-active {
     color: #42b983;
+}
+.main-nav div {
+    display: flex;
 }
 
 .main-nav-item {
@@ -363,5 +366,8 @@ body,
     .edit-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    .main-nav div {
+        flex-direction: column;
     }
 }
