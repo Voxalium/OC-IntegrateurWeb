@@ -1,6 +1,6 @@
 import profile from "../../assets/ratProfile.png";
-import { intro } from "../../datas/intro.json";
-export const Info = () => {
+import { intro } from "../../datas/data.json";
+export const Intro = () => {
     return (
         <div className="info">
             <div className="text">

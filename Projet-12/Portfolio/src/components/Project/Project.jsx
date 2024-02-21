@@ -1,15 +1,9 @@
-import { Skill } from "../Skill/Skill";
-import datas from "../../datas/projects.json";
+import { Tag } from "../Tag/Tag";
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { projects } from "../../datas/data.json";
 export const Project = () => {
-    const data = [
-        datas.booki,
-        datas.ohmyfood,
-        datas.sophiebuel,
-        datas.menumaker,
-    ];
+    const data = projects;
 
     const [index, setIndex] = useState(0);
     const nextProject = () => {
@@ -38,9 +32,9 @@ export const Project = () => {
                         ) : null}
                     </p>
                 </div>
-                <div className="skills">
+                <div className="tags">
                     {data[index].skills.map((skill, idx) => (
-                        <Skill key={idx} name={skill} />
+                        <Tag key={idx} name={skill} />
                     ))}
                 </div>
             </div>

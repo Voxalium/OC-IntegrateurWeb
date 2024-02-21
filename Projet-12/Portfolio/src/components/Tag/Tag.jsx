@@ -1,3 +1,3 @@
-export const Skill = ({ name }) => {
+export const Tag = ({ name }) => {
     return <span className="skill-tag">{name}</span>;
 };
