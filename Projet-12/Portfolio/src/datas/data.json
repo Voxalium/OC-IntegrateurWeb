@@ -28,7 +28,7 @@
         },
         {
             "title": "Site Menu Maker",
-            "description": "Menu Maker est un site de création de menu pour restaurateur. Mon travail consistait à planifier les développements de ce site en créant différents documents comme la solution technique, les spécificités techniques et une veille technologique.",
+            "description": "Menu Maker est un site de création de menu pour restaurateur. Mon travail consistait à planifier le développement de ce site en créant différents documents comme la solution technique, les spécificités techniques et une veille technologique.",
             "img": "/projects/menumaker1.webp",
             "skills": [
                 "Veille technologique",
@@ -44,45 +44,94 @@
             "skill": [
                 {
                     "name": "HTML",
-                    "logo": ""
+                    "logo": "/logos/html.webp"
                 },
                 {
                     "name": "CSS",
-                    "logo": ""
+                    "logo": "/logos/css.webp"
                 },
 
                 {
                     "name": "Javascript",
-                    "logo": ""
+                    "logo": "/logos/js.webp"
                 },
 
                 {
                     "name": "Sass",
-                    "logo": ""
+                    "logo": "/logos/sass.webp"
                 },
                 {
                     "name": "React",
-                    "logo": ""
+                    "logo": "/logos/react.webp"
                 },
                 {
                     "name": "Redux",
-                    "logo": ""
+                    "logo": "/logos/redux.webp"
                 },
                 {
                     "name": "C",
-                    "logo": ""
+                    "logo": "/logos/c.webp"
                 },
                 {
                     "name": "C++",
-                    "logo": ""
+                    "logo": "/logos/cpp.webp"
                 },
                 {
                     "name": "C#",
-                    "logo": ""
+                    "logo": "/logos/cs.webp"
                 },
                 {
                     "name": "Lua",
-                    "logo": ""
+                    "logo": "/logos/lua.webp"
+                }
+            ]
+        },
+        {
+            "title": "Softwares",
+            "skill": [
+                {
+                    "name": "Neovim",
+                    "logo": "/logos/nvim.webp"
+                },
+                {
+                    "name": "VS Code",
+                    "logo": "/logos/vscode.webp"
+                },
+                {
+                    "name": "Suite Libre Office",
+                    "logo": "/logos/libreoffice.webp"
+                },
+                {
+                    "name": "Audacity",
+                    "logo": "/logos/audacity.webp"
+                },
+                {
+                    "name": "Fl Studio",
+                    "logo": "/logos/flstudio.webp"
+                },
+                {
+                    "name": "Reaper",
+                    "logo": "/logos/reaper.webp"
+                },
+                {
+                    "name": "Blender3D",
+                    "logo": "/logos/blender.webp"
+                },
+                {
+                    "name": "Gimp",
+                    "logo": "/logos/gimp.webp"
+                },
+                {
+                    "name": "Inkscape",
+                    "logo": "/logos/inkscape.webp"
+                },
+                {
+                    "name": "Clip Studio Paint",
+                    "logo": "/logos/csp.webp"
+                },
+                {
+                    "name": "Figma",
+                    "logo": "/logos/figma.webp"
                 }
             ]
         }
