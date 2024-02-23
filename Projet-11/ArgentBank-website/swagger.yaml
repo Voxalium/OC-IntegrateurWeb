@@ -277,7 +277,7 @@ paths:
                   required: true
                   type: string
             responses:
-                "200":
+                "204":
                     description: Note deleted successfully
                     schema:
                         $ref: "#/definitions/TransactionNoteResponse"
