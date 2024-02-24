@@ -200,7 +200,7 @@ paths:
                   required: true
                   type: string
             responses:
-                "200":
+                "201":
                     description: Note created successfully
                     schema:
                         $ref: "#/definitions/TransactionNoteResponse"
