@@ -8,22 +8,22 @@
     padding-top: 26px;
     padding-bottom: 26px;
 
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 100px;
+    padding-right: 100px;
     h2 {
         text-align: center;
     }
 
     .project-desc {
-
-    max-width: 800px;
         display: flex;
         flex-direction: column;
         margin-top: 26px;
         background-color: $darkgray;
-        border-radius: 6px;
+        border-radius: 12px;
         gap: 16px;
-        padding: 12px;
+        padding: 26px;
+
+        max-width: 1200px;
         h3 {
             width: 100%;
             color: white;
@@ -32,6 +32,9 @@
             display: flex;
             flex-direction: column;
             color: white;
+            max-width: 500px;
+
+            font-size: 16px;
             a {
                 text-decoration: none;
                 color: $primary;
@@ -43,11 +46,33 @@
         }
         .container {
             display: flex;
+            position: relative;
             gap: 20px;
+            max-width: 100%;
+            height: 100%;
             img {
-                max-width: 500px;
+                max-width: 300px;
                 height: 300px;
+                object-fit: cover;
                 border-radius: 12px;
+            }
+            .nav-button {
+                position: absolute;
+                top: (50%);
+                transform: translateY(-24px);
+                background-color: $primary;
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+            }
+            .prev {
+                left: -80px;
+            }
+            .next {
+                right: -80px;
+            }
+            @media (max-width: 1200px) {
+                flex-direction: column;
             }
         }
     }

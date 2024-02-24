@@ -75,26 +75,28 @@ p {
   margin-top: 24px;
   padding-top: 26px;
   padding-bottom: 26px;
-  padding-left: 32px;
-  padding-right: 32px; }
+  padding-left: 100px;
+  padding-right: 100px; }
   .project h2 {
     text-align: center; }
   .project .project-desc {
-    max-width: 800px;
     display: flex;
     flex-direction: column;
     margin-top: 26px;
     background-color: #393939;
-    border-radius: 6px;
+    border-radius: 12px;
     gap: 16px;
-    padding: 12px; }
+    padding: 26px;
+    max-width: 1200px; }
     .project .project-desc h3 {
       width: 100%;
       color: white; }
     .project .project-desc p {
       display: flex;
       flex-direction: column;
-      color: white; }
+      color: white;
+      max-width: 500px;
+      font-size: 16px; }
       .project .project-desc p a {
         text-decoration: none;
         color: #ff8811;
@@ -103,11 +105,30 @@ p {
           text-decoration: underline; }
     .project .project-desc .container {
       display: flex;
-      gap: 20px; }
+      position: relative;
+      gap: 20px;
+      max-width: 100%;
+      height: 100%; }
       .project .project-desc .container img {
-        max-width: 500px;
+        max-width: 300px;
         height: 300px;
+        object-fit: cover;
         border-radius: 12px; }
+      .project .project-desc .container .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-24px);
+        background-color: #ff8811;
+        cursor: pointer;
+        width: 48px;
+        height: 48px; }
+      .project .project-desc .container .prev {
+        left: -80px; }
+      .project .project-desc .container .next {
+        right: -80px; }
+      @media (max-width: 1200px) {
+        .project .project-desc .container {
+          flex-direction: column; } }
   .project .tags {
     display: flex;
     gap: 12px; }

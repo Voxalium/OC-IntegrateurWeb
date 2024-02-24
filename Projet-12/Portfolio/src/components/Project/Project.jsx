@@ -6,15 +6,9 @@ export const Project = () => {
     const data = projects;
 
     const [index, setIndex] = useState(0);
-    const nextProject = () => {
-        setTimeout(
-            () => setIndex(index + 1 < data.length ? index + 1 : 0),
-            10000
-        );
+    const nextProject = (i) => {
+        setIndex((index + i + data.length) % data.length);
     };
-    useEffect(() => {
-        nextProject();
-    });
 
     return (
         <div className="project">
@@ -22,7 +16,11 @@ export const Project = () => {
             <div className="project-desc">
                 <h3>{data[index].title}</h3>
                 <div className="container">
-                    <img src={data[index].img} alt="" />
+                    <div
+                        onClick={() => nextProject(-1)}
+                        className="nav-button prev"
+                    ></div>
+                    <img src={data[index].img} alt={data[index].title} />
                     <p>
                         {data[index].description}{" "}
                         {data[index].link ? (
@@ -31,6 +29,11 @@ export const Project = () => {
                             </a>
                         ) : null}
                     </p>
+
+                    <div
+                        onClick={() => nextProject(+1)}
+                        className="nav-button next"
+                    ></div>
                 </div>
                 <div className="tags">
                     {data[index].skills.map((skill, idx) => (
