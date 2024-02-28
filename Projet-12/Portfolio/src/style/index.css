@@ -4,12 +4,6 @@
   padding: 0;
   margin: 0; }
 
-html,
-#mainDiv,
-body,
-#root {
-  height: 100%; }
-
 #mainDiv {
   display: flex;
   flex-direction: column;
@@ -53,30 +47,48 @@ p {
   margin-left: 60px;
   padding-top: 34px;
   padding-bottom: 34px;
-  border-top: solid black 2px;
-  border-bottom: solid black 2px;
-  height: 50%; }
-  .info .text {
-    max-width: 50%; }
+  height: 100vh; }
+  @media (max-width: 720px) {
+    .info .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      text-align: center; }
+      .info .text h1 {
+        font-size: 1.8rem; }
+      .info .text p {
+        font-size: 1rem; } }
   .info .profile {
     width: 250px;
     height: 250px;
     border-radius: 50%; }
+    @media (max-width: 720px) {
+      .info .profile {
+        width: 128px;
+        height: 128px;
+        margin-bottom: 18px; } }
   @media (min-width: 1240px) {
     .info {
-      margin-left: 25%;
-      margin-right: 25%; } }
+      margin-left: 5%;
+      margin-right: 5%; } }
+  @media (max-width: 720px) {
+    .info {
+      flex-direction: column-reverse;
+      justify-content: flex-end; } }
 
 .project {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #eeeeee;
   margin-top: 24px;
   padding-top: 26px;
   padding-bottom: 26px;
   padding-left: 100px;
-  padding-right: 100px; }
+  padding-right: 100px;
+  height: 100vh; }
   .project h2 {
     text-align: center; }
   .project .project-desc {
@@ -145,6 +157,7 @@ p {
 
 .skills {
   margin-top: 24px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center; }

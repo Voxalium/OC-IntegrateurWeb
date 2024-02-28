@@ -10,12 +10,6 @@ $primary: #ff8811;
     margin: 0;
 }
 
-html,
-#mainDiv,
-body,
-#root {
-    height: 100%;
-}
 #mainDiv {
     display: flex;
     flex-direction: column;

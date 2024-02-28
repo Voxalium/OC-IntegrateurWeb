@@ -1,7 +1,7 @@
 {
     "intro": {
         "title": "Terence Truyens, développeur web.",
-        "body": "Je suis spécialisé dans le développement web front-end (HTML, CSS, React).Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor mini culpa duis."
+        "body": "Je suis spécialisé dans le développement web front-end (HTML, CSS, React). En 2023, j'ai suivi la formation Intégrateur web sur Open Classrooms, ce qui m'a permis d'approfondir mes connaissances en développement Web. Durant cette formation, j'ai aussi appris à organiser un projet avec les méthodes AGILE, à debugger des sites et faire des tests unitaires et fonctionnels avec JEST."
     },
 
     "projects": [
@@ -44,45 +44,55 @@
             "skill": [
                 {
                     "name": "HTML",
-                    "logo": "/logos/html.webp"
+                    "logo": "/logos/html.webp",
+                    "category": "web"
                 },
                 {
                     "name": "CSS",
-                    "logo": "/logos/css.webp"
+                    "logo": "/logos/css.webp",
+                    "category": "web"
                 },
 
                 {
                     "name": "Javascript",
-                    "logo": "/logos/js.webp"
+                    "logo": "/logos/js.webp",
+                    "category": "web"
                 },
 
                 {
                     "name": "Sass",
-                    "logo": "/logos/sass.webp"
+                    "logo": "/logos/sass.webp",
+                    "category": "web"
                 },
                 {
                     "name": "React",
-                    "logo": "/logos/react.webp"
+                    "logo": "/logos/react.webp",
+                    "category": "web"
                 },
                 {
                     "name": "Redux",
-                    "logo": "/logos/redux.webp"
+                    "logo": "/logos/redux.webp",
+                    "category": "web"
                 },
                 {
                     "name": "C",
-                    "logo": "/logos/c.webp"
+                    "logo": "/logos/c.webp",
+                    "category": "other"
                 },
                 {
                     "name": "C++",
-                    "logo": "/logos/cpp.webp"
+                    "logo": "/logos/cpp.webp",
+                    "category": "web"
                 },
                 {
                     "name": "C#",
-                    "logo": "/logos/cs.webp"
+                    "logo": "/logos/cs.webp",
+                    "category": "web"
                 },
                 {
                     "name": "Lua",
-                    "logo": "/logos/lua.webp"
+                    "logo": "/logos/lua.webp",
+                    "category": "web"
                 }
             ]
         },
@@ -91,47 +101,58 @@
             "skill": [
                 {
                     "name": "Neovim",
-                    "logo": "/logos/nvim.webp"
+                    "logo": "/logos/nvim.webp",
+                    "category": "text"
                 },
                 {
                     "name": "VS Code",
-                    "logo": "/logos/vscode.webp"
+                    "logo": "/logos/vscode.webp",
+                    "category": "text"
                 },
                 {
                     "name": "Suite Libre Office",
-                    "logo": "/logos/libreoffice.webp"
+                    "logo": "/logos/libreoffice.webp",
+                    "category": "text"
                 },
                 {
                     "name": "Audacity",
-                    "logo": "/logos/audacity.webp"
+                    "logo": "/logos/audacity.webp",
+                    "category": "audio"
                 },
                 {
                     "name": "Fl Studio",
-                    "logo": "/logos/flstudio.webp"
+                    "logo": "/logos/flstudio.webp",
+                    "category": "audio"
                 },
                 {
                     "name": "Reaper",
-                    "logo": "/logos/reaper.webp"
+                    "logo": "/logos/reaper.webp",
+                    "category": "audio"
                 },
                 {
                     "name": "Blender3D",
-                    "logo": "/logos/blender.webp"
+                    "logo": "/logos/blender.webp",
+                    "category": "graphic"
                 },
                 {
                     "name": "Gimp",
-                    "logo": "/logos/gimp.webp"
+                    "logo": "/logos/gimp.webp",
+                    "category": "graphic"
                 },
                 {
                     "name": "Inkscape",
-                    "logo": "/logos/inkscape.webp"
+                    "logo": "/logos/inkscape.webp",
+                    "category": "graphic"
                 },
                 {
                     "name": "Clip Studio Paint",
-                    "logo": "/logos/csp.webp"
+                    "logo": "/logos/csp.webp",
+                    "category": "graphic"
                 },
                 {
                     "name": "Figma",
-                    "logo": "/logos/figma.webp"
+                    "logo": "/logos/figma.webp",
+                    "category": "graphic"
                 }
             ]
         }

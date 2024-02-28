@@ -6,7 +6,6 @@ import { Skills } from "../Skills/Skills";
 function App() {
     return (
         <div id="mainDiv">
-            <Header />
             <Intro />
             <Project />
             <Skills />
