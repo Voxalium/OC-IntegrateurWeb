@@ -1,7 +1,7 @@
 import { Tag } from "../Tag/Tag";
 import { useState } from "react";
-import { useEffect } from "react";
 import { projects } from "../../datas/data.json";
+import { Arrow } from "../Arrow/Arrow";
 export const Project = () => {
     const data = projects;
 
@@ -11,7 +11,8 @@ export const Project = () => {
     };
 
     return (
-        <div className="project">
+        <div id="project" className="project">
+            <Arrow link="#intro" direction="up" />
             <h2>Mes projets</h2>
             <div className="project-desc">
                 <h3>{data[index].title}</h3>
@@ -41,6 +42,7 @@ export const Project = () => {
                     ))}
                 </div>
             </div>
+            <Arrow link="#skills" direction="down" />
         </div>
     );
 };

@@ -8,12 +8,18 @@ $primary: #ff8811;
     font-family: "Noto Sans";
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 #mainDiv {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.intro,
+.project,
+.skills {
+    position: relative;
 }
 
 h1 {
@@ -28,6 +34,7 @@ p {
 }
 
 @import "../components/Header/Header.scss";
+@import "../components/Arrow/Arrow.scss";
 @import "../components/Intro/Intro.scss";
 @import "../components/Project/Project.scss";
 @import "../components/Skills/Skills.scss";

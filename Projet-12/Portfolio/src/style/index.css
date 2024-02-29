@@ -2,12 +2,18 @@
 * {
   font-family: "Noto Sans";
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  scroll-behavior: smooth; }
 
 #mainDiv {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+
+.intro,
+.project,
+.skills {
+  position: relative; }
 
 h1 {
   margin-bottom: 12px;
@@ -39,41 +45,54 @@ p {
       text-decoration: none;
       color: black; }
 
-.info {
+.up {
+  position: absolute;
+  top: 0;
+  margin-top: 100px; }
+
+.down,
+.top {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 100px; }
+
+.intro {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin-right: 60px;
   margin-left: 60px;
-  padding-top: 34px;
-  padding-bottom: 34px;
   height: 100vh; }
-  @media (max-width: 720px) {
-    .info .text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 100%;
-      text-align: center; }
-      .info .text h1 {
-        font-size: 1.8rem; }
-      .info .text p {
-        font-size: 1rem; } }
-  .info .profile {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; }
+  .intro .container {
+    display: flex;
+    max-width: 1080px; }
     @media (max-width: 720px) {
-      .info .profile {
-        width: 128px;
-        height: 128px;
-        margin-bottom: 18px; } }
+      .intro .container .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        text-align: center; }
+        .intro .container .text h1 {
+          font-size: 1.8rem; }
+        .intro .container .text p {
+          font-size: 1rem; } }
+    .intro .container .profile {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%; }
+      @media (max-width: 720px) {
+        .intro .container .profile {
+          width: 128px;
+          height: 128px;
+          margin-bottom: 18px; } }
   @media (min-width: 1240px) {
-    .info {
+    .intro {
       margin-left: 5%;
       margin-right: 5%; } }
   @media (max-width: 720px) {
-    .info {
+    .intro {
       flex-direction: column-reverse;
       justify-content: flex-end; } }
 
@@ -83,9 +102,6 @@ p {
   align-items: center;
   justify-content: center;
   background-color: #eeeeee;
-  margin-top: 24px;
-  padding-top: 26px;
-  padding-bottom: 26px;
   padding-left: 100px;
   padding-right: 100px;
   height: 100vh; }
@@ -156,11 +172,11 @@ p {
       border-radius: 8px; }
 
 .skills {
-  margin-top: 24px;
-  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
   .skills h2 {
     text-align: center;
     margin-bottom: 26px; }
