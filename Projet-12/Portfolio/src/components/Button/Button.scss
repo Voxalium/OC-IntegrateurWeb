@@ -1,0 +1,17 @@
+.button {
+    color: white;
+    font-size: 1.5rem;
+    background-color: $primary;
+    max-width: 156px;
+    height: 36px;
+    text-align: center;
+    border-radius: 14px;
+    cursor: pointer;
+
+    transition: 500ms;
+    &:hover {
+        filter: brightness(1.2);
+        transform: scale(1.1);
+        transition: 500ms;
+    }
+}

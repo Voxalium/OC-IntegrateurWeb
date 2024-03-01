@@ -36,6 +36,24 @@
                 "Plannification",
                 "Documentation technique"
             ]
+        },
+        {
+            "title": "Site portfolio Nina Carducci",
+            "description": "SEO",
+            "img": "",
+            "skills": ["Optimisation", "SEO"]
+        },
+        {
+            "title": "Site 724events",
+            "description": "Debug",
+            "img": "",
+            "skills": ["Debug", "Test", "JEST"]
+        },
+        {
+            "title": "Application bancaire Argent Bank",
+            "description": "React",
+            "img": "",
+            "skills": ["React", "API", "Redux"]
         }
     ],
     "skills": [

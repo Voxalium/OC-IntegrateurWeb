@@ -1,6 +1,6 @@
-import { Card } from "./Card";
 import { skills } from "../../datas//data.json";
-import { Arrow } from "../Arrow/Arrow";
+import { Card } from "../../components/Card/Card";
+import { Arrow } from "../../components/Arrow/Arrow";
 
 export const Skills = () => {
     const data = skills;

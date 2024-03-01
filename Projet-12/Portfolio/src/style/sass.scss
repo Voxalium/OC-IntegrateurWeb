@@ -32,10 +32,18 @@ p {
     font-weight: 300;
     font-size: 18px;
 }
+@media (max-width: 720px) {
+    .arrow {
+        display: none;
+    }
+}
+
+@import "../views/Intro/Intro.scss";
+@import "../views/Project/Project.scss";
+@import "../views/Skills/Skills.scss";
 
 @import "../components/Header/Header.scss";
 @import "../components/Arrow/Arrow.scss";
-@import "../components/Intro/Intro.scss";
-@import "../components/Project/Project.scss";
-@import "../components/Skills/Skills.scss";
+@import "../components/Slider/Slider.scss";
+@import "../components/Button/Button.scss";
 @import "../components/Footer/Footer.scss";

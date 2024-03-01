@@ -1,1 +1,1 @@
-sass -I ./src/components/ --watch ./src/style/sass.scss:./src/style/index.css
+sass -I ./src/components/ ./src/views/ --watch ./src/style/sass.scss:./src/style/index.css
