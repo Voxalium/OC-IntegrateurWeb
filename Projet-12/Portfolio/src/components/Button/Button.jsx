@@ -1,3 +1,7 @@
-export const Button = ({ title }) => {
-    return <span className="button">{title}</span>;
+export const Button = ({ title, link }) => {
+    return (
+        <a target="_blank" href={link} className="button">
+            {title}
+        </a>
+    );
 };

@@ -16,6 +16,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            h1 {
+                font-family: "Source Code Pro", monospace;
+                border-right: 4px solid $primary;
+                animation:
+                    cursor 1s infinite step-end,
+                    typing 15s infinite steps(33);
+                white-space: nowrap;
+                overflow: hidden;
+            }
             @media (max-width: 720px) {
                 h1 {
                     font-size: 1.8rem;
@@ -51,5 +60,29 @@
     }
     @media (max-width: 700px) {
         margin: 0;
+    }
+}
+
+@keyframes cursor {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: $primary;
+    }
+}
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+    30% {
+        width: 33ch;
+    }
+    80% {
+        width: 33ch;
+    }
+    100% {
+        width: 0ch;
     }
 }
