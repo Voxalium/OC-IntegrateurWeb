@@ -1,7 +1,8 @@
 import { Tag } from "../../components/Tag/Tag";
-
 import { useState } from "react";
 
+import arrowLeft from "/ui/arrow_left.webp";
+import arrowRight from "/ui/arrow_right.webp";
 export const Slider = ({ data }) => {
     const [index, setIndex] = useState(0);
     const nextProject = (i) => {
@@ -11,10 +12,12 @@ export const Slider = ({ data }) => {
         <div className="slider">
             <h3>{data[index].title}</h3>
             <div className="container">
-                <div
+                <img
+                    src={arrowLeft}
+                    alt="arrow left"
                     onClick={() => nextProject(-1)}
                     className="nav-button prev"
-                ></div>
+                ></img>
                 <img src={data[index].img} alt={data[index].title} />
                 <p>
                     {data[index].description}{" "}
@@ -25,10 +28,12 @@ export const Slider = ({ data }) => {
                     ) : null}
                 </p>
 
-                <div
+                <img
+                    src={arrowRight}
+                    alt="arrow right"
                     onClick={() => nextProject(+1)}
                     className="nav-button next"
-                ></div>
+                ></img>
             </div>
             <div className="tags">
                 {data[index].skills.map((skill, idx) => (

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 //Variables
 $lightgray: #eeeeee;
-$darkgray: #393939;
+$darkgray: #666666;
 $primary: #ff8811;
 
 * {
@@ -45,6 +45,7 @@ p {
 
 @import "../components/Header/Header.scss";
 @import "../components/Arrow/Arrow.scss";
+@import "../components/Grid/Grid.scss";
 @import "../components/Slider/Slider.scss";
 @import "../components/Button/Button.scss";
 @import "../components/Footer/Footer.scss";

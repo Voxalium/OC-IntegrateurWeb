@@ -1,10 +1,8 @@
-.slider {
+.grid {
     display: flex;
-    flex-direction: column;
     margin-top: 26px;
     background-color: $darkgray;
     border-radius: 12px;
-    gap: 16px;
     padding: 26px;
 
     max-width: 1200px;
@@ -12,9 +10,17 @@
         border-radius: 0;
     }
 
-    h3 {
-        width: 100%;
-        color: white;
+    .grid-cell {
+        position: relative;
+        h3 {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 100%;
+            color: white;
+            z-index: 10;
+        }
     }
     p {
         display: flex;
@@ -33,49 +39,29 @@
         }
     }
     .container {
-        display: flex;
-        position: relative;
-        gap: 20px;
         max-width: 100%;
         height: 100%;
+        .img-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
         img {
-            max-width: 300px;
-            height: 300px;
+            cursor: pointer;
+            max-width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 12px;
-        }
-        .nav-button {
-            position: absolute;
-            top: (50%);
-            transform: translateY(-24px);
-            cursor: pointer;
-            height: 48px;
-        }
-        .prev {
-            left: -80px;
             transition: filter 0.3s;
             &:hover {
-                filter: brightness(1.2);
-
-                transition: filter 0.3s;
-            }
-        }
-        .next {
-            right: -80px;
-            transition: filter 0.3s;
-            &:hover {
-                filter: brightness(1.2);
-                transition: filter 0.3s;
+                filter: brightness(0.8);
+                transition: 0.3s;
             }
         }
         @media (max-width: 1200px) {
             flex-direction: column;
             align-items: center;
-        }
-        @media (max-width: 700px) {
-            .nav-button {
-                display: none;
-            }
         }
     }
 }

@@ -39,21 +39,24 @@
         },
         {
             "title": "Site portfolio Nina Carducci",
-            "description": "SEO",
-            "img": "",
-            "skills": ["Optimisation", "SEO"]
+            "description": "Pour ce projet, j'ai appris à faire des audits avec Lighthouse pour faire un diagnostique des performances du site afin d'opérer des diverses optimisations. J'ai notamment compressé et réduit la taille des fichiers image et texte, ajouter les balises \"meta\" pour les réseaux sociaux et Google Rich Snippet.",
+            "img": "/projects/ninacarducci1.webp",
+            "skills": ["Optimisation", "SEO"],
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-9/Projet-9/ninacarducci"
         },
         {
             "title": "Site 724events",
-            "description": "Debug",
-            "img": "",
-            "skills": ["Debug", "Test", "JEST"]
+            "description": "724events est un site d'événementiel. Je devais corriger un certain nombre de bugs. Le carrousel du site, le système de filtrage et l'envoie de message du formulaire de contact ne fonctionnaient pas comme convenu. De plus quelques élément ne s'affichaient pas. J'ai appris à débugger un site et à mettre en place différents tests avec Jest.",
+            "img": "/projects/724events.webp",
+            "skills": ["Debug", "Test", "JEST"],
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-10/Projet-10/Debuggez-une-application-React.JS"
         },
         {
             "title": "Application bancaire Argent Bank",
-            "description": "React",
-            "img": "",
-            "skills": ["React", "API", "Redux"]
+            "description": "Argent bank est une application de banque en ligne. Une maquette en HTML et CSS m'avait été fourni et je devais refaire le site avec React. On devait avoir la possibilité de se connecter et d'afficher certaines informations de l'utilisateur avec le store Redux. J'ai aussi appris à faire une documentation Swagger en Yaml pour définir de nouvelles routes. ",
+            "img": "/projects/argentbank.webp",
+            "skills": ["React", "API", "Redux", "Mongo", "Swagger"],
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-11/Projet-11/ArgentBank-website"
         }
     ],
     "skills": [
