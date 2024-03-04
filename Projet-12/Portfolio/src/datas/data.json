@@ -103,23 +103,32 @@
                 {
                     "name": "C++",
                     "logo": "/logos/cpp.webp",
-                    "category": "web"
+                    "category": "other"
                 },
                 {
                     "name": "C#",
                     "logo": "/logos/cs.webp",
-                    "category": "web"
+                    "category": "other"
                 },
                 {
                     "name": "Lua",
                     "logo": "/logos/lua.webp",
-                    "category": "web"
+                    "category": "other"
                 }
             ]
         },
         {
             "title": "Softwares",
             "skill": [
+                {
+                    "name": "Linux(Arch/Debian)",
+                    "logo": "/logos/linux.webp"
+                },
+                {
+                    "name": "Windows(10)",
+                    "logo": "/logos/windows.webp",
+                    "category": "os"
+                },
                 {
                     "name": "Neovim",
                     "logo": "/logos/nvim.webp",

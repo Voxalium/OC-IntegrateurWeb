@@ -13,7 +13,7 @@ export const Skills = () => {
                     <Card key={`${idx}-card`} title={d.title} skill={d.skill} />
                 ))}
             </div>
-            <Arrow link="#intro" direction="top" />
+            <Arrow link="#intro" direction="down" />
         </div>
     );
 };

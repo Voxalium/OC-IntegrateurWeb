@@ -9,33 +9,45 @@
     height: 100vh;
     .container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         max-width: 1080px;
 
+        h1 {
+            font-family: "Source Code Pro", monospace;
+            border-right: 4px solid $primary;
+            animation:
+                cursor 1s infinite step-end,
+                typing 15s infinite steps(33);
+            white-space: nowrap;
+            overflow: hidden;
+            @media (max-width: 800px) {
+                font-size: 28px;
+                padding-left: 12px;
+                padding-right: 12px;
+                animation: none;
+                white-space: initial;
+                border-right: none;
+                overflow: initial;
+            }
+        }
         .text {
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            h1 {
-                font-family: "Source Code Pro", monospace;
-                border-right: 4px solid $primary;
-                animation:
-                    cursor 1s infinite step-end,
-                    typing 15s infinite steps(33);
-                white-space: nowrap;
-                overflow: hidden;
-            }
             @media (max-width: 720px) {
-                h1 {
-                    font-size: 1.8rem;
-                }
+                flex-direction: column;
                 p {
                     font-size: 1rem;
                 }
                 align-items: center;
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
             .button {
                 margin-top: 26px;
+                min-width: 120px;
             }
         }
         .profile {
@@ -44,13 +56,15 @@
             border-radius: 50%;
 
             @media (max-width: 720px) {
-                margin-bottom: 18px;
+                margin-top: 26px;
+                width: 150px;
+                height: 150px;
             }
         }
         @media (max-width: 720px) {
-            flex-direction: column-reverse;
-            align-items: center;
             text-align: center;
+            justify-content: center;
+            align-items: center;
         }
     }
 

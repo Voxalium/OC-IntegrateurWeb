@@ -33,7 +33,7 @@ p {
     font-weight: 300;
     font-size: 18px;
 }
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
     .arrow {
         display: none;
     }
@@ -46,6 +46,7 @@ p {
 @import "../components/Header/Header.scss";
 @import "../components/Arrow/Arrow.scss";
 @import "../components/Grid/Grid.scss";
+@import "../components/Card/Card.scss";
 @import "../components/Slider/Slider.scss";
 @import "../components/Button/Button.scss";
 @import "../components/Footer/Footer.scss";
