@@ -128,16 +128,6 @@ p {
   display: flex;
   gap: 12px;
   flex-wrap: wrap; }
-  .tags .skill-tag {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    min-width: 52px;
-    max-width: 100%;
-    padding: 0 6px;
-    background-color: #ff8811;
-    border-radius: 8px; }
 
 .skills {
   display: flex;
@@ -275,6 +265,17 @@ p {
         flex-direction: column;
         align-items: center; } }
 
+.skill-tag {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-width: 52px;
+  max-width: 100%;
+  padding: 0 6px;
+  background-color: #ff8811;
+  border-radius: 8px; }
+
 .card {
   background: #eeeeee;
   box-shadow: rgba(0, 0, 0, 0.2) -1px 1px 10px inset;
@@ -370,7 +371,7 @@ p {
 
 .button {
   display: block;
-  color: white;
+  color: black;
   font-size: 1.5rem;
   background-color: #ff8811;
   max-width: 156px;
@@ -381,6 +382,7 @@ p {
   text-decoration: none;
   transition: 500ms; }
   .button:hover {
+    color: white;
     filter: brightness(1.2);
     transform: scale(1.1);
     transition: 500ms; }

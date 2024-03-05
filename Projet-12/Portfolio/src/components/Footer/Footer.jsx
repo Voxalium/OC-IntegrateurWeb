@@ -1,4 +1,4 @@
-import githubLogo from "../../assets/github.webp";
+import githubLogo from "/logos/github.webp";
 export const Footer = () => {
     return (
         <footer className="footer" id="footer">

@@ -1,4 +1,4 @@
-import profile from "../../assets/ratProfile.png";
+import profile from "/ratProfile.webp";
 import { intro } from "../../datas/data.json";
 import { Arrow } from "../../components/Arrow/Arrow";
 import { Button } from "../../components/Button/Button";

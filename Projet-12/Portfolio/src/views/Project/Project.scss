@@ -23,15 +23,4 @@
     gap: 12px;
 
     flex-wrap: wrap;
-    .skill-tag {
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        min-width: 52px;
-        max-width: 100%;
-        padding: 0 6px;
-        background-color: $primary;
-        border-radius: 8px;
-    }
 }
