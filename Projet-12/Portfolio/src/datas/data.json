@@ -122,11 +122,14 @@
             "skill": [
                 {
                     "name": "Linux(Arch/Debian)",
-                    "logo": "/logos/linux.webp"
+                    "logo": "/logos/linuxLarge.webp",
+                    "content": "Pour le développement web, j'utilise Linux avec des distributions comme Arch ou Debian. Ma façon de travailler est principalement basée sur la console et les lignes de commandes. Je sais utiliser les différents gestionnaires de paquets comme pacman, apt ou encore npm pour l'écosystème nodejs. Mon expérience de plus de 10 ans sur les systèmes basé sur Linux m'a permis de m'intéresser à divers domaines de l'informatique comme le développement de logiciels avec quelques bases sur les langages C et C++ ou encore une compréhension plus avancé du fonctionnement d'un système d'exploitation.",
+                    "category": "os"
                 },
                 {
                     "name": "Windows(10)",
-                    "logo": "/logos/windows.webp",
+                    "logo": "/logos/windowsLarge.webp",
+                    "content": "Il me semble avoir utilisé les systèmes Windows depuis toujours. La première version que j'ai connue est la 3.1 et j'ai suivi les évolutions et les mises à jours depuis ce temps jusqu'à Windows 10. Même si, de manière générale, je préfère utiliser Linux pour le développement Web, je peux utiliser Windows et ses outils convenablement pour me permettre de mener à bien mes projets.",
                     "category": "os"
                 },
                 {

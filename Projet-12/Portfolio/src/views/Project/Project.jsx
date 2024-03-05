@@ -4,11 +4,11 @@ import { Slider } from "../../components/Slider/Slider";
 
 export const Project = () => {
     return (
-        <div id="project" className="project">
+        <section id="project" className="project">
             <Arrow link="#intro" direction="up" />
             <h2>Mes projets</h2>
             <Slider data={projects} />
             <Arrow link="#skills" direction="down" />
-        </div>
+        </section>
     );
 };

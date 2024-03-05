@@ -1,19 +1,17 @@
 .up {
     position: absolute;
     top: 0;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
-.down,
-.top {
+.down {
     position: absolute;
     bottom: 0;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .up,
-.down,
-.top {
+.down {
     transition: 0.5s;
     &:hover {
         filter: brightness(1.2);

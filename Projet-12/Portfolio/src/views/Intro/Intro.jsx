@@ -5,7 +5,7 @@ import { Button } from "../../components/Button/Button";
 import cv from "/documents/CV_Terence_Truyens.pdf";
 export const Intro = () => {
     return (
-        <div id="intro" className="intro">
+        <section id="intro" className="intro">
             <div className="container">
                 <h1>{intro.title}</h1>
                 <div className="text">
@@ -22,6 +22,6 @@ export const Intro = () => {
                 </div>
             </div>
             <Arrow link="#project" direction="down" />
-        </div>
+        </section>
     );
 };

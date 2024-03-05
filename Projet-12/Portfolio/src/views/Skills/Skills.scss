@@ -16,14 +16,6 @@
         text-align: center;
         margin-bottom: 26px;
     }
-    h3 {
-        background-color: $primary;
-        color: white;
-        padding-right: 24px;
-        text-align: end;
-
-        border-radius: 20px 40px 0 0;
-    }
     li {
         list-style: none;
         display: flex;
@@ -42,6 +34,27 @@
         gap: 26px;
         @media (max-width: 1200px) {
             flex-direction: column;
+        }
+
+        h3 {
+            background-color: $primary;
+            color: white;
+            padding-right: 24px;
+            text-align: end;
+
+            border-radius: 20px 40px 0 0;
+        }
+    }
+
+    .system {
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        h3 {
+            width: 100%;
+        }
+        .os {
+            margin-top: 26px;
         }
     }
 }

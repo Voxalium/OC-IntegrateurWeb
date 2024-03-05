@@ -1,19 +1,30 @@
-import { skills } from "../../datas//data.json";
-import { Card } from "../../components/Card/Card";
 import { Arrow } from "../../components/Arrow/Arrow";
-
+import { CardOs } from "../../components/Card/CardOs";
+import { skills } from "../../datas/data.json";
 export const Skills = () => {
-    const data = skills;
     return (
-        <div id="skills" className="skills">
+        <section id="skills" className="skills">
             <Arrow link="#project" direction="up" />
             <h2>Mes compétences</h2>
-            <div className="skills-container">
-                {data.map((d, idx) => (
-                    <Card key={`${idx}-card`} title={d.title} skill={d.skill} />
+            <h3>Systèmes d'exploitation</h3>
+            <div className="system">
+                {filterData("Softwares", "os").map((skill, idx) => (
+                    <CardOs
+                        key={`image ${skill.name}`}
+                        title={skill.name}
+                        content={skill.content}
+                        image={skill.logo}
+                    />
                 ))}
             </div>
+
             <Arrow link="#intro" direction="down" />
-        </div>
+        </section>
     );
+};
+
+const filterData = (title, category) => {
+    return skills
+        .find((f) => f.title === title)
+        .skill.filter((s) => s.category === category);
 };
