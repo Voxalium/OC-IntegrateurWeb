@@ -47,14 +47,38 @@
     }
 
     .system {
+        margin-top: 24px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background-color: $lightgray;
+        border-radius: 14px;
+
         justify-content: center;
         width: 100%;
+
         max-width: 1200px;
+        @media (max-width: 1200px) {
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+            p {
+                max-width: 55%;
+            }
+        }
         h3 {
             width: 100%;
         }
         .os {
-            margin-top: 26px;
+            gap: 20px;
+
+            h4 {
+                margin-left: 24px;
+
+                margin-bottom: 12px;
+            }
         }
     }
 }
