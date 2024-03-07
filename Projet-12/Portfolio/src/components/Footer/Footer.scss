@@ -10,10 +10,19 @@
     color: white;
     height: 100px;
     .links {
+        display: flex;
+        gap: 10px;
         img {
             background-color: white;
             padding: 6px;
             border-radius: 50%;
+        }
+        a {
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.2s;
+            }
         }
     }
 }

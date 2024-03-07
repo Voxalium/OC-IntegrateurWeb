@@ -1,17 +1,6 @@
-export const Card = ({ title, skill, category }) => {
-    console.log(category);
+export const Card = ({ skill }) => {
     return (
         <div className="card">
-            <h3>{title}</h3>
-
-            {skillIterator(skill, category)}
-        </div>
-    );
-};
-
-const skillIterator = (skill) => {
-    return (
-        <>
             <div className="container">
                 {skill.map((s, idx) => (
                     <ul key={`${idx}-ul`}>
@@ -22,6 +11,6 @@ const skillIterator = (skill) => {
                     </ul>
                 ))}
             </div>
-        </>
+        </div>
     );
 };

@@ -1,16 +1,22 @@
-export const CardFlip = ({ cover, title, link, content }) => {
+import { Tag } from "../Tag/Tag";
+export const CardFlip = ({ cover, title, link, content, tag }) => {
+    const cardStyle = {
+        backgroundImage: `url(${cover}) `,
+        backgroundSize: "cover",
+    };
     return (
         <div className="flip-card">
             <div className="flip-card-inner">
-                <div
-                    className="flip-card-front"
-                    style={{ backgroundImage: `url(${cover})` }}
-                >
-                    <p className="title">{title}</p>
-                </div>
+                <div className="flip-card-front" style={cardStyle}></div>
                 <div className="flip-card-back">
                     <p className="content">{content}</p>
-                    <a href={link}>Lien Github</a>
+                    {link ? <a href={link}>Lien Github</a> : null}
+
+                    <div className="tags">
+                        {tag.map((i, idx) => (
+                            <Tag key={`Tag-${idx}`} name={i} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

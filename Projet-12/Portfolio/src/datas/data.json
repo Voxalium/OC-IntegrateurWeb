@@ -1,7 +1,7 @@
 {
     "intro": {
         "title": "Terence Truyens, développeur web.",
-        "body": "Je suis spécialisé dans le développement web front-end (HTML, CSS, React). En 2023, j'ai suivi la formation Intégrateur web sur Open Classrooms, ce qui m'a permis d'approfondir mes connaissances en développement Web. Durant cette formation, j'ai aussi appris à organiser un projet avec les méthodes AGILE, à debugger des sites et faire des tests unitaires et fonctionnels avec JEST."
+        "body": "Je suis spécialisé dans le développement web front-end (HTML, CSS, React). En 2023, j'ai suivi la formation Intégrateur web sur OpenClassrooms, ce qui m'a permis d'approfondir mes connaissances en développement Web. Durant cette formation, j'ai aussi appris à organiser un projet avec les méthodes AGILE, à debugger des sites et faire des tests unitaires et fonctionnels avec JEST."
     },
 
     "projects": [
@@ -30,12 +30,7 @@
             "title": "Site Menu Maker",
             "description": "Menu Maker est un site de création de menu pour restaurateur. Mon travail consistait à planifier le développement de ce site en créant différents documents comme la solution technique, les spécificités techniques et une veille technologique.",
             "img": "/projects/menumaker1.webp",
-            "skills": [
-                "Veille technologique",
-                "Gestion",
-                "Plannification",
-                "Documentation technique"
-            ]
+            "skills": ["Veille", "Gestion", "Doc technique"]
         },
         {
             "title": "Site portfolio Nina Carducci",
@@ -129,7 +124,7 @@
                 {
                     "name": "Windows(10)",
                     "logo": "/logos/windowsLarge.webp",
-                    "content": "Il me semble avoir utilisé les systèmes Windows depuis toujours. La première version que j'ai connue est la 3.1 et j'ai suivi les évolutions et les mises à jours depuis ce temps jusqu'à Windows 10.Même si, de manière générale, je préfère utiliser Linux pour le développement Web, je peux utiliser Windows et ses outils convenablement pour me permettre de mener à bien mes projets.",
+                    "content": "Il me semble avoir utilisé les systèmes Windows depuis toujours. La première version que j'ai connue est la 3.1 et j'ai suivi les évolutions et les mises à jours depuis ce temps jusqu'à Windows 10. Même si, de manière générale, je préfère utiliser Linux pour le développement Web, je peux utiliser Windows et ses outils convenablement pour me permettre de mener à bien mes projets.",
                     "category": "os"
                 },
                 {

@@ -14,6 +14,7 @@ export const Project = () => {
                         cover={p.img}
                         link={p.link}
                         content={p.description}
+                        tag={p.skills}
                     />
                 ))}
             </div>
