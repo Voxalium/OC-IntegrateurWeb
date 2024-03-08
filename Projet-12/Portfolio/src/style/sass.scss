@@ -39,17 +39,15 @@ p {
     }
 }
 
+//View
 @import "../views/Intro/Intro.scss";
 @import "../views/Project/Project.scss";
 @import "../views/Skills/Skills.scss";
-
-@import "../components/Header/Header.scss";
+//Components
 @import "../components/Arrow/Arrow.scss";
-@import "../components/Grid/Grid.scss";
 @import "../components/Tag/Tag.scss";
 @import "../components/Card/CardFlip.scss";
 @import "../components/Card/CardOs.scss";
 @import "../components/Card/Card.scss";
-@import "../components/Slider/Slider.scss";
 @import "../components/Button/Button.scss";
 @import "../components/Footer/Footer.scss";

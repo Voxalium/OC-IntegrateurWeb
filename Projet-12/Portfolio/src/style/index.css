@@ -123,6 +123,8 @@ p {
     text-align: center; }
   .project .grid-card {
     margin-top: 26px;
+    margin-left: 26px;
+    margin-right: 26px;
     padding-bottom: 26px;
     display: flex;
     justify-content: center;
@@ -194,26 +196,6 @@ p {
         margin-left: 24px;
         margin-bottom: 12px; }
 
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 124px;
-  margin-bottom: 26px; }
-  .header .nav {
-    font-weight: 400;
-    font-size: 28px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-14px);
-    display: flex;
-    gap: 50px;
-    padding-right: 60px; }
-    .header .nav a {
-      text-decoration: none;
-      color: black; }
-
 .up {
   position: absolute;
   top: 0;
@@ -232,61 +214,6 @@ p {
     filter: brightness(1.2);
     transform: scale(1.2);
     transition: 0.5s; }
-
-.grid {
-  display: flex;
-  margin-top: 26px;
-  background-color: #666666;
-  border-radius: 12px;
-  padding: 26px;
-  max-width: 1200px; }
-  @media (max-width: 700px) {
-    .grid {
-      border-radius: 0; } }
-  .grid .grid-cell {
-    position: relative; }
-    .grid .grid-cell h3 {
-      display: none;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      width: 100%;
-      color: white;
-      z-index: 10; }
-  .grid p {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    max-width: 500px;
-    font-size: 16px; }
-    .grid p a {
-      text-decoration: none;
-      color: #ff8811;
-      font-weight: 500; }
-      .grid p a:hover {
-        text-decoration: underline; }
-  .grid .container {
-    max-width: 100%;
-    height: 100%; }
-    .grid .container .img-container {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap; }
-    .grid .container img {
-      cursor: pointer;
-      max-width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: filter 0.3s; }
-      .grid .container img:hover {
-        filter: brightness(0.8);
-        transition: 0.3s; }
-    @media (max-width: 1200px) {
-      .grid .container {
-        flex-direction: column;
-        align-items: center; } }
 
 .skill-tag {
   color: white;
@@ -382,82 +309,6 @@ p {
     cursor: pointer;
     transform: scale(1.5);
     transition: transform 0.5s; }
-
-.slider {
-  display: flex;
-  flex-direction: column;
-  margin-top: 26px;
-  background-color: #666666;
-  border-radius: 12px;
-  gap: 16px;
-  padding: 26px;
-  max-width: 1200px; }
-  @media (max-width: 700px) {
-    .slider {
-      border-radius: 0;
-      height: 80%; } }
-  .slider h3 {
-    width: 100%;
-    color: white; }
-  .slider p {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    max-width: 500px;
-    font-size: 16px; }
-    .slider p a {
-      text-decoration: none;
-      color: #ff8811;
-      width: 100px;
-      font-weight: 500;
-      margin-top: 10px; }
-      .slider p a:hover {
-        text-decoration: underline; }
-    @media (max-width: 720px) {
-      .slider p {
-        font-size: 15px; } }
-  .slider .container {
-    display: flex;
-    position: relative;
-    gap: 20px;
-    max-width: 100%;
-    height: 100%; }
-    .slider .container img {
-      max-width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 12px; }
-    .slider .container .nav-button {
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      cursor: pointer;
-      height: 48px; }
-      @media (max-width: 720px) {
-        .slider .container .nav-button {
-          top: 150px; } }
-    .slider .container .prev {
-      left: -80px;
-      transition: filter 0.3s; }
-      .slider .container .prev:hover {
-        filter: brightness(1.2);
-        transition: filter 0.3s; }
-      @media (max-width: 1200px) {
-        .slider .container .prev {
-          left: 0px; } }
-    .slider .container .next {
-      right: -80px;
-      transition: filter 0.3s; }
-      .slider .container .next:hover {
-        filter: brightness(1.2);
-        transition: filter 0.3s; }
-      @media (max-width: 1200px) {
-        .slider .container .next {
-          right: 0px; } }
-    @media (max-width: 1200px) {
-      .slider .container {
-        flex-direction: column;
-        align-items: center; } }
 
 .button {
   display: block;
