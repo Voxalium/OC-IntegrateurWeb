@@ -276,12 +276,12 @@ p {
   display: flex;
   align-items: center; }
   .card-os .container p {
-    margin-left: 26px; }
+    margin-left: 26px;
+    font-size: 1rem; }
   @media (max-width: 1200px) {
     .card-os .container {
       flex-direction: column; }
       .card-os .container p {
-        font-size: 15px;
         padding: 0;
         margin: 12px 0 0 0; } }
 

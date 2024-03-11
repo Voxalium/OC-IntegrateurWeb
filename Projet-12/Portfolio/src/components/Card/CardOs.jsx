@@ -7,8 +7,8 @@ export const CardOs = ({ title, content, image }) => {
                     <img
                         src={image}
                         alt={`logo ${title}`}
-                        height="200px"
-                        width="200px"
+                        height="100px"
+                        width="100px"
                     />
                     <p>{content}</p>
                 </div>

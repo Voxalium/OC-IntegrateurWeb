@@ -10,7 +10,11 @@ export const CardFlip = ({ cover, title, link, content, tag }) => {
                 <div className="flip-card-front" style={cardStyle}></div>
                 <div className="flip-card-back">
                     <p className="content">{content}</p>
-                    {link ? <a href={link}>Lien Github</a> : null}
+                    {link ? (
+                        <a target="_blank" href={link}>
+                            Lien Github
+                        </a>
+                    ) : null}
 
                     <div className="tags">
                         {tag.map((i, idx) => (

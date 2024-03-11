@@ -16,7 +16,7 @@ export const Skills = () => {
             <h3>Systèmes d'exploitation</h3>
 
             <div className="system">
-                {filterData("Softwares", "os").map((skill, idx) => (
+                {filterData("Softwares", "os").map((skill) => (
                     <CardOs
                         key={`image ${skill.name}`}
                         title={skill.name}
