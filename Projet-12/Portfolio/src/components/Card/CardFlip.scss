@@ -1,6 +1,6 @@
 .flip-card {
-    width: 200px;
-    height: 300px;
+    width: 230px;
+    height: 340px;
     perspective: 1000px;
     cursor: pointer;
     .flip-card-inner {
@@ -28,16 +28,11 @@
     .flip-card-front {
         justify-content: space-around;
         color: $primary;
-        .title {
-            font-size: 1.1em;
-            font-weight: 900;
-            text-align: center;
-            margin: 0;
-        }
     }
 
     .flip-card-back {
         color: white;
+        
         background-color: $darkgray;
         transform: rotateY(180deg);
 
