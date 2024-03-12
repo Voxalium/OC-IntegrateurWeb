@@ -5,14 +5,17 @@ import { Skills } from "./views/Skills/Skills";
 
 import { Footer } from "./components/Footer/Footer";
 function App() {
-    return (
-        <div id="mainDiv">
-            <Intro />
-            <Project />
-            <Skills />
-            <Footer />
-        </div>
-    );
+  return (
+    <div id="mainDiv">
+      <div className="scroll">
+        <Intro />
+        <Project />
+        <Skills />
+        <Footer />
+      </div>
+    </div>
+  );
 }
+
 
 export default App;

@@ -16,12 +16,29 @@ $primary: #ff8811;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  
+}
+.scroll{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    @media(max-width: 1200px){
+        scroll-snap-type: none;
+    }
 }
 .intro,
 .project,
 .skills {
+    min-height: 100vh;
     position: relative;
+    scroll-snap-align: start;
 }
+.footer{
+
+    scroll-snap-align: start;
+}
+
+
 
 h1 {
     margin-bottom: 12px;
