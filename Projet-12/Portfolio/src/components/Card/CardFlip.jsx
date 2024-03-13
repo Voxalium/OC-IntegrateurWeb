@@ -9,7 +9,6 @@ export const CardFlip = ({ cover, link, content, tag }) => {
     transform: "rotateY(180deg)",
     transition: "transform 0.8s",
   };
-
   const [isFlipped, setIsFlip] = useState(false);
   const onFlip = () => {
     return !isFlipped;

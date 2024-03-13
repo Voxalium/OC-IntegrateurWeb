@@ -32,10 +32,8 @@
 
     .flip-card-back {
         color: white;
-        
         background-color: $darkgray;
         transform: rotateY(180deg);
-
         justify-content: space-between;
         .content {
             margin-top: 12px;
