@@ -214,16 +214,16 @@ p {
   top: 0;
   margin-top: 10px; }
 
-.down {
+.down, .home {
   position: absolute;
   bottom: 0;
   margin-bottom: 10px; }
 
 .up,
-.down {
+.down, .home {
   transition: 0.5s; }
   .up:hover,
-  .down:hover {
+  .down:hover, .home:hover {
     filter: brightness(1.2);
     transform: scale(1.2);
     transition: 0.5s; }

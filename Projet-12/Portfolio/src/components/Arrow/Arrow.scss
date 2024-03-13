@@ -4,14 +4,15 @@
     margin-top: 10px;
 }
 
-.down {
+.down, .home {
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
 }
 
 .up,
-.down {
+.down, .home {
+
     transition: 0.5s;
     &:hover {
         filter: brightness(1.2);
