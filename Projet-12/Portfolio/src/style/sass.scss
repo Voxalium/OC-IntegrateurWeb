@@ -31,11 +31,11 @@ $primary: #ff8811;
 .skills {
     min-height: 100vh;
     position: relative;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 .footer{
-
-    scroll-snap-align: start;
+    position: relative;
+    scroll-snap-align: center;
 }
 
 

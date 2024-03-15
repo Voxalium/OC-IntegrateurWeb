@@ -24,10 +24,11 @@
 .skills {
   min-height: 100vh;
   position: relative;
-  scroll-snap-align: start; }
+  scroll-snap-align: center; }
 
 .footer {
-  scroll-snap-align: start; }
+  position: relative;
+  scroll-snap-align: center; }
 
 h1 {
   margin-bottom: 12px;
@@ -350,7 +351,8 @@ p {
   padding-bottom: 26px;
   background-color: black;
   color: white;
-  height: 100px; }
+  height: 100px;
+  z-index: 1000; }
   .footer .links {
     display: flex;
     gap: 10px; }

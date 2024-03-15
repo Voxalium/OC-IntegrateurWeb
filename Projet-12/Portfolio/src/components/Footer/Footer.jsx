@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
         <footer className="footer" id="footer">
             <div className="links">
-                <a href="https://github.com/Voxalium" target="_blank">
+                <a href="https://github.com/Voxalium" target="_blank" rel="noreferrer">
                     <img src={githubLogo} alt="Logo Github" />
                 </a>
                 <a href="mailto:terence.truyens@sfr.fr">
@@ -14,6 +14,7 @@ export const Footer = () => {
                 <a
                     href="https://linkedin.com/in/terence-truyens-6283092b9"
                     target="_blank"
+rel="noreferrer"
                 >
                     <img src={linkedinLogo} alt="Logo linkedin" />
                 </a>
