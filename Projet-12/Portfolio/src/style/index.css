@@ -30,10 +30,31 @@
   position: relative;
   scroll-snap-align: center; }
 
+.background {
+  background: linear-gradient(132deg, #ff8811, #591BC5, #212335);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0px; }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 h1 {
   margin-bottom: 12px;
   font-weight: 500;
   font-size: 36px; }
+
+h2, h3 {
+  color: #eeeeee; }
 
 p {
   max-width: 80%;
@@ -53,8 +74,13 @@ p {
   .intro .container {
     display: flex;
     flex-direction: column;
-    max-width: 1080px; }
+    max-width: 1080px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 16px; }
     .intro .container h1 {
+      margin-left: 12px;
+      margin-top: 6px;
       font-family: "Source Code Pro", monospace;
       border-right: 4px solid #ff8811;
       animation: cursor 1s infinite step-end, typing 15s infinite steps(33);
@@ -70,6 +96,7 @@ p {
           border-right: none;
           overflow: initial; } }
     .intro .container .text {
+      margin: 14px;
       display: flex;
       justify-content: space-between; }
       @media (max-width: 720px) {
@@ -86,8 +113,8 @@ p {
         margin-top: 26px;
         min-width: 120px; }
     .intro .container .profile {
-      width: 250px;
-      height: 250px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%; }
       @media (max-width: 720px) {
         .intro .container .profile {
@@ -126,8 +153,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #eeeeee; }
+  justify-content: center; }
   @media (max-width: 700px) {
     .project {
       padding: 0; } }
@@ -187,8 +213,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background-color: #eeeeee;
-    box-shadow: rgba(0, 0, 0, 0.2) -1px 1px 10px inset;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
     border-radius: 14px;
     justify-content: center;
     width: 100%;
@@ -228,6 +254,10 @@ p {
     filter: brightness(1.2);
     transform: scale(1.2);
     transition: 0.5s; }
+  @media (max-height: 900px) {
+    .up,
+    .down, .home {
+      display: none; } }
 
 .skill-tag {
   color: white;
@@ -300,8 +330,8 @@ p {
           margin: 12px 0 0 0; } }
 
 .card {
-  background-color: #eeeeee;
-  box-shadow: rgba(0, 0, 0, 0.2) -1px 1px 10px inset;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   margin-bottom: 12px;

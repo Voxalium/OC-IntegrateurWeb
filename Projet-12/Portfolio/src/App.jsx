@@ -6,7 +6,7 @@ import { Skills } from "./views/Skills/Skills";
 import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
-    <div id="mainDiv">
+    <div id="mainDiv" className="background">
       <div className="scroll">
         <Intro />
         <Project />

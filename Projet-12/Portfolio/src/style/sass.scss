@@ -37,13 +37,38 @@ $primary: #ff8811;
     position: relative;
     scroll-snap-align: center;
 }
-
+.background {
+  background: linear-gradient(132deg, #ff8811, #591BC5, #212335);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding:0;
+  margin:0px;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
 h1 {
     margin-bottom: 12px;
     font-weight: 500;
     font-size: 36px;
+}
+h2,h3{
+
+  color: $lightgray;
 }
 p {
     max-width: 80%;

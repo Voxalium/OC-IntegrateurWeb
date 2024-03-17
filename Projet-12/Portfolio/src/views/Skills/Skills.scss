@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     h3 {
         margin-bottom: 16px;
     }
@@ -29,6 +30,7 @@
     }
     .cards {
         display: flex;
+
     }
     .system {
         padding-top: 24px;
@@ -36,9 +38,8 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
-        background-color: $lightgray;
-
-        box-shadow: rgba(#000000, $alpha: 0.2) -1px 1px 10px inset;
+        background-color: rgba(#ffffff, $alpha: 0.5);
+        box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
         border-radius: 14px;
         justify-content: center;
         width: 100%;

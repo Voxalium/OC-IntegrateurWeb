@@ -9,8 +9,13 @@
         display: flex;
         flex-direction: column;
         max-width: 1080px;
-
+        background-color: rgba(255,255,255,0.5);
+box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
         h1 {
+            margin-left: 12px;
+            margin-top: 6px;
+
             font-family: "Source Code Pro", monospace;
             border-right: 4px solid $primary;
             animation:
@@ -29,6 +34,8 @@
             }
         }
         .text {
+            margin: 14px;
+
             display: flex;
             justify-content: space-between;
             @media (max-width: 720px) {
@@ -49,8 +56,8 @@
             }
         }
         .profile {
-            width: 250px;
-            height: 250px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
 
             @media (max-width: 720px) {
